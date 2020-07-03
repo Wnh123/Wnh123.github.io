@@ -205,9 +205,9 @@
 <ol>
 <li>登录Github建立一个新仓库，仓库名为 Github账户昵称.github.io</li>
 <li>输入”cnpm install –save hexo-deployer-git” 在blog目录下安装git部署插件，如已经配置过Git则不会出现问题，如提示：<br>Please tell me who you are.<br>则需向Git说明自己的身份，通过如下两个命令证明：<br>“git config –global user.name “myusername”” 用户名<br>“git config –global user.email “myemail”” 邮箱<br>要查看用户，使用：<br>“git config –list”</li>
-<li>配置_config.yml文件，文件最底部做如下配置（下面符号’*‘代表空格！！！）：<br>deploy:  </li>
+<li>配置_config.yml文件，文件最底部做如下配置（下面符号’+‘代表空格！！！）：<br>deploy:  </li>
 </ol>
-<p>*<em>type:</em>git<br>*<em>repo:</em>新舰空仓库的地址<br>**branch: master<br>4. 输入”hexo d” 部署到远端Github仓库里，在弹出对话框中输入Github账号密码<br>5. 成功后,刷新Github仓库会发现仓库中多了些东西,这些就是博客的一些内容<br>6. 再浏览器中访问 1中的名称,可发现远程部署完成</p>
+<p>++type:+git<br>++repo:+新建的空仓库的地址<br>++branch:+master<br>4. 输入”hexo d” 部署到远端Github仓库里，在弹出对话框中输入Github账号密码<br>5. 成功后,刷新Github仓库会发现仓库中多了些东西,这些就是博客的一些内容<br>6. 再浏览器中访问 1中的名称,可发现远程部署完成</p>
 <h3 id="换博客主题"><a href="#换博客主题" class="headerlink" title="换博客主题"></a>换博客主题</h3><p>此主题仅是一个示例<br><a href="https://YourGithubName.github.io/" target="_blank" rel="noopener">https://YourGithubName.github.io/</a> 访问这个地址可以查看博客<br>下面操作依旧在blog目录下</p>
 <ol>
 <li>输入”git clone <a href="https://github.com/litten/hexo-theme-yilia.git" target="_blank" rel="noopener">https://github.com/litten/hexo-theme-yilia.git</a> themes/yilia” 下载yilia主题到本地blog/themes目录下</li>
