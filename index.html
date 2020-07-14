@@ -257,10 +257,7 @@
 </blockquote>
 <ul>
 <li>若T[k] == T[j]，则next[j + 1 ] = next [j] + 1 = k + 1；  </li>
-<li>若T[k ] ≠ T[j]，如果此时T[ next[k] ] == T[j ]，则next[ j + 1 ] =  next[k] + 1，否则继续递归前缀索引k = next[k]，而后重复此过程。 相当于在字符T[j+1]之前不存在长度为k+1的前缀”T0 T1, …, Tk-1 Tk”跟后缀“Tj-k Tj-k+1, …, Tj-1 Tj”相等，那么是否可能存在另一个值t+1 &lt; k+1，使得长度更小的前缀 “T0 T1, …, Tt-1 Tt” 等于长度更小的后缀 “Tj-t Tj-t+1, …, Tj-1 Tj” 呢？如果存在，那么这个t+1 便是next[ j+1]的值，此相当于利用已经求得的next 数组（next [0, …, k, …, j]）进行T串前缀跟T串后缀的匹配。<ul>
-<li>原文链接：<a href="https://blog.csdn.net/v_JULY_v/article/details/7041827" target="_blank" rel="noopener">https://blog.csdn.net/v_JULY_v/article/details/7041827</a></li>
-</ul>
-</li>
+<li>若T[k ] ≠ T[j]，如果此时T[ next[k] ] == T[j ]，则next[ j + 1 ] =  next[k] + 1，否则继续递归前缀索引k = next[k]，而后重复此过程。 相当于在字符T[j+1]之前不存在长度为k+1的前缀”T0 T1, …, Tk-1 Tk”跟后缀“Tj-k Tj-k+1, …, Tj-1 Tj”相等，那么是否可能存在另一个值t+1 &lt; k+1，使得长度更小的前缀 “T0 T1, …, Tt-1 Tt” 等于长度更小的后缀 “Tj-t Tj-t+1, …, Tj-1 Tj” 呢？如果存在，那么这个t+1 便是next[ j+1]的值，此相当于利用已经求得的next 数组（next [0, …, k, …, j]）进行T串前缀跟T串后缀的匹配。<br>原文链接：<a href="https://blog.csdn.net/v_JULY_v/article/details/7041827" target="_blank" rel="noopener">https://blog.csdn.net/v_JULY_v/article/details/7041827</a></li>
 </ul>
 <h2 id="next数组的优化"><a href="#next数组的优化" class="headerlink" title="next数组的优化"></a>next数组的优化</h2><h3 id="问题的出现"><a href="#问题的出现" class="headerlink" title="问题的出现"></a>问题的出现</h3><p>后来有人发现，KMP算法还是有缺陷的。<br>如果用之前的next 数组方法求模式串“abab”的next 数组，可得其next 数组为-1 0 0 1（0 0 1 2整体右移一位，初值赋为-1），当它跟下图中的文本串去匹配的时候，发现b跟c失配，于是模式串j = next[j] =1。</p>
 <blockquote>
