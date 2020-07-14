@@ -16,7 +16,7 @@
 <meta property="og:description" content="重读KMP算法这几天看了《大话数据结构》第五章-串，重新了解了串这个数据结构，当然其中最重要的模式匹配算法KMP有了新的认识，或者说是终于理解了。接下来结合我的理解和CSDN中大佬的详解，讲一讲KMP吧！ 朴素的模式匹配（BF算法、暴力算法）简介这是最早、最简单的模式匹配算法，就是简单的暴力算法，思路：    主串S，模式串T 从主串S第一位开始和模式串T第一位开始匹配，成功匹配返回匹配成功的第一">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-07-14T08:38:21.000Z">
-<meta property="article:modified_time" content="2020-07-14T12:09:41.567Z">
+<meta property="article:modified_time" content="2020-07-14T12:12:06.130Z">
 <meta property="article:author" content="计科老杨（Wnh123）">
 <meta name="twitter:card" content="summary">
   
@@ -258,13 +258,14 @@
 <ul>
 <li>若T[k] == T[j]，则next[j + 1 ] = next [j] + 1 = k + 1；  </li>
 <li>若T[k ] ≠ T[j]，如果此时T[ next[k] ] == T[j ]，则next[ j + 1 ] =  next[k] + 1，否则继续递归前缀索引k = next[k]，而后重复此过程。 相当于在字符T[j+1]之前不存在长度为k+1的前缀”T0 T1, …, Tk-1 Tk”跟后缀“Tj-k Tj-k+1, …, Tj-1 Tj”相等，那么是否可能存在另一个值t+1 &lt; k+1，使得长度更小的前缀 “T0 T1, …, Tt-1 Tt” 等于长度更小的后缀 “Tj-t Tj-t+1, …, Tj-1 Tj” 呢？如果存在，那么这个t+1 便是next[ j+1]的值，此相当于利用已经求得的next 数组（next [0, …, k, …, j]）进行T串前缀跟T串后缀的匹配。<ul>
-<li>原文链接：<a href="https://blog.csdn.net/v_JULY_v/article/details/7041827" target="_blank" rel="noopener">https://blog.csdn.net/v_JULY_v/article/details/7041827</a><h2 id="next数组的优化"><a href="#next数组的优化" class="headerlink" title="next数组的优化"></a>next数组的优化</h2><h3 id="问题的出现"><a href="#问题的出现" class="headerlink" title="问题的出现"></a>问题的出现</h3>后来有人发现，KMP算法还是有缺陷的。<br>如果用之前的next 数组方法求模式串“abab”的next 数组，可得其next 数组为-1 0 0 1（0 0 1 2整体右移一位，初值赋为-1），当它跟下图中的文本串去匹配的时候，发现b跟c失配，于是模式串j = next[j] =1。<blockquote>
+<li>原文链接：<a href="https://blog.csdn.net/v_JULY_v/article/details/7041827" target="_blank" rel="noopener">https://blog.csdn.net/v_JULY_v/article/details/7041827</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="next数组的优化"><a href="#next数组的优化" class="headerlink" title="next数组的优化"></a>next数组的优化</h2><h3 id="问题的出现"><a href="#问题的出现" class="headerlink" title="问题的出现"></a>问题的出现</h3><p>后来有人发现，KMP算法还是有缺陷的。<br>如果用之前的next 数组方法求模式串“abab”的next 数组，可得其next 数组为-1 0 0 1（0 0 1 2整体右移一位，初值赋为-1），当它跟下图中的文本串去匹配的时候，发现b跟c失配，于是模式串j = next[j] =1。</p>
+<blockquote>
 <p><del>aba</del>cabababc<br><del>aba</del>b  </p>
 </blockquote>
-</li>
-</ul>
-</li>
-</ul>
 <p>右移2位后，b又跟c失配。事实上，因为在上一步的匹配中，已经得知p[3] = b，与s[3] = c失配，而右移两位之后，让p[ next[3] ] = p[1] = b 再跟s[3]匹配时，必然失配。  </p>
 <blockquote>
 <p> ab<del>a</del>cabababc<br>&nbsp;&nbsp;&nbsp;&nbsp;ab<del>a</del>b</p>
