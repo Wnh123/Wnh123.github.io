@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>重读KMP算法 | 计科老杨（Wnh123）</title>
+  <title>线性表 | 计科老杨（Wnh123）</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="重读KMP算法这几天看了《大话数据结构》第五章-串，重新了解了串这个数据结构，当然其中最重要的模式匹配算法KMP有了新的认识，或者说是终于理解了。接下来结合我的理解和CSDN中大佬的详解，讲一讲KMP吧！ 朴素的模式匹配（BF算法、暴力算法）简介这是最早、最简单的模式匹配算法，就是简单的暴力算法，思路：    主串S，模式串T 从主串S第一位开始和模式串T第一位开始匹配，成功匹配返回匹配成功的第一">
+  <meta name="description" content="线性表定义顾名思义，线性表中的数据是线性排列的，是包括零个或多个数据元素的有限序列。  线性表的抽象数据类型1234567891011121314151617ADT 线性表(List)Data    线性表的数据对象集合为&amp;#123;a1,a2,....,an&amp;#125;,每个元素的类型均为DataType。其中，除了第一个元素a1外，每一个元素有且只有一个直接前驱元素，除最后一个元素an外，每一">
 <meta property="og:type" content="article">
-<meta property="og:title" content="重读KMP算法">
-<meta property="og:url" content="http://yoursite.com/2020/07/14/%E9%87%8D%E8%AF%BBKMP%E7%AE%97%E6%B3%95/index.html">
+<meta property="og:title" content="线性表">
+<meta property="og:url" content="http://yoursite.com/2020/07/25/%E7%BA%BF%E6%80%A7%E8%A1%A8/index.html">
 <meta property="og:site_name" content="计科老杨（Wnh123）">
-<meta property="og:description" content="重读KMP算法这几天看了《大话数据结构》第五章-串，重新了解了串这个数据结构，当然其中最重要的模式匹配算法KMP有了新的认识，或者说是终于理解了。接下来结合我的理解和CSDN中大佬的详解，讲一讲KMP吧！ 朴素的模式匹配（BF算法、暴力算法）简介这是最早、最简单的模式匹配算法，就是简单的暴力算法，思路：    主串S，模式串T 从主串S第一位开始和模式串T第一位开始匹配，成功匹配返回匹配成功的第一">
+<meta property="og:description" content="线性表定义顾名思义，线性表中的数据是线性排列的，是包括零个或多个数据元素的有限序列。  线性表的抽象数据类型1234567891011121314151617ADT 线性表(List)Data    线性表的数据对象集合为&amp;#123;a1,a2,....,an&amp;#125;,每个元素的类型均为DataType。其中，除了第一个元素a1外，每一个元素有且只有一个直接前驱元素，除最后一个元素an外，每一">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-07-14T08:38:21.347Z">
-<meta property="article:modified_time" content="2020-07-19T13:56:19.583Z">
+<meta property="article:published_time" content="2020-07-25T12:46:02.000Z">
+<meta property="article:modified_time" content="2020-07-26T06:02:36.770Z">
 <meta property="article:author" content="计科老杨（Wnh123）">
 <meta name="twitter:card" content="summary">
   
@@ -162,174 +162,122 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-重读KMP算法" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-线性表" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      重读KMP算法
+      线性表
     </h1>
   
 
         
-        <a href="/2020/07/14/%E9%87%8D%E8%AF%BBKMP%E7%AE%97%E6%B3%95/" class="archive-article-date">
-  	<time datetime="2020-07-14T08:38:21.347Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-14</time>
+        <a href="/2020/07/25/%E7%BA%BF%E6%80%A7%E8%A1%A8/" class="archive-article-date">
+  	<time datetime="2020-07-25T12:46:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-25</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="重读KMP算法"><a href="#重读KMP算法" class="headerlink" title="重读KMP算法"></a>重读KMP算法</h1><p>这几天看了《大话数据结构》第五章-串，重新了解了串这个数据结构，当然其中最重要的模式匹配算法KMP有了新的认识，或者说是终于理解了。<br>接下来结合我的理解和<a href="https://blog.csdn.net/v_JULY_v/article/details/7041827" target="_blank" rel="noopener">CSDN中大佬</a>的详解，讲一讲KMP吧！</p>
-<h2 id="朴素的模式匹配（BF算法、暴力算法）"><a href="#朴素的模式匹配（BF算法、暴力算法）" class="headerlink" title="朴素的模式匹配（BF算法、暴力算法）"></a>朴素的模式匹配（BF算法、暴力算法）</h2><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>这是最早、最简单的模式匹配算法，就是简单的暴力算法，思路：  </p>
-<ul>
-<li>主串S，模式串T</li>
-<li>从主串S第一位开始和模式串T第一位开始匹配，成功匹配返回匹配成功的第一位，匹配失败，主串S后移一位，模式串重新从头开始匹配  </li>
-</ul>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//朴素的匹配,从pos位置开始匹配</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Index</span><span class="params">(<span class="built_in">string</span> S, <span class="built_in">string</span> T, <span class="keyword">int</span> pos)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = pos;</span><br><span class="line">    <span class="keyword">int</span> j = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (i &lt; S.length() &amp;&amp; j &lt; T.length())</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (S[i] == T[j])</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//①如果当前字符匹配成功（即S[i] == T[j]），则i++，j++  </span></span><br><span class="line">            ++i;</span><br><span class="line">            ++j;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//②如果失配（即S[i]! = T[j]），令i =（i - j） + 1，j = 0  </span></span><br><span class="line">            i = i - j + <span class="number">1</span>;</span><br><span class="line">            j = <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">if</span> (j == T.length())</span><br><span class="line">        <span class="keyword">return</span> i - j;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h1 id="线性表"><a href="#线性表" class="headerlink" title="线性表"></a>线性表</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>顾名思义，线性表中的数据是线性排列的，是包括零个或多个数据元素的有限序列。 </p>
+<h2 id="线性表的抽象数据类型"><a href="#线性表的抽象数据类型" class="headerlink" title="线性表的抽象数据类型"></a>线性表的抽象数据类型</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">ADT 线性表(List)</span><br><span class="line">Data</span><br><span class="line">    线性表的数据对象集合为&#123;a1,a2,....,an&#125;,每个元素的类型均为DataType。其中，除了第一个元素a1外，每一个元素有且只有一个直接前驱元素，除最后一个元素an外，每一个元素有且只有一个直接后继元素。数据元素之间的关系是一对一的关系。</span><br><span class="line"></span><br><span class="line">Operation</span><br><span class="line">    InitList(*L):初始化操作，建立一个空的线性表。</span><br><span class="line">    ListEmpty(L):若线性表为空，返回<span class="literal">true</span>，否则返回<span class="literal">false</span>。</span><br><span class="line">    ClearList(*L):线性表清空。</span><br><span class="line">    GetElem(L,i,*e):将线性表L中第i个位置元素返回给e。</span><br><span class="line">    LocateElem(L,e):在线性表L中查找与给定值e相等的元素，如果查找成功,返回该元素在表中的序列号；否则，返回<span class="number">0</span>表示失败。</span><br><span class="line">    ListInsert(*L,i,e):在线性表的第i个位置插入元素e。</span><br><span class="line">    ListDelete(*L,i,*e):删除线性表L中的第i个元素，并用e返回其值</span><br><span class="line">    ListLength(L):返回线性表L的元素个数。</span><br><span class="line">    PrintList(L):打印线性表</span><br><span class="line"></span><br><span class="line">对于不同的应用，线性表的基本操作是不同的，上述操作是最基本的。</span><br><span class="line">对于实际问题中涉及的关于线性表的更复杂操作，完全可以用这些基本操作的组合来实现。</span><br></pre></td></tr></table></figure>
 
-<h3 id="例"><a href="#例" class="headerlink" title="例"></a>例</h3><p>S=”goodgoogle”,T=”google”  </p>
-<blockquote>
-<ol>
-<li><del>goo</del>dgoogle<br><del>goo</del>gle</li>
-<li>goodgoogle<br>&nbsp;&nbsp;google</li>
-<li>goodgoogle<br>&nbsp;&nbsp;&nbsp;&nbsp;google</li>
-<li>goodgoogle<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;google</li>
-<li>good<del>google</del><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<del>google</del></li>
-</ol>
-</blockquote>
-<p>朴素的模式匹配就是这个过程，可以看出这种算法的时间复杂度很大，为了优化模式匹配就有了KMP算法</p>
-<h2 id="KMP算法"><a href="#KMP算法" class="headerlink" title="KMP算法"></a>KMP算法</h2><h3 id="简介-1"><a href="#简介-1" class="headerlink" title="简介"></a>简介</h3><p>KMP是由三位前辈研究出来的避免重复遍历的高效率模式匹配算法，它们分别是D.E.Knuth、J.H.Morris、V.R.Pratt。知道了吧KMP是来自这三位前辈的名字，我们在称之为克努特-莫里斯-普拉特算法。</p>
-<h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><p>通俗的讲，KMP算法利用已匹配的现有信息，省去不必要的匹配过程，进而优化算法。  </p>
-<blockquote>
-<p>先上一个例子解释一下<br>S=”abcababcax”,T=”abcabx”  </p>
-<ol>
-<li><del>abcab</del>abcax<br><del>abcab</del>x  </li>
-<li>abcababcax<br>&nbsp;&nbsp;abcabx  </li>
-<li>abcababcax<br>&nbsp;&nbsp;&nbsp;&nbsp;abcabx  </li>
-<li>abc<del>a</del>babcax<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<del>a</del>bcabx  </li>
-<li>abc<del>ab</del>abcax<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<del>ab</del>cabx  </li>
-<li>abc<del>ab</del>abcax<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<del>ab</del>cabx  </li>
-</ol>
-</blockquote>
-<p> 1前5位“abcab”匹配成功，此时S的第i位”a”与T的第j位”x”匹配失败，i=5，j=5，按照朴素的模式匹配算法，接下来要让T串后移一位继续与S匹配，i变为1，j变成0，就是上面的过程，其实从1获取的匹配信息可以知道S的前三位”abc”已与T的相应位匹配成功，且”bc”并不等于”a”，所以23步不可能匹配成功，i在第一步时已经等于5了，但经过2345过程5-&gt;1-&gt;2-&gt;3-&gt;4-&gt;5最后S的第i位”a”与T的第j位”c”匹配失败,i=5，j=2。可以发现之前的2345可以去掉，i在这变化中又回到5，这个过程变化的好像只是j的值，KMP要做的就是省去不必要的匹配过程，直接跳到合适的位置。</p>
-<h3 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//KMP</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">KmpSearch</span><span class="params">(<span class="built_in">string</span> S, <span class="built_in">string</span> T, <span class="keyword">int</span> pos)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = pos;</span><br><span class="line">    <span class="keyword">int</span> j = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> Sl = S.length();</span><br><span class="line">    <span class="keyword">int</span> Tl = T.length();</span><br><span class="line">    <span class="keyword">while</span> (i &lt; Sl &amp;&amp; j &lt; Tl)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//①如果j = -1，或者当前字符匹配成功（即S[i] == T[j]），都令i++，j++    </span></span><br><span class="line">        <span class="keyword">if</span> (j == <span class="number">-1</span> || S[i] == T[j])</span><br><span class="line">        &#123;</span><br><span class="line">            i++;</span><br><span class="line">            j++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//②如果j != -1，且当前字符匹配失败（即S[i] != T[j]），则令 i 不变，j = next[j]    </span></span><br><span class="line">            <span class="comment">//next[j]即为j所对应的next值      </span></span><br><span class="line">            j = next[j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (j == Tl)</span><br><span class="line">        <span class="keyword">return</span> i - j;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="next数组"><a href="#next数组" class="headerlink" title="next数组"></a>next数组</h2><p>前面提到合适的位置，什么叫做合适的位置呢，就是主串S与模式串T失配时，i不变，只移动模式串T到合适的位置再与S匹配，这个合适的位置就存在next数组中。<br>上例中第一次在i=5，j=5失配，省去不必要的过程后i=5，j=2，也就是i不变，j从5变成2，这个过程中省去的是T前两位”ab”与S的45位”ab”匹配的过程，省去的原因是在第一次已经匹配过了，S的”abcab”与T的”abcab”匹配，可以发现，T的前缀和后缀都有”ab”，则下次匹配可以从T的第2位”c”开始与S上次失配的第5位开始重新匹配。</p>
-<h3 id="最大相同前后缀"><a href="#最大相同前后缀" class="headerlink" title="最大相同前后缀"></a>最大相同前后缀</h3><p>要计算next数组一定要知道最大相同前后缀，从上面的解释可以知道，j的变化与模式串T有关，在失配时j=next[j]，所以要知道T最大前后缀与next数组的关系。  </p>
-<h3 id="对于模式串T-”abcabx”"><a href="#对于模式串T-”abcabx”" class="headerlink" title="对于模式串T=”abcabx”"></a>对于模式串T=”abcabx”</h3><table>
-<thead>
-<tr>
-<th>模式串</th>
-<th>a</th>
-<th>b</th>
-<th>c</th>
-<th>a</th>
-<th>b</th>
-<th>x</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>最大相同前后缀</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>2</td>
-<td>0</td>
-</tr>
-<tr>
-<td>next数组</td>
-<td>-1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>2</td>
-</tr>
-<tr>
-<td>串为”a”，”ab”，”abc”，时最大相同前后缀为0，”abca”为1及前后的”a”，”abcab”为2及前后的”ab”。把next 数组跟求得的最大相同前后缀对比后，不难发现，next 数组相当于“最大相同前后缀” 整体向右移动一位，然后初始值赋为-1。</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>### 代码</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//next数组</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">GetNext</span><span class="params">(<span class="built_in">string</span> T, <span class="keyword">int</span> next[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    next[<span class="number">0</span>] = <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">int</span> k = <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">int</span> j = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (j &lt;T.length() - <span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//T[k]表示前缀，T[j]表示后缀</span></span><br><span class="line">        <span class="keyword">if</span> (k == <span class="number">-1</span> || T[j] == T[k])</span><br><span class="line">        &#123;</span><br><span class="line">            ++k;</span><br><span class="line">            ++j;</span><br><span class="line">            next[j] = k;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            k = next[k];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>代码有点难理解，我简单解释一下，这里涉及了已知next[0,…,j],求next[j+1]的问题。</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<blockquote>
-<p>对于T的前j+1个序列字符：  </p>
-</blockquote>
+<h2 id="线性表的顺序存储结构"><a href="#线性表的顺序存储结构" class="headerlink" title="线性表的顺序存储结构"></a>线性表的顺序存储结构</h2><p>线性表的顺序存储结构，指的是用一段地址连续的存储单元依次存储线性表的数据元素。</p>
+<h3 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="meta-keyword">define</span>  MAXSIZE   50  <span class="comment">/*存储空间初始分配量*/</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> ElemType;   <span class="comment">/*ElemType类型根据实际情况而定*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    ElemType* data;     <span class="comment">/*存储空间基地址*/</span></span><br><span class="line">    <span class="keyword">int</span> length;         <span class="comment">/*线性表当前长度*/</span></span><br><span class="line">&#125;SqList;</span><br></pre></td></tr></table></figure>
+
+<h3 id="元素获取"><a href="#元素获取" class="headerlink" title="元素获取"></a>元素获取</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">GetElem</span><span class="params">(SqList L, <span class="keyword">int</span> i)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (L.length == <span class="number">0</span> || i&lt;<span class="number">1</span> || i&gt;L.length)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"位置信息有误！"</span> &lt;&lt; <span class="built_in">endl</span>;   <span class="comment">/*位置不合法，返回-1*/</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> L.data[i - <span class="number">1</span>];       <span class="comment">/*返回位置i的值*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="元素插入"><a href="#元素插入" class="headerlink" title="元素插入"></a>元素插入</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">InsertElem</span><span class="params">(SqList&amp; L, <span class="keyword">int</span> i, ElemType e)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (L.length == MAXSIZE)</span><br><span class="line">        <span class="keyword">return</span>;         <span class="comment">/*空间已满*/</span></span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (i&lt;<span class="number">1</span> || i&gt;L.length + <span class="number">1</span>)</span><br><span class="line">            <span class="keyword">return</span>;     <span class="comment">/*位置不合法*/</span></span><br><span class="line">        elseyici</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">/*从最后元素到第i个元素依次后移一位*/</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = L.length - <span class="number">1</span>; j &gt;= i - <span class="number">1</span>; j--)</span><br><span class="line">                L.data[j + <span class="number">1</span>] = L.data[j];</span><br><span class="line">            L.data[i - <span class="number">1</span>] = e;  <span class="comment">/*第i的位置为值e*/</span></span><br><span class="line">            L.length++;         <span class="comment">/*长度加一*/</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="元素删除"><a href="#元素删除" class="headerlink" title="元素删除"></a>元素删除</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DeleteElem</span><span class="params">(SqList&amp; L, <span class="keyword">int</span> i, ElemType&amp; e)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (L.length == <span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span>;         <span class="comment">/*空表没有删除操作*/</span></span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (i&lt;<span class="number">1</span> || i&gt;L.length)</span><br><span class="line">            <span class="keyword">return</span>;     <span class="comment">/*位置不合法*/</span></span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            e = L.data[i - <span class="number">1</span>];  <span class="comment">/*删除元素存入e*/</span></span><br><span class="line">            <span class="comment">/*从第i+1元素到最后元素依次前移一位*/</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = i; j &lt; L.length; j++)</span><br><span class="line">                L.data[j - <span class="number">1</span>] = L.data[j];</span><br><span class="line">            L.length--;     <span class="comment">/*长度减一*/</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="优缺点"><a href="#优缺点" class="headerlink" title="优缺点"></a>优缺点</h3><p>优点：  </p>
 <ul>
-<li>若T[k] == T[j]，则next[j + 1 ] = next [j] + 1 = k + 1；  </li>
-<li>若T[k ] ≠ T[j]，如果此时T[ next[k] ] == T[j ]，则next[ j + 1 ] =  next[k] + 1，否则继续递归前缀索引k = next[k]，而后重复此过程。 相当于在字符T[j+1]之前不存在长度为k+1的前缀”T0 T1, …, Tk-1 Tk”跟后缀“Tj-k Tj-k+1, …, Tj-1 Tj”相等，那么是否可能存在另一个值t+1 &lt; k+1，使得长度更小的前缀 “T0 T1, …, Tt-1 Tt” 等于长度更小的后缀 “Tj-t Tj-t+1, …, Tj-1 Tj” 呢？如果存在，那么这个t+1 便是next[ j+1]的值，此相当于利用已经求得的next 数组（next [0, …, k, …, j]）进行T串前缀跟T串后缀的匹配。<ul>
-<li>原文链接：<a href="https://blog.csdn.net/v_JULY_v/article/details/7041827" target="_blank" rel="noopener">https://blog.csdn.net/v_JULY_v/article/details/7041827</a><h2 id="next数组的优化"><a href="#next数组的优化" class="headerlink" title="next数组的优化"></a>next数组的优化</h2><h3 id="问题的出现"><a href="#问题的出现" class="headerlink" title="问题的出现"></a>问题的出现</h3>后来有人发现，KMP算法还是有缺陷的。<br>如果用之前的next 数组方法求模式串“abab”的next 数组，可得其next 数组为-1 0 0 1（0 0 1 2整体右移一位，初值赋为-1），当它跟下图中的文本串去匹配的时候，发现b跟c失配，于是模式串j = next[j] =1。<blockquote>
-<p><del>aba</del>cabababc<br><del>aba</del>b  </p>
-</blockquote>
-</li>
+<li>无需为表示表中元素之间的逻辑关系而增加额外的存储空间  </li>
+<li>可以快速地存取表中任意位置元素  </li>
 </ul>
-</li>
+<p>缺点：</p>
+<ul>
+<li>插入和删除操作需要移动大量元素</li>
+<li>当线性表长度变化较大时，难以确定存储空间的容量</li>
+<li>造成存储空间的“碎片”</li>
 </ul>
-<p>右移2位后，b又跟c失配。事实上，因为在上一步的匹配中，已经得知p[3] = b，与s[3] = c失配，而右移两位之后，让p[ next[3] ] = p[1] = b 再跟s[3]匹配时，必然失配。  </p>
-<blockquote>
-<p> ab<del>a</del>cabababc<br>&nbsp;&nbsp;&nbsp;&nbsp;ab<del>a</del>b</p>
-</blockquote>
-<p>问题出在不该出现T[j] = T[ next[j] ]。为什么呢？理由是：当T[j] != S[i] 时，下次匹配必然是T[ next [j]] 跟S[i]匹配，如果T[j] = T[ next[j] ]，必然导致后一步匹配失败（因为T[j]已经跟S[i]失配，然后你还用跟T[j]等同的值T[next[j]]去跟S[i]匹配，很显然，必然失配），所以不能允许T[j] = T[ next[j ]]。如果出现了T[j] = T[ next[j] ]咋办呢？如果出现了，则需要再次递归，即令next[j] = next[ next[j] ]。<br>原文链接：<a href="https://blog.csdn.net/v_JULY_v/article/details/7041827" target="_blank" rel="noopener">https://blog.csdn.net/v_JULY_v/article/details/7041827</a></p>
-<h3 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//优化过后的next 数组求法</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">GetNextval</span><span class="params">(<span class="built_in">string</span> T, <span class="keyword">int</span> next[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    next[<span class="number">0</span>] = <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">int</span> k = <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">int</span> j = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (j &lt; T.length()- <span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//T[k]表示前缀，T[j]表示后缀  </span></span><br><span class="line">        <span class="keyword">if</span> (k == <span class="number">-1</span> || T[j] == T[k])</span><br><span class="line">        &#123;</span><br><span class="line">            ++j;</span><br><span class="line">            ++k;</span><br><span class="line">            <span class="comment">//较之前next数组求法，改动在下面4行</span></span><br><span class="line">            <span class="keyword">if</span> (T[j] != T[k])</span><br><span class="line">                next[j] = k;   <span class="comment">//之前只有这一行</span></span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                <span class="comment">//因为不能出现T[j] = T[ next[j ]]，所以当出现时需要继续递归，k = next[k] = next[next[k]]</span></span><br><span class="line">                next[j] = next[k];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            k = next[k];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="KMP算法时间复杂度分析"><a href="#KMP算法时间复杂度分析" class="headerlink" title="KMP算法时间复杂度分析"></a>KMP算法时间复杂度分析</h2><p>朴素的模式匹配算法时间复杂度分析如下：（n为主串长度 ，m为模式串长度）</p>
-<table>
+<h2 id="线性表的链式存储结构"><a href="#线性表的链式存储结构" class="headerlink" title="线性表的链式存储结构"></a>线性表的链式存储结构</h2><p>线性表中元素不再是相邻排列，而是由“链”连接成。</p>
+<h3 id="头指针与头结点的异同"><a href="#头指针与头结点的异同" class="headerlink" title="头指针与头结点的异同"></a>头指针与头结点的异同</h3><p>头指针：</p>
+<ul>
+<li>头指针是指链表指向的第一个结点的指针，若链表有头结点，则是指向头结点的指针</li>
+<li>头指针具有标识作用，所有常用头指针冠以链表的名字</li>
+<li>无论链表是否为空，头指针均不为空。头指针是链表的必要元素</li>
+</ul>
+<p>头结点：</p>
+<ul>
+<li>头结点是为了操作的统一和方便而设计的，放在第一元素的结点之前，其数据域一般无意义（也存放链表的长度）</li>
+<li>有了头结点，对在第一元素结点前插入结点和删除第一结点，其操作与其他结点的操作就统一了</li>
+<li>头结点不一定是链式必须要素</li>
+</ul>
+<h3 id="定义-2"><a href="#定义-2" class="headerlink" title="定义"></a>定义</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> ElemType;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">LNode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    ElemType   data;       <span class="comment">/*数据域*/</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">LNode</span>* <span class="title">next</span>;</span>   <span class="comment">/*指针域*/</span></span><br><span class="line">&#125; LNode, * LinkList;          <span class="comment">/*LinkList为LNode类型的指针*/</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="元素获取-1"><a href="#元素获取-1" class="headerlink" title="元素获取"></a>元素获取</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">GetElem</span><span class="params">(LinkList L, <span class="keyword">int</span> i, ElemType&amp; e)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//当第i个元素存在时，其值赋给e</span></span><br><span class="line">    LinkList p = L-&gt;next;</span><br><span class="line">    <span class="keyword">int</span> j = <span class="number">1</span>; <span class="comment">//初始化</span></span><br><span class="line">    <span class="keyword">while</span> (p &amp;&amp; j &lt; i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//向后扫描，直到p指向第i个元素或p为空</span></span><br><span class="line">        p = p-&gt;next;</span><br><span class="line">        ++j;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (!p || j &gt; i) </span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"第"</span> &lt;&lt; i &lt;&lt; <span class="string">"个结点不存在\n"</span>; <span class="comment">//第i个元素不存在</span></span><br><span class="line">        e = <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        e = p-&gt;data;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="元素插入-1"><a href="#元素插入-1" class="headerlink" title="元素插入"></a>元素插入</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">ListInsert</span><span class="params">(LinkList&amp; L, <span class="keyword">int</span> i, ElemType e)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    LinkList p, s;</span><br><span class="line">    <span class="keyword">int</span> j = <span class="number">1</span>;</span><br><span class="line">    p = L;</span><br><span class="line">    <span class="keyword">while</span> (p &amp;&amp; j &lt; i)</span><br><span class="line">    &#123;</span><br><span class="line">        p = p-&gt;next;    <span class="comment">//寻找第i−1个结点</span></span><br><span class="line">        ++j;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (!p || j &gt; i) <span class="built_in">cout</span> &lt;&lt; <span class="string">"第"</span> &lt;&lt; i &lt;&lt; <span class="string">"个结点不存在"</span> &lt;&lt; <span class="built_in">endl</span>;	<span class="comment">//i大于表长 + 1或者小于1</span></span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        s = <span class="keyword">new</span> LNode;                    <span class="comment">//生成新结点*s</span></span><br><span class="line">        s-&gt;data = e;      		          <span class="comment">//将结点*s的数据域置为e</span></span><br><span class="line">        s-&gt;next = p-&gt;next;	   	          <span class="comment">//将结点*s插入L中</span></span><br><span class="line">        p-&gt;next = s;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="元素删除-1"><a href="#元素删除-1" class="headerlink" title="元素删除"></a>元素删除</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">ListDelete</span><span class="params">(LinkList&amp; L, <span class="keyword">int</span> i, ElemType&amp; e)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    LinkList p, q;</span><br><span class="line">    <span class="keyword">int</span> j = <span class="number">1</span>;</span><br><span class="line">    p = L;</span><br><span class="line">    <span class="keyword">while</span> (p-&gt;next &amp;&amp; j &lt; i) <span class="comment">//寻找第i个结点，并令p指向其前驱</span></span><br><span class="line">    &#123;</span><br><span class="line">        p = p-&gt;next;</span><br><span class="line">        ++j;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (!(p-&gt;next) || j &gt; i) <span class="built_in">cout</span> &lt;&lt; <span class="string">"第"</span> &lt;&lt; i &lt;&lt; <span class="string">"个结点不存在"</span> &lt;&lt; <span class="built_in">endl</span>; <span class="comment">//删除位置不合理</span></span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        q = p-&gt;next; <span class="comment">//临时保存被删结点的地址以备释放</span></span><br><span class="line">        p-&gt;next = q-&gt;next; 	<span class="comment">//改变删除结点前驱结点的指针域</span></span><br><span class="line">        <span class="keyword">delete</span> q;<span class="comment">//释放结点</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="单链表创建"><a href="#单链表创建" class="headerlink" title="单链表创建"></a>单链表创建</h3><p>头插法：  </p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">CreateList_H</span><span class="params">(LinkList&amp; L, <span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    LinkList p;</span><br><span class="line">    L = <span class="keyword">new</span> LNode;</span><br><span class="line">    L-&gt;next = <span class="literal">NULL</span>; <span class="comment">//先建立一个带头结点的单链表</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"输入"</span> &lt;&lt; n &lt;&lt; <span class="string">"个新值："</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        p = <span class="keyword">new</span> LNode;<span class="comment">//生成新结点</span></span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; p-&gt;data;</span><br><span class="line">        p-&gt;next = L-&gt;next;</span><br><span class="line">        L-&gt;next = p; <span class="comment">//插入到表头</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>尾插法：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">CreateList_T</span><span class="params">(LinkList&amp; L, <span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//正位序输入n个元素的值，建立带表头结点的单链表L</span></span><br><span class="line">    LinkList p, r;</span><br><span class="line">    L = <span class="keyword">new</span> LNode;</span><br><span class="line">    L-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">    r = L; <span class="comment">//尾指针r指向头结点</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"输入"</span> &lt;&lt; n &lt;&lt; <span class="string">"个新值："</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        p = <span class="keyword">new</span> LNode; <span class="comment">//生成新结点</span></span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; p-&gt;data;</span><br><span class="line">        p-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">        r-&gt;next = p; <span class="comment">//插入到表尾</span></span><br><span class="line">        r = p; <span class="comment">//r指向新的尾结点</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="单链表整表删除"><a href="#单链表整表删除" class="headerlink" title="单链表整表删除"></a>单链表整表删除</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">ClearList</span><span class="params">(LinkList&amp; L)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 将L重置为空表</span></span><br><span class="line">    LinkList p, q;</span><br><span class="line">    p = L-&gt;next;   <span class="comment">//p指向第一个结点</span></span><br><span class="line">    <span class="keyword">while</span> (p)       <span class="comment">//没到表尾</span></span><br><span class="line">    &#123;</span><br><span class="line">        q = p-&gt;next;</span><br><span class="line">        <span class="keyword">delete</span> p;</span><br><span class="line">        p = q;</span><br><span class="line">    &#125;</span><br><span class="line">    L-&gt;next = <span class="literal">NULL</span>;   <span class="comment">//头结点指针域为空</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="静态链表"><a href="#静态链表" class="headerlink" title="静态链表"></a>静态链表</h3><p><a href="http://data.biancheng.net/view/163.html" target="_blank" rel="noopener">引用</a></p>
+<h3 id="循环链表"><a href="#循环链表" class="headerlink" title="循环链表"></a>循环链表</h3><p><a href="http://data.biancheng.net/view/7.html" target="_blank" rel="noopener">引用</a></p>
+<h3 id="双向链表"><a href="#双向链表" class="headerlink" title="双向链表"></a>双向链表</h3><p><a href="http://data.biancheng.net/view/166.html" target="_blank" rel="noopener">引用</a></p>
+<h2 id="单链表结构与顺序存储结构优缺点"><a href="#单链表结构与顺序存储结构优缺点" class="headerlink" title="单链表结构与顺序存储结构优缺点"></a>单链表结构与顺序存储结构优缺点</h2><table>
 <thead>
 <tr>
-<th>情况</th>
-<th>时间复杂度</th>
-<th>备注</th>
+<th>存储结构</th>
+<th>顺序表</th>
+<th>链表</th>
+<th></th>
 </tr>
 </thead>
 <tbody><tr>
-<td>最好情况</td>
-<td>O(1)</td>
-<td>一开始就匹配成功</td>
+<td>存储空间</td>
+<td>预先分配，会导致空间闲置或溢出现象</td>
+<td>动态分配，不会出现存储空间闲置或溢出现象</td>
+<td></td>
 </tr>
 <tr>
-<td>最坏情况</td>
-<td>O((n-m+1)*m)</td>
-<td>每次不成功的匹配都发生在模式串的最后一个字符</td>
+<td>存储密度</td>
+<td>不用为表示结点间的逻辑关系而增加额外的存储开销，存储密度等于1</td>
+<td>需要借助指针来体现元素间的逻辑关系，存储密度小于1</td>
+<td></td>
 </tr>
 <tr>
-<td>平均情况</td>
-<td>O(n+m)</td>
-<td>根据等概率原则，平均是(n+m)/2次查找</td>
+<td>存取元素</td>
+<td>随机存取，按位置访问元素的时间复杂度为O(1)</td>
+<td>顺序存取， 按位置访问元素时间复杂度为O(n)</td>
+<td></td>
+</tr>
+<tr>
+<td>插入、删除</td>
+<td>平均移动约表中一半元素， 时间复杂度为O(n)</td>
+<td>不需移动元素， 确定插入.删除位置后，时间复杂度为0(1)</td>
+<td></td>
+</tr>
+<tr>
+<td>使用情况</td>
+<td>①表长变化不大，且能事先确定变化的范围②很少进行插入或删除操作，经常按元素位置序号访问数据元素</td>
+<td>①长度变化较大②频繁进行插人或删除操作</td>
+<td></td>
 </tr>
 </tbody></table>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>数据结构是非常重要的，这次的KMP算法也是花了好久才理解的。<br>欢迎批评指正。</p>
+<p>—参考《大话数据结构》</p>
+<p><a href="https://blog.csdn.net/baidu_39630193/article/details/76526691?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.nonecase" target="_blank" rel="noopener">详细</a></p>
 
       
 
@@ -419,7 +367,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/14/%E9%87%8D%E8%AF%BBKMP%E7%AE%97%E6%B3%95/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/25/%E7%BA%BF%E6%80%A7%E8%A1%A8/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -433,18 +381,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/07/25/%E7%BA%BF%E6%80%A7%E8%A1%A8/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          线性表
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/07/04/%E8%AF%BB%E3%80%8A%E5%A4%A7%E8%AF%9D%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E3%80%8B%EF%BC%88%E6%9B%B4%E6%96%B0%E4%B8%AD%EF%BC%89/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">读《大话数据结构》（更新中）</div>
+    <a href="/2020/07/14/%E9%87%8D%E8%AF%BBKMP%E7%AE%97%E6%B3%95/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">重读KMP算法</div>
       <i class="icon-circle-right"></i>
     </a>
   
