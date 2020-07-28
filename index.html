@@ -162,68 +162,6 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-哈夫曼树及应用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/27/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E5%8F%8A%E5%BA%94%E7%94%A8/">哈夫曼树及应用</a>
-    </h1>
-  
-
-        
-        <a href="/2020/07/27/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E5%8F%8A%E5%BA%94%E7%94%A8/" class="archive-article-date">
-  	<time datetime="2020-07-27T07:15:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="哈夫曼树及应用"><a href="#哈夫曼树及应用" class="headerlink" title="哈夫曼树及应用"></a>哈夫曼树及应用</h1><h2 id="更新ing"><a href="#更新ing" class="headerlink" title="更新ing"></a>更新ing</h2>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/27/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E5%8F%8A%E5%BA%94%E7%94%A8/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-排序" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -348,6 +286,266 @@
 
 
   
+    <article id="post-二叉树" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/25/%E4%BA%8C%E5%8F%89%E6%A0%91/">二叉树</a>
+    </h1>
+  
+
+        
+        <a href="/2020/07/25/%E4%BA%8C%E5%8F%89%E6%A0%91/" class="archive-article-date">
+  	<time datetime="2020-07-25T08:11:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-25</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h1><p>树的基本概念和存储结构已经介绍过了，现在介绍数据结构中极其重要的二叉树。</p>
+<p><a href="https://www.jianshu.com/p/3a8aee2ce593" target="_blank" rel="noopener">部分显示问题，请参考</a></p>
+<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>二叉树（Binary Tree）是n（n&gt;=0）个结点的有限集合，该集合或者为空集（称为空二叉树），或者由一个根结点和两棵互不相交的，分别称为根结点的左子树和右子树的二叉树组成。</p>
+<h3 id="二叉树的特点有"><a href="#二叉树的特点有" class="headerlink" title="二叉树的特点有:"></a>二叉树的特点有:</h3><p>每个结点最多有两棵子树，所以二又树中不存在度大于2的结点。注意不是只有两棵子树，而是最多有。没有子树或者有棵子树都是可以的。</p>
+<p>左子树和右子树是有顺序的，次序不能任意颠倒。就像人是双手、双脚，但显然左手、左脚和右手、右脚是不一样的，右手戴左手套、右脚穿左鞋都会极其别扭和难受。</p>
+<p>即使树中某结点只有一棵子树，也要区分它是左子树还是右子树。图6-5-3中，树1和树2是同一棵树，但它们却是不同的二叉树。就好像你一不小心，摔伤了手，伤的是左手还是右手，对你的生活影响度是完全不同的。</p>
+<h3 id="二叉树具有五种基本形态"><a href="#二叉树具有五种基本形态" class="headerlink" title="二叉树具有五种基本形态:"></a>二叉树具有五种基本形态:</h3><p>1.空二叉树。</p>
+<p>2.只有一个根结点。</p>
+<p>3.根结点只有左子树。</p>
+<p>4.根结点只有右子树。</p>
+<p>5.根结点既有左子树又有右子树。</p>
+<h3 id="特殊二叉树"><a href="#特殊二叉树" class="headerlink" title="特殊二叉树"></a>特殊二叉树</h3><h4 id="斜树"><a href="#斜树" class="headerlink" title="斜树"></a>斜树</h4><p>所有的结点都只有左子树的二叉树叫左斜树。所有的结点都只有右子树的二叉树叫右斜树。这两者统称为斜树。</p>
+<h4 id="满二叉树"><a href="#满二叉树" class="headerlink" title="满二叉树"></a>满二叉树</h4><p>在一棵二叉树中，如果所有分支结点都存在左子树和右子树，并且所有叶子都在同一层上，这样的二叉树称为满二叉树。</p>
+<p>特点：</p>
+<p>(1)叶子只能出现在最下一层。出现在其他层就不可能达成平衡。</p>
+<p>(2)非叶子结点的度一-定是 2。否则就是“缺胳膊少腿”了。</p>
+<p>(3)在同样深度的二叉树中，满二叉树的结点个数最多，叶子数最多。</p>
+<p><img src="%E6%BB%A1%E4%BA%8C%E5%8F%89%E6%A0%91.png" alt="满二叉树"></p>
+<h4 id="完全二叉树"><a href="#完全二叉树" class="headerlink" title="完全二叉树"></a>完全二叉树</h4><p>对一棵具有n个结点的二叉树按层序编号，如果编号为i（1≤i≤n）的结点与同祥深度的满二叉树中编号为i的结点在二叉树中位置完全相同，则这棵二叉树称为完全二叉树。</p>
+<p>特点：</p>
+<p>(1)叶子结点只能出现在最下两层。</p>
+<p>(2)最下层的叶子一定集中在左部连续位置。</p>
+<p>(3)倒数二层，若有叶子结点，一定都在右部连续位置。</p>
+<p>(4)如果结点度为1，则该结点只有左孩子，即不存在只有右子树的情况。</p>
+<p>(5)同样结点数的二叉树，完全二叉树的深度最小。</p>
+<p><img src="%E5%AE%8C%E5%85%A8%E4%BA%8C%E5%8F%89%E6%A0%91.png" alt="完全二叉树"></p>
+<h2 id="二叉树的性质"><a href="#二叉树的性质" class="headerlink" title="二叉树的性质"></a>二叉树的性质</h2><h3 id="性质一"><a href="#性质一" class="headerlink" title="性质一"></a>性质一</h3><p>在二叉树的第i层上至多有$2^{i-1}$个结点（i&gt;=1）。</p>
+<h3 id="性质二"><a href="#性质二" class="headerlink" title="性质二"></a>性质二</h3><p>深度为k的二叉树至多有$2^k-1$个结点（k&gt;=1）。</p>
+<h3 id="性质三"><a href="#性质三" class="headerlink" title="性质三"></a>性质三</h3><p>对任何一棵二叉树T，如果其终端结点数为$n_0$，度为2的结点数为$n_2$，则$n_0=n_2+1$。</p>
+<h3 id="性质四"><a href="#性质四" class="headerlink" title="性质四"></a>性质四</h3><p>具有n个结点的完全二叉树的深度为$[log_2n]$+1（[x]表示不大于x的最大整数）。</p>
+<h3 id="性质五"><a href="#性质五" class="headerlink" title="性质五"></a>性质五</h3><p>对于完全二叉树，若从上至下、从左至右编号，则编号为$i$的结点，其左孩子编号必为$2i$，右孩子编号必为$2i＋1$，双亲的编号必为$i/2$。</p>
+<h2 id="二叉树的存储结构"><a href="#二叉树的存储结构" class="headerlink" title="二叉树的存储结构"></a>二叉树的存储结构</h2><h3 id="二叉树顺序存储结构"><a href="#二叉树顺序存储结构" class="headerlink" title="二叉树顺序存储结构"></a>二叉树顺序存储结构</h3><p>一般只用于完全二叉树，不详解。</p>
+<h3 id="二叉链表"><a href="#二叉链表" class="headerlink" title="二叉链表"></a>二叉链表</h3><p>二叉树每个结点最多有两个孩子，所以为他设计一个数据与和两个指针域，称这样的链表叫做二叉链表。</p>
+<p>| lchild | data | rchild |</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">BiTNode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    TElemType data;     <span class="comment">/*数据*/</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">BiTNode</span>* <span class="title">lchild</span>, * <span class="title">rchild</span>;</span>   <span class="comment">/*左右孩子指针*/</span></span><br><span class="line">&#125;BiTNode, * BiTree;</span><br></pre></td></tr></table></figure>
+
+<h2 id="遍历二叉树"><a href="#遍历二叉树" class="headerlink" title="遍历二叉树"></a>遍历二叉树</h2><h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><p>二叉树的遍历( traversing binary tree )是指从根结点出发，按照某种次序依次访问二叉树中所有结点，使得每个结点被访问一次且仅被访问一次。</p>
+<h3 id="遍历方法"><a href="#遍历方法" class="headerlink" title="遍历方法"></a>遍历方法</h3><p><img src="%E9%81%8D%E5%8E%86.png" alt="遍历"></p>
+<h4 id="前序遍历即先（根）序的遍历算法"><a href="#前序遍历即先（根）序的遍历算法" class="headerlink" title="前序遍历即先（根）序的遍历算法"></a>前序遍历即先（根）序的遍历算法</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">PreOrderTraverse</span><span class="params">(BiTree T)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (T == <span class="literal">NULL</span>)</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; T-&gt;data;</span><br><span class="line">    PreOrderTraverse(T-&gt;lchild);</span><br><span class="line">    PreOrderTraverse(T-&gt;rchild);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>上图前序遍历：A  BDG  CEF</p>
+<h4 id="中序遍历即中（根）序的遍历算法"><a href="#中序遍历即中（根）序的遍历算法" class="headerlink" title="中序遍历即中（根）序的遍历算法"></a>中序遍历即中（根）序的遍历算法</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">InOrderTraverse</span><span class="params">(BiTree T)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (T == <span class="literal">NULL</span>)</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    InOrderTraverse(T-&gt;lchild);</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; T-&gt;data;</span><br><span class="line">    InOrderTraverse(T-&gt;rchild);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>上图中序遍历：DGB  A  ECF</p>
+<h4 id="后序遍历即后（根）序的遍历算法"><a href="#后序遍历即后（根）序的遍历算法" class="headerlink" title="后序遍历即后（根）序的遍历算法"></a>后序遍历即后（根）序的遍历算法</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">PostOrderTraverse</span><span class="params">(BiTree T)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (T == <span class="literal">NULL</span>)</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    PostOrderTraverse(T-&gt;lchild);</span><br><span class="line">    PostOrderTraverse(T-&gt;rchild);</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; T-&gt;data;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>上图后序遍历：GDB  EFC  A</p>
+<h4 id="层序遍历即逐层遍历"><a href="#层序遍历即逐层遍历" class="headerlink" title="层序遍历即逐层遍历"></a>层序遍历即逐层遍历</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">FloorPrint</span><span class="params">(BiTree T)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    BiTree temp[<span class="number">100</span>];   <span class="comment">//创建pTreeNode指针类型的指针数组</span></span><br><span class="line">    <span class="keyword">int</span> in = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> out = <span class="number">0</span>;</span><br><span class="line">    temp[in++] = T;  <span class="comment">//先保存二叉树根节点</span></span><br><span class="line">    <span class="keyword">while</span> (in &gt; out)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (temp[out])</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; temp[out]-&gt;data;</span><br><span class="line">            temp[in++] = temp[out]-&gt;lchild;</span><br><span class="line">            temp[in++] = temp[out]-&gt;rchild;</span><br><span class="line">        &#125;</span><br><span class="line">        out++;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>上图层序遍历：A BC DEF G</p>
+<h2 id="二叉树建立"><a href="#二叉树建立" class="headerlink" title="二叉树建立"></a>二叉树建立</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">CreateBiTree</span><span class="params">(BiTree&amp; T)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    TElemType c;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; c;</span><br><span class="line">    <span class="keyword">if</span> (c == <span class="string">'#'</span>)</span><br><span class="line">        T = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        T = <span class="keyword">new</span> BiTNode;</span><br><span class="line">        <span class="keyword">if</span> (!T)</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; <span class="string">"分配空间失败"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            T-&gt;data = c;</span><br><span class="line">            CreateBiTree(T-&gt;lchild);</span><br><span class="line">            CreateBiTree(T-&gt;rchild);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="线索二叉树"><a href="#线索二叉树" class="headerlink" title="线索二叉树"></a>线索二叉树</h2><p>把指向前驱和后继的指针称为线索，加上线索的二叉链表称为线索链表，相应的二叉树就称为线索二叉树（Threaded Binary Tree）。</p>
+<p>| lchild | ltag | data | rtag | rchild |</p>
+<p>其中：</p>
+<p>ltag为0时指向该结点的左孩子，为1时指向该结点的前驱。</p>
+<p>rtag为0时指向该结点的右孩子，为1时指向该结点的后继。</p>
+<h3 id="线索二叉树结构实现"><a href="#线索二叉树结构实现" class="headerlink" title="线索二叉树结构实现"></a>线索二叉树结构实现</h3><h4 id="存储结构定义"><a href="#存储结构定义" class="headerlink" title="存储结构定义"></a>存储结构定义</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">BiThrNode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    TElemType data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span>  <span class="title">BiThrNode</span>* <span class="title">lchild</span>, * <span class="title">rchild</span>;</span></span><br><span class="line">    <span class="keyword">int</span> LTag, RTag; <span class="comment">//LTag(RTag)=0表示指向孩子，LTag(RTag)=1表示只是前驱或后继</span></span><br><span class="line">&#125;BiThrNode, * BiThrTree;</span><br><span class="line">BiThrTree pre;<span class="comment">//全局变量，始终指向刚刚访问过的节点</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="中序遍历进行中序线索化"><a href="#中序遍历进行中序线索化" class="headerlink" title="中序遍历进行中序线索化"></a>中序遍历进行中序线索化</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">InThreading</span><span class="params">(BiThrTree p)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (p)</span><br><span class="line">    &#123;</span><br><span class="line">        InThreading(p-&gt;lchild);<span class="comment">/* 递归左子树线索化 */</span></span><br><span class="line">        <span class="keyword">if</span> (!p-&gt;lchild)<span class="comment">/* 没有左孩子 */</span></span><br><span class="line">        &#123;</span><br><span class="line">            p-&gt;LTag = <span class="number">1</span>;<span class="comment">/* 前驱线索 */</span></span><br><span class="line">            p-&gt;lchild = pre; <span class="comment">/* 左孩子指针指向前驱 */</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            p-&gt;LTag = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span> (!pre-&gt;rchild) <span class="comment">/* 前驱没有右孩子 */</span></span><br><span class="line">        &#123;</span><br><span class="line">            pre-&gt;RTag = <span class="number">1</span>;<span class="comment">/* 后继线索 */</span></span><br><span class="line">            pre-&gt;rchild = p;<span class="comment">/* 前驱右孩子指针指向后继(当前结点p) */</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            p-&gt;RTag = <span class="number">0</span>;</span><br><span class="line">        pre = p;<span class="comment">/* 保持pre指向p的前驱 */</span></span><br><span class="line">        InThreading(p-&gt;rchild);<span class="comment">/* 递归右子树线索化 */</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="中序线索二叉树遍历（带有头节点）"><a href="#中序线索二叉树遍历（带有头节点）" class="headerlink" title="中序线索二叉树遍历（带有头节点）"></a>中序线索二叉树遍历（带有头节点）</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">InOrderTraverse_Thr</span><span class="params">(BiThrTree T)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    BiThrTree p;</span><br><span class="line">    p = T-&gt;lchild; <span class="comment">/* p指向根结点 */</span></span><br><span class="line">    <span class="keyword">while</span> (p != T)<span class="comment">/* 空树或遍历结束时,p==T */</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">while</span> (p-&gt;LTag == <span class="number">0</span>)</span><br><span class="line">            p = p-&gt;lchild;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; p-&gt;data;</span><br><span class="line">        <span class="keyword">while</span> (p-&gt;RTag == <span class="number">1</span> &amp;&amp; p-&gt;rchild != T)</span><br><span class="line">        &#123;</span><br><span class="line">            p = p-&gt;rchild;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; p-&gt;data;</span><br><span class="line">        &#125;</span><br><span class="line">        p = p-&gt;rchild;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="树、森林与二叉树的转换"><a href="#树、森林与二叉树的转换" class="headerlink" title="树、森林与二叉树的转换"></a>树、森林与二叉树的转换</h2><h3 id="树转换为二叉树"><a href="#树转换为二叉树" class="headerlink" title="树转换为二叉树"></a>树转换为二叉树</h3><p>1.加线。在所有兄弟结点之间加一条连线。</p>
+<p>2.去线。对树中每个结点，只保留它与第一一个孩子结点的连线， 删除它与其他孩子结点之间的连线。</p>
+<p>3.层次调整。以树的根结点为轴心，将整棵树顺时针旋转定的角度， 使之结构层次分明。注意第一个孩子是二叉树结点的左孩子，兄弟转换过来的孩子是结点的右孩子。</p>
+<h3 id="森林转换为二叉树"><a href="#森林转换为二叉树" class="headerlink" title="森林转换为二叉树"></a>森林转换为二叉树</h3><p>森林是由若干棵树组成的，所以完全可以理解为，森林中的每一棵树都是兄弟，可以按照兄弟的处理办法来操作。步骤如下:</p>
+<p>1.把每个树转换为二叉树。</p>
+<p>2.第一棵二又树不动，从第二棵二叉树开始，依次把后一棵二叉树的根结点作为前一棵二叉树的根结点的右孩子用线连接起来。当所有的二叉树连接起来后就得到了由森林转换来的二叉树。</p>
+<h3 id="二叉树转换为树"><a href="#二叉树转换为树" class="headerlink" title="二叉树转换为树"></a>二叉树转换为树</h3><p>二叉树转换为树是树转换为二叉树的逆过程，也就是反过来做而已。步骤如下:</p>
+<p>1.加线。若某结点的左孩子结点存在，则将这个左孩子的右孩子结点、右孩子的右孩子结点、右孩子的右孩子的右孩子结….哈，反正就是左孩子的n个右孩子结点都作为此结点的孩子。将该结点与这些右孩子结点用线连接起来。</p>
+<p>2.去线。删除原二叉树中所有结点与其右孩子结点的连线。</p>
+<p>3.层次调整。使之结构层次分明。</p>
+<h3 id="二叉树转换为森林"><a href="#二叉树转换为森林" class="headerlink" title="二叉树转换为森林"></a>二叉树转换为森林</h3><p>判断一棵二叉树能够转换成棵树还是森林， 标准很简单，那就是只要看这棵二叉树的根结点有没有右孩子，有就是森林，没有就是一棵树。那么如果是转换成森林，步骤如下:</p>
+<p>1.从根结点开始，若右孩子存在，则把与右孩子结点的连线删除，再查看分离后的二叉树，若右孩子存在，则连线删除….直到所有右孩子连线都删除为止，得到分离的二叉树。</p>
+<p>2.再将每棵分离后的二叉树转换为树即可。</p>
+<h3 id="树与森林的遍历"><a href="#树与森林的遍历" class="headerlink" title="树与森林的遍历"></a>树与森林的遍历</h3><p>最后我们再谈谈关于树和森林的遍历问题。</p>
+<p>树的遍历分为两种方式。</p>
+<p>1.一种是先根遍历树， 即先访问树的根结点，然后依次先根遍历根的每棵子树。</p>
+<p>2.另一种是后根遍历》即先依次后根遍历每棵子树，然后再访问根结点。</p>
+<p>森林的遍历也分为两种方式:</p>
+<p>1.前序遍历:先访问森林中第一棵树的根结点，然后再依次先根遍历根的每棵子树，再依次用同样方式遍历除去第一棵树的剩余树构成的森林。</p>
+<p>2.后序遍历:是先访问森林中第一棵树，后根遍历的方式遍历每棵子树，然后再访问根结点，再依次同样方式遍历除去第一棵树的剩余树构成的森林。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>二叉树应用很广的。</p>
+<p><a href="https://www.jianshu.com/p/3a8aee2ce593" target="_blank" rel="noopener">部分显示问题，请参考</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/25/%E4%BA%8C%E5%8F%89%E6%A0%91/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-哈夫曼树及应用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/25/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E5%8F%8A%E5%BA%94%E7%94%A8/">哈夫曼树及应用</a>
+    </h1>
+  
+
+        
+        <a href="/2020/07/25/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E5%8F%8A%E5%BA%94%E7%94%A8/" class="archive-article-date">
+  	<time datetime="2020-07-25T07:15:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-25</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="哈夫曼树及应用"><a href="#哈夫曼树及应用" class="headerlink" title="哈夫曼树及应用"></a>哈夫曼树及应用</h1><p>在计算机和互联网技术中，文本压缩就是一个非常重要的技术。玩电脑的人几乎都会应用压缩和解压缩软件来处理文档。因为它除了可以减少文档在磁盘上的空间外，还有重要的一点， 就是我们可以在网络上以压缩的形式传输大量数据，使得保存和传递都更加高效。</p>
+<p>那么压缩而不出错是如何做到的呢?简单说，就是把我们要压缩的文本进行重新编码，以减少不必要的空间。尽管现在最新技术在编码上已经很好很强大，但这一切都来自于曾经的技术积累，我们今天就来介绍一下最基本的压缩编码方法-赫夫曼编码。</p>
+<p>在介绍赫夫曼编码前，我们必须得介绍赫夫曼树，而介绍赫夫曼树，我们不得不提这样一个人，美国数学家赫夫曼(David Huffman)， 也有的翻译为哈夫曼。他在1952年发明了赫夫曼编码，为了纪念他的成就，于是就把他在编码中用到的特殊的C叉树称之为赫夫曼树，他的编码方法称为赫夫曼编码。也就是说，我们现在介绍的知识全都来自于近60年前这位伟大科学家的研究成果，而我们平时所用的压缩和解压缩技术也都是基于赫夫曼的研究之上发展而来，我们应该要记住他。</p>
+<p><a href="https://www.jianshu.com/p/acd06b8ed06b" target="_blank" rel="noopener">部分显示问题，请参考</a></p>
+<h2 id="哈夫曼树的相关术语"><a href="#哈夫曼树的相关术语" class="headerlink" title="哈夫曼树的相关术语"></a>哈夫曼树的相关术语</h2><blockquote>
+<p>路径</p>
+</blockquote>
+<ul>
+<li>从树中一个结点到另一个结点之间的分支构成这两个结点间的路径</li>
+</ul>
+<blockquote>
+<p>路径长度</p>
+</blockquote>
+<ul>
+<li>路径上的分支数目</li>
+</ul>
+<blockquote>
+<p>带权路径长度</p>
+</blockquote>
+<ul>
+<li>结点到根的路径长度与结点上权的乘积</li>
+</ul>
+<blockquote>
+<p>树的带权路径长度(weighted path length) </p>
+</blockquote>
+<ul>
+<li>树中所有叶子结点的带权路径长度之和</li>
+</ul>
+<p><img src="WPL.png" alt="WPL"></p>
+<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>设有n个权值{w1,w2,…,wn}，构造一棵有n个叶子结点的二叉树，每个叶子的权值为wi，则wpl最小的二叉树叫哈夫曼树。</p>
+<h2 id="哈夫曼树的构造过程"><a href="#哈夫曼树的构造过程" class="headerlink" title="哈夫曼树的构造过程"></a>哈夫曼树的构造过程</h2><p>(1). 初始化：根据给定的n个权值{w1,w2,…,wn}，构成n棵二叉树的集合F={T1,T2,…,Tn}，其中每棵二叉树Ti只有一个带权为wi的根结点，其左右子树均空。</p>
+<p>(2). 选取与合并：在 F 中选取两棵根结点的权值最小的树作为左右子树，构造一棵新的二叉树，且置新的二叉树的根结点的权值为其左、右子树上根结点的权值之和。</p>
+<p>(3). 删除与加入：在 F 中删除这两棵树，同时将新得到的二叉树加入 F 中。</p>
+<p>(4). 重复(2)和(3)，直到 F 只含一棵树为止。这棵树便是所求的哈夫曼树。</p>
+<h3 id="例："><a href="#例：" class="headerlink" title="例："></a>例：</h3><p>w={5, 29, 7, 8, 14, 23, 3, 11}的构造过程</p>
+<p><img src="w1.png" alt="w1"><br><img src="w2.png" alt="w2"><br><img src="w3.png" alt="w3"><br><img src="w4.png" alt="w4"><br><img src="w5.png" alt="w5"><br><img src="w6.png" alt="w6"><br><img src="w7.png" alt="w7"><br><img src="w8.png" alt="w8"></p>
+<h2 id="哈夫曼编码"><a href="#哈夫曼编码" class="headerlink" title="哈夫曼编码"></a>哈夫曼编码</h2><p>一般地， 设需要编码的字符集为{ d1,d2,···,dn }，各个字符在电文中出现的次数或频率集合为{ W1,W2,···,Wn},以d1,d2,···,dn作为叶子结点，以W1,W,···,Wn作为相应叶子结点的权值来构造一棵哈夫曼树。规定哈夫曼树的左分支代表0，右分支代表1,则从根结点到叶子结点所经过的路径分支组成的0和1的序列便为该结点对应字符的编码，这就是哈夫曼编码。</p>
+<h2 id="哈夫曼树及编码存储结构"><a href="#哈夫曼树及编码存储结构" class="headerlink" title="哈夫曼树及编码存储结构"></a>哈夫曼树及编码存储结构</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">char</span> data;</span><br><span class="line">    <span class="keyword">int</span> weight;</span><br><span class="line">    <span class="keyword">int</span> parent, lchild, rchild;</span><br><span class="line">&#125;HTNode, * HuffmanTree;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">char</span>** HuffmanCode;<span class="comment">//动态分配数组存储哈夫曼编码</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="哈夫曼树建立"><a href="#哈夫曼树建立" class="headerlink" title="哈夫曼树建立"></a>哈夫曼树建立</h2><h3 id="返回两个双亲域为0且权值最小的点的下标"><a href="#返回两个双亲域为0且权值最小的点的下标" class="headerlink" title="返回两个双亲域为0且权值最小的点的下标"></a>返回两个双亲域为0且权值最小的点的下标</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Select</span><span class="params">(HuffmanTree HT, <span class="keyword">int</span> n, <span class="keyword">int</span>&amp; s1, <span class="keyword">int</span>&amp; s2)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">/*n代表HT数组的长度*/</span></span><br><span class="line">    <span class="comment">//前两个for循环找所有结点中权值最小的点（字符）</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (HT[i].parent == <span class="number">0</span>)<span class="comment">//利用for循环找出一个双亲为0的结点</span></span><br><span class="line">        &#123;</span><br><span class="line">            s1 = i;<span class="comment">//s1初始化为i</span></span><br><span class="line">            <span class="keyword">break</span>;<span class="comment">//找到一个后立即退出循环</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">/*利用for循环找到所有结点（字符）权值最小的一个并且保证该结点的双亲为0*/</span></span><br><span class="line">        <span class="keyword">if</span> (HT[i].weight &lt; HT[s1].weight &amp;&amp; HT[i].parent == <span class="number">0</span>)</span><br><span class="line">            s1 = i;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//后两个for循环所有结点中权值第二小的点（字符）</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (HT[i].parent == <span class="number">0</span> &amp;&amp; i != s1)<span class="comment">//利用for循环找出一个双亲为0的结点，并且不能是s1</span></span><br><span class="line">        &#123;</span><br><span class="line">            s2 = i;<span class="comment">//s2初始化为i</span></span><br><span class="line">            <span class="keyword">break</span>;<span class="comment">//找到一个后立即退出循环</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">/*利用for循环找到所有结点（字符）权值第二小的一个，该结点满足不能是s1且双亲是0*/</span></span><br><span class="line">        <span class="keyword">if</span> (HT[i].weight &lt; HT[s2].weight &amp;&amp; HT[i].parent == <span class="number">0</span> &amp;&amp; i != s1)</span><br><span class="line">            s2 = i;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="建树"><a href="#建树" class="headerlink" title="建树"></a>建树</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">CreateHuffmanTree</span><span class="params">(HuffmanTree&amp; HT, <span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (n &lt;= <span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">int</span> m = <span class="number">2</span> * n - <span class="number">1</span>;  <span class="comment">//总结点数2n-1</span></span><br><span class="line">    HT = <span class="keyword">new</span> HTNode[m + <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= m; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//将1~m号单元中的双亲，左孩子，右孩子的下标都初始化为0</span></span><br><span class="line">        HT[i].data = <span class="string">'\0'</span>;</span><br><span class="line">        HT[i].parent = <span class="number">0</span>;</span><br><span class="line">        HT[i].lchild = <span class="number">0</span>;</span><br><span class="line">        HT[i].rchild = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"输入结点信息和权值："</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; HT[i].data &gt;&gt; HT[i].weight; <span class="comment">//输入前n个单元中叶子结点的信息和权值</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/*-----------初始化工作结束，下面建树---------------------------*/</span></span><br><span class="line">    <span class="keyword">int</span> s1, s2;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = n + <span class="number">1</span>; i &lt;= m; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        Select(HT, i - <span class="number">1</span>, s1, s2);</span><br><span class="line">        HT[s1].parent = i;</span><br><span class="line">        HT[s2].parent = i;</span><br><span class="line">        HT[i].lchild = s1;</span><br><span class="line">        HT[i].rchild = s2;</span><br><span class="line">        HT[i].weight = HT[s1].weight + HT[s2].weight;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="哈夫曼编码-1"><a href="#哈夫曼编码-1" class="headerlink" title="哈夫曼编码"></a>哈夫曼编码</h2><h3 id="根据树对每个元素编码"><a href="#根据树对每个元素编码" class="headerlink" title="根据树对每个元素编码"></a>根据树对每个元素编码</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">CreateHuffmanCode</span><span class="params">(HuffmanTree HT, HuffmanCode&amp; HC, <span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    HC = <span class="keyword">new</span> <span class="keyword">char</span>* [n + <span class="number">1</span>]; <span class="comment">//分配储存n个字符编码的编码表空间</span></span><br><span class="line">    <span class="keyword">char</span>* cd = <span class="keyword">new</span> <span class="keyword">char</span>[n]; <span class="comment">//分配临时存储字符编码的动态空间</span></span><br><span class="line">    cd[n - <span class="number">1</span>] = <span class="string">'\0'</span>;       <span class="comment">//编码结束符</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)<span class="comment">//逐个求字符编码</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> start = n - <span class="number">1</span>; <span class="comment">//start 开始指向最后，即编码结束符位置</span></span><br><span class="line">        <span class="keyword">int</span> c = i;</span><br><span class="line">        <span class="keyword">int</span> f = HT[c].parent;<span class="comment">//f指向结点c的双亲</span></span><br><span class="line">        <span class="keyword">while</span> (f != <span class="number">0</span>)<span class="comment">//从叶子结点开始回溯，直到根结点</span></span><br><span class="line">        &#123;</span><br><span class="line">            --start;<span class="comment">//回溯一次，start向前指向一个位置</span></span><br><span class="line">            <span class="keyword">if</span> (HT[f].lchild == c)</span><br><span class="line">                cd[start] = <span class="string">'0'</span>;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                cd[start] = <span class="string">'1'</span>;</span><br><span class="line">            c = f;</span><br><span class="line">            f = HT[c].parent;</span><br><span class="line">        &#125;</span><br><span class="line">        HC[i] = <span class="keyword">new</span> <span class="keyword">char</span>[n - start];<span class="comment">//为第i个字符编码分配空间</span></span><br><span class="line">        <span class="built_in">strcpy</span>(HC[i], &amp;cd[start]);<span class="comment">//把求得编码的首地址从cd[start]复制到HC的当前行中</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">delete</span>[] cd;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="哈夫曼解码"><a href="#哈夫曼解码" class="headerlink" title="哈夫曼解码"></a>哈夫曼解码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DeCode</span><span class="params">(HuffmanTree HT, <span class="built_in">string</span> a, <span class="built_in">string</span>&amp; b, <span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    b = <span class="string">""</span>;</span><br><span class="line">    <span class="keyword">int</span> q = <span class="number">2</span> * n - <span class="number">1</span>;<span class="comment">//q初始化为根结点的下标</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; a.length(); i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//for循环结束条件是读入的字符是结束符（二进制编码）</span></span><br><span class="line">        <span class="comment">//此代码块用来判断读入的二进制字符是0还是1</span></span><br><span class="line">        <span class="keyword">if</span> (a[i] == <span class="string">'0'</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">/*读入0，把根结点(HT[q])的左孩子的下标值赋给q下次循环的时候把HT[q]的左孩子作为新的根结点*/</span></span><br><span class="line">            q = HT[q].lchild;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (a[i] == <span class="string">'1'</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            q = HT[q].rchild;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//此代码块用来判断HT[q]是否为叶子结点</span></span><br><span class="line">        <span class="keyword">if</span> (HT[q].lchild == <span class="number">0</span> &amp;&amp; HT[q].rchild == <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">/*是叶子结点，说明已经译出一个字符该字符的下标就是找到的叶子结点的下标*/</span></span><br><span class="line">            b += HT[q].data;<span class="comment">//把下标为q的字符赋给字符数组b[] q = 2 * n - 1;//初始化q为根结点的下标</span></span><br><span class="line">            q = <span class="number">2</span> * n - <span class="number">1</span>;<span class="comment">//继续译下一个字符的时候从哈夫曼树的根结点开始</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="哈夫曼译码"><a href="#哈夫曼译码" class="headerlink" title="哈夫曼译码"></a>哈夫曼译码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Code</span><span class="params">(HuffmanTree HT, HuffmanCode HC, <span class="built_in">string</span> c, <span class="built_in">string</span>&amp; d, <span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    d = <span class="string">""</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; c.length(); i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= n; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (c[i] == HT[j].data)  <span class="comment">//找到字符后再d后追加编码</span></span><br><span class="line">                d.append(HC[j]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>学习哈夫曼树和哈夫曼编码有助于初步理解数据压缩原理。</p>
+<p><a href="https://www.jianshu.com/p/acd06b8ed06b" target="_blank" rel="noopener">部分显示问题，请参考</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/25/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E5%8F%8A%E5%BA%94%E7%94%A8/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-树" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -355,13 +553,13 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/27/%E6%A0%91/">树</a>
+      <a class="article-title" href="/2020/07/21/%E6%A0%91/">树</a>
     </h1>
   
 
         
-        <a href="/2020/07/27/%E6%A0%91/" class="archive-article-date">
-  	<time datetime="2020-07-27T06:07:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-27</time>
+        <a href="/2020/07/21/%E6%A0%91/" class="archive-article-date">
+  	<time datetime="2020-07-21T06:07:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-21</time>
 </a>
         
       </header>
@@ -503,288 +701,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/27/%E6%A0%91/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-二叉树" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/26/%E4%BA%8C%E5%8F%89%E6%A0%91/">二叉树</a>
-    </h1>
-  
-
-        
-        <a href="/2020/07/26/%E4%BA%8C%E5%8F%89%E6%A0%91/" class="archive-article-date">
-  	<time datetime="2020-07-26T08:11:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h1><p>树的基本概念和存储结构已经介绍过了，现在介绍数据结构中极其重要的二叉树。</p>
-<p><a href="https://www.jianshu.com/p/3a8aee2ce593" target="_blank" rel="noopener">部分显示问题，请参考</a></p>
-<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>二叉树（Binary Tree）是n（n&gt;=0）个结点的有限集合，该集合或者为空集（称为空二叉树），或者由一个根结点和两棵互不相交的，分别称为根结点的左子树和右子树的二叉树组成。</p>
-<h3 id="二叉树的特点有"><a href="#二叉树的特点有" class="headerlink" title="二叉树的特点有:"></a>二叉树的特点有:</h3><p>每个结点最多有两棵子树，所以二又树中不存在度大于2的结点。注意不是只有两棵子树，而是最多有。没有子树或者有棵子树都是可以的。</p>
-<p>左子树和右子树是有顺序的，次序不能任意颠倒。就像人是双手、双脚，但显然左手、左脚和右手、右脚是不一样的，右手戴左手套、右脚穿左鞋都会极其别扭和难受。</p>
-<p>即使树中某结点只有一棵子树，也要区分它是左子树还是右子树。图6-5-3中，树1和树2是同一棵树，但它们却是不同的二叉树。就好像你一不小心，摔伤了手，伤的是左手还是右手，对你的生活影响度是完全不同的。</p>
-<h3 id="二叉树具有五种基本形态"><a href="#二叉树具有五种基本形态" class="headerlink" title="二叉树具有五种基本形态:"></a>二叉树具有五种基本形态:</h3><p>1.空二叉树。</p>
-<p>2.只有一个根结点。</p>
-<p>3.根结点只有左子树。</p>
-<p>4.根结点只有右子树。</p>
-<p>5.根结点既有左子树又有右子树。</p>
-<h3 id="特殊二叉树"><a href="#特殊二叉树" class="headerlink" title="特殊二叉树"></a>特殊二叉树</h3><h4 id="斜树"><a href="#斜树" class="headerlink" title="斜树"></a>斜树</h4><p>所有的结点都只有左子树的二叉树叫左斜树。所有的结点都只有右子树的二叉树叫右斜树。这两者统称为斜树。</p>
-<h4 id="满二叉树"><a href="#满二叉树" class="headerlink" title="满二叉树"></a>满二叉树</h4><p>在一棵二叉树中，如果所有分支结点都存在左子树和右子树，并且所有叶子都在同一层上，这样的二叉树称为满二叉树。</p>
-<p>特点：</p>
-<p>(1)叶子只能出现在最下一层。出现在其他层就不可能达成平衡。</p>
-<p>(2)非叶子结点的度一-定是 2。否则就是“缺胳膊少腿”了。</p>
-<p>(3)在同样深度的二叉树中，满二叉树的结点个数最多，叶子数最多。</p>
-<p><img src="%E6%BB%A1%E4%BA%8C%E5%8F%89%E6%A0%91.png" alt="满二叉树"></p>
-<h4 id="完全二叉树"><a href="#完全二叉树" class="headerlink" title="完全二叉树"></a>完全二叉树</h4><p>对一棵具有n个结点的二叉树按层序编号，如果编号为i（1≤i≤n）的结点与同祥深度的满二叉树中编号为i的结点在二叉树中位置完全相同，则这棵二叉树称为完全二叉树。</p>
-<p>特点：</p>
-<p>(1)叶子结点只能出现在最下两层。</p>
-<p>(2)最下层的叶子一定集中在左部连续位置。</p>
-<p>(3)倒数二层，若有叶子结点，一定都在右部连续位置。</p>
-<p>(4)如果结点度为1，则该结点只有左孩子，即不存在只有右子树的情况。</p>
-<p>(5)同样结点数的二叉树，完全二叉树的深度最小。</p>
-<p><img src="%E5%AE%8C%E5%85%A8%E4%BA%8C%E5%8F%89%E6%A0%91.png" alt="完全二叉树"></p>
-<h2 id="二叉树的性质"><a href="#二叉树的性质" class="headerlink" title="二叉树的性质"></a>二叉树的性质</h2><h3 id="性质一"><a href="#性质一" class="headerlink" title="性质一"></a>性质一</h3><p>在二叉树的第i层上至多有$2^{i-1}$个结点（i&gt;=1）。</p>
-<h3 id="性质二"><a href="#性质二" class="headerlink" title="性质二"></a>性质二</h3><p>深度为k的二叉树至多有$2^k-1$个结点（k&gt;=1）。</p>
-<h3 id="性质三"><a href="#性质三" class="headerlink" title="性质三"></a>性质三</h3><p>对任何一棵二叉树T，如果其终端结点数为$n_0$，度为2的结点数为$n_2$，则$n_0=n_2+1$。</p>
-<h3 id="性质四"><a href="#性质四" class="headerlink" title="性质四"></a>性质四</h3><p>具有n个结点的完全二叉树的深度为$[log_2n]$+1（[x]表示不大于x的最大整数）。</p>
-<h3 id="性质五"><a href="#性质五" class="headerlink" title="性质五"></a>性质五</h3><p>对于完全二叉树，若从上至下、从左至右编号，则编号为$i$的结点，其左孩子编号必为$2i$，右孩子编号必为$2i＋1$，双亲的编号必为$i/2$。</p>
-<h2 id="二叉树的存储结构"><a href="#二叉树的存储结构" class="headerlink" title="二叉树的存储结构"></a>二叉树的存储结构</h2><h3 id="二叉树顺序存储结构"><a href="#二叉树顺序存储结构" class="headerlink" title="二叉树顺序存储结构"></a>二叉树顺序存储结构</h3><p>一般只用于完全二叉树，不详解。</p>
-<h3 id="二叉链表"><a href="#二叉链表" class="headerlink" title="二叉链表"></a>二叉链表</h3><p>二叉树每个结点最多有两个孩子，所以为他设计一个数据与和两个指针域，称这样的链表叫做二叉链表。</p>
-<p>| lchild | data | rchild |</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">BiTNode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    TElemType data;     <span class="comment">/*数据*/</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">BiTNode</span>* <span class="title">lchild</span>, * <span class="title">rchild</span>;</span>   <span class="comment">/*左右孩子指针*/</span></span><br><span class="line">&#125;BiTNode, * BiTree;</span><br></pre></td></tr></table></figure>
-
-<h2 id="遍历二叉树"><a href="#遍历二叉树" class="headerlink" title="遍历二叉树"></a>遍历二叉树</h2><h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><p>二叉树的遍历( traversing binary tree )是指从根结点出发，按照某种次序依次访问二叉树中所有结点，使得每个结点被访问一次且仅被访问一次。</p>
-<h3 id="遍历方法"><a href="#遍历方法" class="headerlink" title="遍历方法"></a>遍历方法</h3><p><img src="%E9%81%8D%E5%8E%86.png" alt="遍历"></p>
-<h4 id="前序遍历即先（根）序的遍历算法"><a href="#前序遍历即先（根）序的遍历算法" class="headerlink" title="前序遍历即先（根）序的遍历算法"></a>前序遍历即先（根）序的遍历算法</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">PreOrderTraverse</span><span class="params">(BiTree T)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (T == <span class="literal">NULL</span>)</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; T-&gt;data;</span><br><span class="line">    PreOrderTraverse(T-&gt;lchild);</span><br><span class="line">    PreOrderTraverse(T-&gt;rchild);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>上图前序遍历：A  BDG  CEF</p>
-<h4 id="中序遍历即中（根）序的遍历算法"><a href="#中序遍历即中（根）序的遍历算法" class="headerlink" title="中序遍历即中（根）序的遍历算法"></a>中序遍历即中（根）序的遍历算法</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">InOrderTraverse</span><span class="params">(BiTree T)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (T == <span class="literal">NULL</span>)</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    InOrderTraverse(T-&gt;lchild);</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; T-&gt;data;</span><br><span class="line">    InOrderTraverse(T-&gt;rchild);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>上图中序遍历：DGB  A  ECF</p>
-<h4 id="后序遍历即后（根）序的遍历算法"><a href="#后序遍历即后（根）序的遍历算法" class="headerlink" title="后序遍历即后（根）序的遍历算法"></a>后序遍历即后（根）序的遍历算法</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">PostOrderTraverse</span><span class="params">(BiTree T)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (T == <span class="literal">NULL</span>)</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    PostOrderTraverse(T-&gt;lchild);</span><br><span class="line">    PostOrderTraverse(T-&gt;rchild);</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; T-&gt;data;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>上图后序遍历：GDB  EFC  A</p>
-<h4 id="层序遍历即逐层遍历"><a href="#层序遍历即逐层遍历" class="headerlink" title="层序遍历即逐层遍历"></a>层序遍历即逐层遍历</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">FloorPrint</span><span class="params">(BiTree T)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    BiTree temp[<span class="number">100</span>];   <span class="comment">//创建pTreeNode指针类型的指针数组</span></span><br><span class="line">    <span class="keyword">int</span> in = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> out = <span class="number">0</span>;</span><br><span class="line">    temp[in++] = T;  <span class="comment">//先保存二叉树根节点</span></span><br><span class="line">    <span class="keyword">while</span> (in &gt; out)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (temp[out])</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; temp[out]-&gt;data;</span><br><span class="line">            temp[in++] = temp[out]-&gt;lchild;</span><br><span class="line">            temp[in++] = temp[out]-&gt;rchild;</span><br><span class="line">        &#125;</span><br><span class="line">        out++;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>上图层序遍历：A BC DEF G</p>
-<h2 id="二叉树建立"><a href="#二叉树建立" class="headerlink" title="二叉树建立"></a>二叉树建立</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">CreateBiTree</span><span class="params">(BiTree&amp; T)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    TElemType c;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; c;</span><br><span class="line">    <span class="keyword">if</span> (c == <span class="string">'#'</span>)</span><br><span class="line">        T = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        T = <span class="keyword">new</span> BiTNode;</span><br><span class="line">        <span class="keyword">if</span> (!T)</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; <span class="string">"分配空间失败"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            T-&gt;data = c;</span><br><span class="line">            CreateBiTree(T-&gt;lchild);</span><br><span class="line">            CreateBiTree(T-&gt;rchild);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="线索二叉树"><a href="#线索二叉树" class="headerlink" title="线索二叉树"></a>线索二叉树</h2><p>把指向前驱和后继的指针称为线索，加上线索的二叉链表称为线索链表，相应的二叉树就称为线索二叉树（Threaded Binary Tree）。</p>
-<p>| lchild | ltag | data | rtag | rchild |</p>
-<p>其中：</p>
-<p>ltag为0时指向该结点的左孩子，为1时指向该结点的前驱。</p>
-<p>rtag为0时指向该结点的右孩子，为1时指向该结点的后继。</p>
-<h3 id="线索二叉树结构实现"><a href="#线索二叉树结构实现" class="headerlink" title="线索二叉树结构实现"></a>线索二叉树结构实现</h3><h4 id="存储结构定义"><a href="#存储结构定义" class="headerlink" title="存储结构定义"></a>存储结构定义</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">BiThrNode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    TElemType data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span>  <span class="title">BiThrNode</span>* <span class="title">lchild</span>, * <span class="title">rchild</span>;</span></span><br><span class="line">    <span class="keyword">int</span> LTag, RTag; <span class="comment">//LTag(RTag)=0表示指向孩子，LTag(RTag)=1表示只是前驱或后继</span></span><br><span class="line">&#125;BiThrNode, * BiThrTree;</span><br><span class="line">BiThrTree pre;<span class="comment">//全局变量，始终指向刚刚访问过的节点</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="中序遍历进行中序线索化"><a href="#中序遍历进行中序线索化" class="headerlink" title="中序遍历进行中序线索化"></a>中序遍历进行中序线索化</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">InThreading</span><span class="params">(BiThrTree p)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (p)</span><br><span class="line">    &#123;</span><br><span class="line">        InThreading(p-&gt;lchild);<span class="comment">/* 递归左子树线索化 */</span></span><br><span class="line">        <span class="keyword">if</span> (!p-&gt;lchild)<span class="comment">/* 没有左孩子 */</span></span><br><span class="line">        &#123;</span><br><span class="line">            p-&gt;LTag = <span class="number">1</span>;<span class="comment">/* 前驱线索 */</span></span><br><span class="line">            p-&gt;lchild = pre; <span class="comment">/* 左孩子指针指向前驱 */</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            p-&gt;LTag = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span> (!pre-&gt;rchild) <span class="comment">/* 前驱没有右孩子 */</span></span><br><span class="line">        &#123;</span><br><span class="line">            pre-&gt;RTag = <span class="number">1</span>;<span class="comment">/* 后继线索 */</span></span><br><span class="line">            pre-&gt;rchild = p;<span class="comment">/* 前驱右孩子指针指向后继(当前结点p) */</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            p-&gt;RTag = <span class="number">0</span>;</span><br><span class="line">        pre = p;<span class="comment">/* 保持pre指向p的前驱 */</span></span><br><span class="line">        InThreading(p-&gt;rchild);<span class="comment">/* 递归右子树线索化 */</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="中序线索二叉树遍历（带有头节点）"><a href="#中序线索二叉树遍历（带有头节点）" class="headerlink" title="中序线索二叉树遍历（带有头节点）"></a>中序线索二叉树遍历（带有头节点）</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">InOrderTraverse_Thr</span><span class="params">(BiThrTree T)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    BiThrTree p;</span><br><span class="line">    p = T-&gt;lchild; <span class="comment">/* p指向根结点 */</span></span><br><span class="line">    <span class="keyword">while</span> (p != T)<span class="comment">/* 空树或遍历结束时,p==T */</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">while</span> (p-&gt;LTag == <span class="number">0</span>)</span><br><span class="line">            p = p-&gt;lchild;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; p-&gt;data;</span><br><span class="line">        <span class="keyword">while</span> (p-&gt;RTag == <span class="number">1</span> &amp;&amp; p-&gt;rchild != T)</span><br><span class="line">        &#123;</span><br><span class="line">            p = p-&gt;rchild;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; p-&gt;data;</span><br><span class="line">        &#125;</span><br><span class="line">        p = p-&gt;rchild;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="树、森林与二叉树的转换"><a href="#树、森林与二叉树的转换" class="headerlink" title="树、森林与二叉树的转换"></a>树、森林与二叉树的转换</h2><h3 id="树转换为二叉树"><a href="#树转换为二叉树" class="headerlink" title="树转换为二叉树"></a>树转换为二叉树</h3><p>1.加线。在所有兄弟结点之间加一条连线。</p>
-<p>2.去线。对树中每个结点，只保留它与第一一个孩子结点的连线， 删除它与其他孩子结点之间的连线。</p>
-<p>3.层次调整。以树的根结点为轴心，将整棵树顺时针旋转定的角度， 使之结构层次分明。注意第一个孩子是二叉树结点的左孩子，兄弟转换过来的孩子是结点的右孩子。</p>
-<h3 id="森林转换为二叉树"><a href="#森林转换为二叉树" class="headerlink" title="森林转换为二叉树"></a>森林转换为二叉树</h3><p>森林是由若干棵树组成的，所以完全可以理解为，森林中的每一棵树都是兄弟，可以按照兄弟的处理办法来操作。步骤如下:</p>
-<p>1.把每个树转换为二叉树。</p>
-<p>2.第一棵二又树不动，从第二棵二叉树开始，依次把后一棵二叉树的根结点作为前一棵二叉树的根结点的右孩子用线连接起来。当所有的二叉树连接起来后就得到了由森林转换来的二叉树。</p>
-<h3 id="二叉树转换为树"><a href="#二叉树转换为树" class="headerlink" title="二叉树转换为树"></a>二叉树转换为树</h3><p>二叉树转换为树是树转换为二叉树的逆过程，也就是反过来做而已。步骤如下:</p>
-<p>1.加线。若某结点的左孩子结点存在，则将这个左孩子的右孩子结点、右孩子的右孩子结点、右孩子的右孩子的右孩子结….哈，反正就是左孩子的n个右孩子结点都作为此结点的孩子。将该结点与这些右孩子结点用线连接起来。</p>
-<p>2.去线。删除原二叉树中所有结点与其右孩子结点的连线。</p>
-<p>3.层次调整。使之结构层次分明。</p>
-<h3 id="二叉树转换为森林"><a href="#二叉树转换为森林" class="headerlink" title="二叉树转换为森林"></a>二叉树转换为森林</h3><p>判断一棵二叉树能够转换成棵树还是森林， 标准很简单，那就是只要看这棵二叉树的根结点有没有右孩子，有就是森林，没有就是一棵树。那么如果是转换成森林，步骤如下:</p>
-<p>1.从根结点开始，若右孩子存在，则把与右孩子结点的连线删除，再查看分离后的二叉树，若右孩子存在，则连线删除….直到所有右孩子连线都删除为止，得到分离的二叉树。</p>
-<p>2.再将每棵分离后的二叉树转换为树即可。</p>
-<h3 id="树与森林的遍历"><a href="#树与森林的遍历" class="headerlink" title="树与森林的遍历"></a>树与森林的遍历</h3><p>最后我们再谈谈关于树和森林的遍历问题。</p>
-<p>树的遍历分为两种方式。</p>
-<p>1.一种是先根遍历树， 即先访问树的根结点，然后依次先根遍历根的每棵子树。</p>
-<p>2.另一种是后根遍历》即先依次后根遍历每棵子树，然后再访问根结点。</p>
-<p>森林的遍历也分为两种方式:</p>
-<p>1.前序遍历:先访问森林中第一棵树的根结点，然后再依次先根遍历根的每棵子树，再依次用同样方式遍历除去第一棵树的剩余树构成的森林。</p>
-<p>2.后序遍历:是先访问森林中第一棵树，后根遍历的方式遍历每棵子树，然后再访问根结点，再依次同样方式遍历除去第一棵树的剩余树构成的森林。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>二叉树应用很广的。</p>
-<p><a href="https://www.jianshu.com/p/3a8aee2ce593" target="_blank" rel="noopener">部分显示问题，请参考</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/26/%E4%BA%8C%E5%8F%89%E6%A0%91/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-栈与队列" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/26/%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97/">栈与队列</a>
-    </h1>
-  
-
-        
-        <a href="/2020/07/26/%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97/" class="archive-article-date">
-  	<time datetime="2020-07-26T06:06:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="栈与队列"><a href="#栈与队列" class="headerlink" title="栈与队列"></a>栈与队列</h1><h2 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h2><p>栈是限定仅在表尾进行插入和删除操作的线性表。</p>
-<h2 id="栈的抽象数据类型"><a href="#栈的抽象数据类型" class="headerlink" title="栈的抽象数据类型"></a>栈的抽象数据类型</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">ADT Stack &#123;</span><br><span class="line">Data</span><br><span class="line">    元素具有相同的类型，相邻元素具有前驱后继关系。</span><br><span class="line"></span><br><span class="line">Operation</span><br><span class="line">    InitStack (&amp;S)  (构造空栈 )</span><br><span class="line">    操作结果：构造一个空栈S。</span><br><span class="line">    DestroyStack(&amp;S)   (销毁栈结构)</span><br><span class="line">    初始条件：栈S已存在。</span><br><span class="line">    操作结果：栈S被销毁。</span><br><span class="line">    ClearStack (&amp;S)  (栈清空)</span><br><span class="line">    初始条件：栈S已存在。</span><br><span class="line">    操作结果：栈S清为空栈。</span><br><span class="line">    StackEmpty (S)   (判空)</span><br><span class="line">    初始条件：栈S已存在。</span><br><span class="line">    操作结果：若栈S为空栈，则返回<span class="literal">true</span>, 否则<span class="literal">false</span>。</span><br><span class="line">    StackLength (S) (求栈长)</span><br><span class="line">    初始条件：栈S已存在。</span><br><span class="line">    操作结果：返回S的元素个数，即栈的长度。</span><br><span class="line">    StackTraverse (S) (遍历栈)</span><br><span class="line">    初始条件：栈S已存在且非空。</span><br><span class="line">    操作结果：从栈底到栈顶依次对S的每个数据元素访问。</span><br><span class="line">    GetTop (S, &amp;e)   (求栈顶元素)</span><br><span class="line">    初始条件：栈S已存在且非空。</span><br><span class="line">    操作结果：用e返回S的栈顶元素。</span><br><span class="line">    Push (&amp;S, e) (入栈)</span><br><span class="line">    初始条件：栈S已存在。</span><br><span class="line">    操作结果：插入元素e为新的栈顶元素。</span><br><span class="line">    Pop (&amp;S, &amp;e)  (出栈)</span><br><span class="line">    初始条件：栈S已存在且非空。</span><br><span class="line">    操作结果：删除S的栈顶元素，并用e返回其值。</span><br><span class="line">&#125;ADT Stack</span><br></pre></td></tr></table></figure>
-
-<h2 id="栈的顺序存储结构"><a href="#栈的顺序存储结构" class="headerlink" title="栈的顺序存储结构"></a>栈的顺序存储结构</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXSIZE 50      <span class="comment">/*存储空间初始分配量*/</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> SElemType;  <span class="comment">/*SElemType类型根据实际情况而定*/</span></span><br><span class="line"><span class="keyword">typedef</span>  <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    SElemType* data;    <span class="comment">/*存储空间基地址*/</span></span><br><span class="line">    <span class="keyword">int</span> top;            <span class="comment">/*栈顶指针*/</span></span><br><span class="line">&#125; SqStack;</span><br></pre></td></tr></table></figure>
-
-<h3 id="进栈操作"><a href="#进栈操作" class="headerlink" title="进栈操作"></a>进栈操作</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Push</span><span class="params">(SqStack&amp; S, SElemType e)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (S.top == MAXSIZE - <span class="number">1</span>)    <span class="comment">/*栈满*/</span></span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"栈满"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        S.top++;            <span class="comment">/*栈顶指针加一*/</span></span><br><span class="line">        S.data[S.top] = e;  <span class="comment">/*新元素赋值给栈顶空间*/</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="出栈操作"><a href="#出栈操作" class="headerlink" title="出栈操作"></a>出栈操作</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Pop</span><span class="params">(SqStack&amp; S, SElemType&amp; e)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (S.top == <span class="number">-1</span>)           <span class="comment">/*栈空*/</span></span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"栈空"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        e = S.data[S.top];  <span class="comment">/*将要删除元素赋值给e*/</span></span><br><span class="line">        S.top--;            <span class="comment">/*栈顶指针减一*/</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="两栈共享空间"><a href="#两栈共享空间" class="headerlink" title="两栈共享空间"></a>两栈共享空间</h2><p>略。。。</p>
-<h2 id="栈的链式存储结构"><a href="#栈的链式存储结构" class="headerlink" title="栈的链式存储结构"></a>栈的链式存储结构</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">StackNode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    SElemType data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">StackNode</span>* <span class="title">next</span>;</span></span><br><span class="line">&#125;StackNode, * LinkStackPtr;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">LinkStack</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    LinkStackPtr top;</span><br><span class="line">    <span class="keyword">int</span> count;</span><br><span class="line">&#125;LinkStack;</span><br></pre></td></tr></table></figure>
-
-<h3 id="进栈操作-1"><a href="#进栈操作-1" class="headerlink" title="进栈操作"></a>进栈操作</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Push</span><span class="params">(LinkStack&amp; S, SElemType e)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    LinkStackPtr s = <span class="keyword">new</span> StackNode;</span><br><span class="line">    s-&gt;data = e;        <span class="comment">/*给新结点值e*/</span></span><br><span class="line">    s-&gt;next = S.top;    <span class="comment">/*当前栈顶赋给新结点后继*/</span></span><br><span class="line">    S.top = s;          <span class="comment">/*新结点s赋给栈顶指针*/</span></span><br><span class="line">    S.count++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="出栈出栈"><a href="#出栈出栈" class="headerlink" title="出栈出栈"></a>出栈出栈</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Pop</span><span class="params">(LinkStack&amp; S, SElemType&amp; e)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    LinkStackPtr p;</span><br><span class="line">    <span class="keyword">if</span> (IsEmpty(S))</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"栈空"</span> &lt;&lt; <span class="built_in">endl</span>;   <span class="comment">/*栈空*/</span></span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        e = S.top-&gt;data;         <span class="comment">/*将要删除元素赋值给e*/</span></span><br><span class="line">        p = S.top;               <span class="comment">/*将栈顶结点赋值给p*/</span></span><br><span class="line">        S.top = S.top-&gt;next;     <span class="comment">/*使栈顶指针下移一位*/</span></span><br><span class="line">        <span class="keyword">delete</span> p;                <span class="comment">/*释放结点p*/</span></span><br><span class="line">        S.count--;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="栈的作用"><a href="#栈的作用" class="headerlink" title="栈的作用"></a>栈的作用</h2><p>栈的引入简化了程序设计问题，划分了不同关注层次，使得思考范围缩小，更加聚焦于我们要解决的问题核心。反之，像数组等，因为要分散精力去考虑数组的下标增减等细节问题，反而掩盖了问题的本质。</p>
-<p>现在许多的高级语言，如java，C#等都有对栈结构的封装，可以不用关注它的实现细节，就可以直接使用Stack的push和pop方法，非常方便。</p>
-<h2 id="栈的应用-递归"><a href="#栈的应用-递归" class="headerlink" title="栈的应用-递归"></a>栈的应用-递归</h2><p>我们把一个直接调用自己或通过一系列的调用语句间接地调用自己的函数，称做递归函数。</p>
-<h3 id="斐波那契数列"><a href="#斐波那契数列" class="headerlink" title="斐波那契数列"></a>斐波那契数列</h3><p>F(n)=F(n-1)+F(n-2)，(F(1)=F(2)=1)</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Fbi</span><span class="params">(<span class="keyword">int</span> i)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(i==<span class="number">1</span>||i==<span class="number">2</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">return</span> Fbi(i<span class="number">-1</span>)+Fbi(i<span class="number">-2</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="等…"><a href="#等…" class="headerlink" title="等…"></a>等…</h3><h2 id="栈的应用-四则运算表达式求值"><a href="#栈的应用-四则运算表达式求值" class="headerlink" title="栈的应用-四则运算表达式求值"></a>栈的应用-四则运算表达式求值</h2><p><a href="https://blog.csdn.net/yzl_rex/article/details/7745341" target="_blank" rel="noopener">可参考</a></p>
-<h2 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h2><p>队列是只允许在一端进行插入操作，而在另一端进行删除操作的线性表。</p>
-<h2 id="队列的抽象数据类型"><a href="#队列的抽象数据类型" class="headerlink" title="队列的抽象数据类型"></a>队列的抽象数据类型</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">ADT Queue &#123;</span><br><span class="line">Data</span><br><span class="line">    元素具有相同的类型，相邻元素具有前驱后继关系。</span><br><span class="line"></span><br><span class="line">Operation</span><br><span class="line">    InitQueue (&amp;Q)  (构造空队列 )</span><br><span class="line">    操作结果：构造一个空队列Q。</span><br><span class="line">    DestroyQueue (&amp;Q)   (销毁队列结构)</span><br><span class="line">    初始条件：队列Q已存在。</span><br><span class="line">    操作结果：队列Q被销毁。</span><br><span class="line">    ClearQueue  (&amp;Q)  (队列清空)</span><br><span class="line">    初始条件：队列Q已存在。</span><br><span class="line">    操作结果：队列Q清为空队列。</span><br><span class="line">    QueueEmpty (Q)   (判空)</span><br><span class="line">    初始条件：队列Q已存在。</span><br><span class="line">    操作结果：若队列Q为空，则返回<span class="literal">true</span>, 否则<span class="literal">false</span>。</span><br><span class="line">    QueueLength (Q) (求队列长)</span><br><span class="line">    初始条件：队列Q已存在。</span><br><span class="line">    操作结果：返回Q的元素个数，即队列的长度。</span><br><span class="line">    QueueTraverse (Q) (遍历队列)</span><br><span class="line">    初始条件：队列Q已存在且非空。</span><br><span class="line">    操作结果：从队头到队尾，依次对Q的每个数据元素  访问。</span><br><span class="line">    GetHead (Q, &amp;e)   (求队头元素)</span><br><span class="line">    初始条件：队列Q已存在且非空。</span><br><span class="line">    操作结果：用e返回Q的队头元素。</span><br><span class="line">    EnQueue (&amp;Q, e) (入队)</span><br><span class="line">    初始条件：队列Q已存在。</span><br><span class="line">    操作结果：插入元素e为新的队列元素。</span><br><span class="line">    DeQueue (&amp;Q, &amp;e)  (出队)</span><br><span class="line">    初始条件：队列Q已存在且非空。</span><br><span class="line">    操作结果：删除Q的队头元素，并用e返回其值。</span><br><span class="line">&#125;ADT Queue</span><br></pre></td></tr></table></figure>
-
-<h2 id="循环队列"><a href="#循环队列" class="headerlink" title="循环队列"></a>循环队列</h2><p>我们把队列的这种头尾相连的顺序存储结构称为循环队列。（可解决顺序存储空间不足）</p>
-<h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXSIZE 50</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> QElemType;</span><br><span class="line"><span class="comment">//循环队列</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    QElemType* data;</span><br><span class="line">    <span class="keyword">int</span> front;      <span class="comment">/*头指针*/</span></span><br><span class="line">    <span class="keyword">int</span> rear;       <span class="comment">/*尾指针*/</span></span><br><span class="line">&#125;SqQueue;</span><br></pre></td></tr></table></figure>
-
-<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">InitQueue</span><span class="params">(SqQueue&amp; Q)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Q.front = <span class="number">0</span>;</span><br><span class="line">    Q.rear = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="队列长度"><a href="#队列长度" class="headerlink" title="队列长度"></a>队列长度</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">GetLength</span><span class="params">(SqQueue Q)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (Q.rear - Q.front + MAXSIZE) % MAXSIZE;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="入队操作"><a href="#入队操作" class="headerlink" title="入队操作"></a>入队操作</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">EnQueue</span><span class="params">(SqQueue&amp; Q, QElemType e)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> ((Q.rear + <span class="number">1</span>) % MAXSIZE == Q.front)  <span class="comment">/*队满*/</span></span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"队列满"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        Q.data[Q.rear] = e;                 <span class="comment">/*元素e赋值给队尾*/</span></span><br><span class="line">        Q.rear = (Q.rear + <span class="number">1</span>) % MAXSIZE;    <span class="comment">/*rear指针后移一位*/</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="出队操作"><a href="#出队操作" class="headerlink" title="出队操作"></a>出队操作</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DeQueue</span><span class="params">(SqQueue&amp; Q, QElemType&amp; e)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (Q.front == Q.rear)                  <span class="comment">/*队空*/</span></span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"队列空"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        e = Q.data[Q.front];                <span class="comment">/*队头元素赋值给e*/</span></span><br><span class="line">        Q.front = (Q.front + <span class="number">1</span>) % MAXSIZE;  <span class="comment">/*front指针后移一位*/</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="队列的链式存储结构"><a href="#队列的链式存储结构" class="headerlink" title="队列的链式存储结构"></a>队列的链式存储结构</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> QElemType;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">QNode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    QElemType data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">QNode</span>* <span class="title">next</span>;</span></span><br><span class="line">&#125;QNode, * QueuePtr;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    QueuePtr front, rear;</span><br><span class="line">&#125;LinkQueue;</span><br></pre></td></tr></table></figure>
-
-<h3 id="入队操作-1"><a href="#入队操作-1" class="headerlink" title="入队操作"></a>入队操作</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">EnQueue</span><span class="params">(LinkQueue&amp; Q, QElemType e)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    QueuePtr s = <span class="keyword">new</span> QNode;</span><br><span class="line">    <span class="keyword">if</span> (!s)                             <span class="comment">/*存储分配失败*/</span></span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"存储分配失败"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        s-&gt;data = e;</span><br><span class="line">        s-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">        Q.rear-&gt;next = s;   <span class="comment">/*新结点s赋值给队尾后继*/</span></span><br><span class="line">        Q.rear = s;         <span class="comment">/*s设为队尾结点*/</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="出队操作-1"><a href="#出队操作-1" class="headerlink" title="出队操作"></a>出队操作</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DeQueue</span><span class="params">(LinkQueue&amp; Q, QElemType&amp; e)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    QueuePtr p;</span><br><span class="line">    <span class="keyword">if</span> (Q.front == Q.rear)          <span class="comment">/*队列空*/</span></span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"队列空"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        p = Q.front-&gt;next;          <span class="comment">/*欲删除结点暂存给p*/</span></span><br><span class="line">        e = p-&gt;data;                <span class="comment">/*欲删除对头结点赋值给e*/</span></span><br><span class="line">        Q.front-&gt;next = p-&gt;next;    <span class="comment">/*原对头结点后继p-&gt;next赋值给头结点后继*/</span></span><br><span class="line">        <span class="keyword">if</span> (Q.rear == p)            <span class="comment">/*若队头是队尾，则删除后将rear指向头结点*/</span></span><br><span class="line">            Q.rear = Q.front;</span><br><span class="line">        <span class="keyword">delete</span> p;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="栈与队列对比"><a href="#栈与队列对比" class="headerlink" title="栈与队列对比"></a>栈与队列对比</h2><table>
-<thead>
-<tr>
-<th>比较项目</th>
-<th>栈</th>
-<th>队列</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>逻辑结构</td>
-<td>和线性表一样, 数据元素之间存在一对一的关系</td>
-<td>和线性表一样, 数据元素之间存在一对一的关系</td>
-</tr>
-<tr>
-<td>顺序存储</td>
-<td>存储空间预先分配，可能会导致空间闲置或栈满溢出现象；数据元素个数不能自由扩充</td>
-<td>（常设计成循环队列形式）；存储空间预先分配，可能会导致空间闲置或队满溢出现象；数据元素个数不能自由扩充</td>
-</tr>
-<tr>
-<td>链式存储</td>
-<td>动态分配，不会出现闲置或栈满溢出现象;数据元素个数可以自由扩充</td>
-<td>动态分配，不会出现闲置或栈满溢出现象;数据元素个数可以自由扩充</td>
-</tr>
-<tr>
-<td>运算规则</td>
-<td>插人和删除在表的一端(栈顶)完成，后进先出</td>
-<td>插入运算在表的一端(队尾)进行，删除运算在表的另一端(队头),先进先出</td>
-</tr>
-</tbody></table>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/26/%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/07/21/%E6%A0%91/">展开全文 >></a>
         </p>
       
 
@@ -821,13 +738,13 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/25/%E7%BA%BF%E6%80%A7%E8%A1%A8/">线性表</a>
+      <a class="article-title" href="/2020/07/18/%E7%BA%BF%E6%80%A7%E8%A1%A8/">线性表</a>
     </h1>
   
 
         
-        <a href="/2020/07/25/%E7%BA%BF%E6%80%A7%E8%A1%A8/" class="archive-article-date">
-  	<time datetime="2020-07-25T12:46:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-25</time>
+        <a href="/2020/07/18/%E7%BA%BF%E6%80%A7%E8%A1%A8/" class="archive-article-date">
+  	<time datetime="2020-07-18T12:46:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-18</time>
 </a>
         
       </header>
@@ -942,7 +859,141 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/25/%E7%BA%BF%E6%80%A7%E8%A1%A8/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/07/18/%E7%BA%BF%E6%80%A7%E8%A1%A8/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-栈与队列" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/18/%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97/">栈与队列</a>
+    </h1>
+  
+
+        
+        <a href="/2020/07/18/%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97/" class="archive-article-date">
+  	<time datetime="2020-07-18T06:06:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-18</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="栈与队列"><a href="#栈与队列" class="headerlink" title="栈与队列"></a>栈与队列</h1><h2 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h2><p>栈是限定仅在表尾进行插入和删除操作的线性表。</p>
+<h2 id="栈的抽象数据类型"><a href="#栈的抽象数据类型" class="headerlink" title="栈的抽象数据类型"></a>栈的抽象数据类型</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">ADT Stack &#123;</span><br><span class="line">Data</span><br><span class="line">    元素具有相同的类型，相邻元素具有前驱后继关系。</span><br><span class="line"></span><br><span class="line">Operation</span><br><span class="line">    InitStack (&amp;S)  (构造空栈 )</span><br><span class="line">    操作结果：构造一个空栈S。</span><br><span class="line">    DestroyStack(&amp;S)   (销毁栈结构)</span><br><span class="line">    初始条件：栈S已存在。</span><br><span class="line">    操作结果：栈S被销毁。</span><br><span class="line">    ClearStack (&amp;S)  (栈清空)</span><br><span class="line">    初始条件：栈S已存在。</span><br><span class="line">    操作结果：栈S清为空栈。</span><br><span class="line">    StackEmpty (S)   (判空)</span><br><span class="line">    初始条件：栈S已存在。</span><br><span class="line">    操作结果：若栈S为空栈，则返回<span class="literal">true</span>, 否则<span class="literal">false</span>。</span><br><span class="line">    StackLength (S) (求栈长)</span><br><span class="line">    初始条件：栈S已存在。</span><br><span class="line">    操作结果：返回S的元素个数，即栈的长度。</span><br><span class="line">    StackTraverse (S) (遍历栈)</span><br><span class="line">    初始条件：栈S已存在且非空。</span><br><span class="line">    操作结果：从栈底到栈顶依次对S的每个数据元素访问。</span><br><span class="line">    GetTop (S, &amp;e)   (求栈顶元素)</span><br><span class="line">    初始条件：栈S已存在且非空。</span><br><span class="line">    操作结果：用e返回S的栈顶元素。</span><br><span class="line">    Push (&amp;S, e) (入栈)</span><br><span class="line">    初始条件：栈S已存在。</span><br><span class="line">    操作结果：插入元素e为新的栈顶元素。</span><br><span class="line">    Pop (&amp;S, &amp;e)  (出栈)</span><br><span class="line">    初始条件：栈S已存在且非空。</span><br><span class="line">    操作结果：删除S的栈顶元素，并用e返回其值。</span><br><span class="line">&#125;ADT Stack</span><br></pre></td></tr></table></figure>
+
+<h2 id="栈的顺序存储结构"><a href="#栈的顺序存储结构" class="headerlink" title="栈的顺序存储结构"></a>栈的顺序存储结构</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXSIZE 50      <span class="comment">/*存储空间初始分配量*/</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> SElemType;  <span class="comment">/*SElemType类型根据实际情况而定*/</span></span><br><span class="line"><span class="keyword">typedef</span>  <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    SElemType* data;    <span class="comment">/*存储空间基地址*/</span></span><br><span class="line">    <span class="keyword">int</span> top;            <span class="comment">/*栈顶指针*/</span></span><br><span class="line">&#125; SqStack;</span><br></pre></td></tr></table></figure>
+
+<h3 id="进栈操作"><a href="#进栈操作" class="headerlink" title="进栈操作"></a>进栈操作</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Push</span><span class="params">(SqStack&amp; S, SElemType e)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (S.top == MAXSIZE - <span class="number">1</span>)    <span class="comment">/*栈满*/</span></span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"栈满"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        S.top++;            <span class="comment">/*栈顶指针加一*/</span></span><br><span class="line">        S.data[S.top] = e;  <span class="comment">/*新元素赋值给栈顶空间*/</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="出栈操作"><a href="#出栈操作" class="headerlink" title="出栈操作"></a>出栈操作</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Pop</span><span class="params">(SqStack&amp; S, SElemType&amp; e)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (S.top == <span class="number">-1</span>)           <span class="comment">/*栈空*/</span></span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"栈空"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        e = S.data[S.top];  <span class="comment">/*将要删除元素赋值给e*/</span></span><br><span class="line">        S.top--;            <span class="comment">/*栈顶指针减一*/</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="两栈共享空间"><a href="#两栈共享空间" class="headerlink" title="两栈共享空间"></a>两栈共享空间</h2><p>略。。。</p>
+<h2 id="栈的链式存储结构"><a href="#栈的链式存储结构" class="headerlink" title="栈的链式存储结构"></a>栈的链式存储结构</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">StackNode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    SElemType data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">StackNode</span>* <span class="title">next</span>;</span></span><br><span class="line">&#125;StackNode, * LinkStackPtr;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">LinkStack</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    LinkStackPtr top;</span><br><span class="line">    <span class="keyword">int</span> count;</span><br><span class="line">&#125;LinkStack;</span><br></pre></td></tr></table></figure>
+
+<h3 id="进栈操作-1"><a href="#进栈操作-1" class="headerlink" title="进栈操作"></a>进栈操作</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Push</span><span class="params">(LinkStack&amp; S, SElemType e)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    LinkStackPtr s = <span class="keyword">new</span> StackNode;</span><br><span class="line">    s-&gt;data = e;        <span class="comment">/*给新结点值e*/</span></span><br><span class="line">    s-&gt;next = S.top;    <span class="comment">/*当前栈顶赋给新结点后继*/</span></span><br><span class="line">    S.top = s;          <span class="comment">/*新结点s赋给栈顶指针*/</span></span><br><span class="line">    S.count++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="出栈出栈"><a href="#出栈出栈" class="headerlink" title="出栈出栈"></a>出栈出栈</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Pop</span><span class="params">(LinkStack&amp; S, SElemType&amp; e)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    LinkStackPtr p;</span><br><span class="line">    <span class="keyword">if</span> (IsEmpty(S))</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"栈空"</span> &lt;&lt; <span class="built_in">endl</span>;   <span class="comment">/*栈空*/</span></span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        e = S.top-&gt;data;         <span class="comment">/*将要删除元素赋值给e*/</span></span><br><span class="line">        p = S.top;               <span class="comment">/*将栈顶结点赋值给p*/</span></span><br><span class="line">        S.top = S.top-&gt;next;     <span class="comment">/*使栈顶指针下移一位*/</span></span><br><span class="line">        <span class="keyword">delete</span> p;                <span class="comment">/*释放结点p*/</span></span><br><span class="line">        S.count--;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="栈的作用"><a href="#栈的作用" class="headerlink" title="栈的作用"></a>栈的作用</h2><p>栈的引入简化了程序设计问题，划分了不同关注层次，使得思考范围缩小，更加聚焦于我们要解决的问题核心。反之，像数组等，因为要分散精力去考虑数组的下标增减等细节问题，反而掩盖了问题的本质。</p>
+<p>现在许多的高级语言，如java，C#等都有对栈结构的封装，可以不用关注它的实现细节，就可以直接使用Stack的push和pop方法，非常方便。</p>
+<h2 id="栈的应用-递归"><a href="#栈的应用-递归" class="headerlink" title="栈的应用-递归"></a>栈的应用-递归</h2><p>我们把一个直接调用自己或通过一系列的调用语句间接地调用自己的函数，称做递归函数。</p>
+<h3 id="斐波那契数列"><a href="#斐波那契数列" class="headerlink" title="斐波那契数列"></a>斐波那契数列</h3><p>F(n)=F(n-1)+F(n-2)，(F(1)=F(2)=1)</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Fbi</span><span class="params">(<span class="keyword">int</span> i)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(i==<span class="number">1</span>||i==<span class="number">2</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">return</span> Fbi(i<span class="number">-1</span>)+Fbi(i<span class="number">-2</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="等…"><a href="#等…" class="headerlink" title="等…"></a>等…</h3><h2 id="栈的应用-四则运算表达式求值"><a href="#栈的应用-四则运算表达式求值" class="headerlink" title="栈的应用-四则运算表达式求值"></a>栈的应用-四则运算表达式求值</h2><p><a href="https://blog.csdn.net/yzl_rex/article/details/7745341" target="_blank" rel="noopener">可参考</a></p>
+<h2 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h2><p>队列是只允许在一端进行插入操作，而在另一端进行删除操作的线性表。</p>
+<h2 id="队列的抽象数据类型"><a href="#队列的抽象数据类型" class="headerlink" title="队列的抽象数据类型"></a>队列的抽象数据类型</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">ADT Queue &#123;</span><br><span class="line">Data</span><br><span class="line">    元素具有相同的类型，相邻元素具有前驱后继关系。</span><br><span class="line"></span><br><span class="line">Operation</span><br><span class="line">    InitQueue (&amp;Q)  (构造空队列 )</span><br><span class="line">    操作结果：构造一个空队列Q。</span><br><span class="line">    DestroyQueue (&amp;Q)   (销毁队列结构)</span><br><span class="line">    初始条件：队列Q已存在。</span><br><span class="line">    操作结果：队列Q被销毁。</span><br><span class="line">    ClearQueue  (&amp;Q)  (队列清空)</span><br><span class="line">    初始条件：队列Q已存在。</span><br><span class="line">    操作结果：队列Q清为空队列。</span><br><span class="line">    QueueEmpty (Q)   (判空)</span><br><span class="line">    初始条件：队列Q已存在。</span><br><span class="line">    操作结果：若队列Q为空，则返回<span class="literal">true</span>, 否则<span class="literal">false</span>。</span><br><span class="line">    QueueLength (Q) (求队列长)</span><br><span class="line">    初始条件：队列Q已存在。</span><br><span class="line">    操作结果：返回Q的元素个数，即队列的长度。</span><br><span class="line">    QueueTraverse (Q) (遍历队列)</span><br><span class="line">    初始条件：队列Q已存在且非空。</span><br><span class="line">    操作结果：从队头到队尾，依次对Q的每个数据元素  访问。</span><br><span class="line">    GetHead (Q, &amp;e)   (求队头元素)</span><br><span class="line">    初始条件：队列Q已存在且非空。</span><br><span class="line">    操作结果：用e返回Q的队头元素。</span><br><span class="line">    EnQueue (&amp;Q, e) (入队)</span><br><span class="line">    初始条件：队列Q已存在。</span><br><span class="line">    操作结果：插入元素e为新的队列元素。</span><br><span class="line">    DeQueue (&amp;Q, &amp;e)  (出队)</span><br><span class="line">    初始条件：队列Q已存在且非空。</span><br><span class="line">    操作结果：删除Q的队头元素，并用e返回其值。</span><br><span class="line">&#125;ADT Queue</span><br></pre></td></tr></table></figure>
+
+<h2 id="循环队列"><a href="#循环队列" class="headerlink" title="循环队列"></a>循环队列</h2><p>我们把队列的这种头尾相连的顺序存储结构称为循环队列。（可解决顺序存储空间不足）</p>
+<h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXSIZE 50</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> QElemType;</span><br><span class="line"><span class="comment">//循环队列</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    QElemType* data;</span><br><span class="line">    <span class="keyword">int</span> front;      <span class="comment">/*头指针*/</span></span><br><span class="line">    <span class="keyword">int</span> rear;       <span class="comment">/*尾指针*/</span></span><br><span class="line">&#125;SqQueue;</span><br></pre></td></tr></table></figure>
+
+<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">InitQueue</span><span class="params">(SqQueue&amp; Q)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Q.front = <span class="number">0</span>;</span><br><span class="line">    Q.rear = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="队列长度"><a href="#队列长度" class="headerlink" title="队列长度"></a>队列长度</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">GetLength</span><span class="params">(SqQueue Q)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (Q.rear - Q.front + MAXSIZE) % MAXSIZE;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="入队操作"><a href="#入队操作" class="headerlink" title="入队操作"></a>入队操作</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">EnQueue</span><span class="params">(SqQueue&amp; Q, QElemType e)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> ((Q.rear + <span class="number">1</span>) % MAXSIZE == Q.front)  <span class="comment">/*队满*/</span></span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"队列满"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        Q.data[Q.rear] = e;                 <span class="comment">/*元素e赋值给队尾*/</span></span><br><span class="line">        Q.rear = (Q.rear + <span class="number">1</span>) % MAXSIZE;    <span class="comment">/*rear指针后移一位*/</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="出队操作"><a href="#出队操作" class="headerlink" title="出队操作"></a>出队操作</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DeQueue</span><span class="params">(SqQueue&amp; Q, QElemType&amp; e)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (Q.front == Q.rear)                  <span class="comment">/*队空*/</span></span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"队列空"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        e = Q.data[Q.front];                <span class="comment">/*队头元素赋值给e*/</span></span><br><span class="line">        Q.front = (Q.front + <span class="number">1</span>) % MAXSIZE;  <span class="comment">/*front指针后移一位*/</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="队列的链式存储结构"><a href="#队列的链式存储结构" class="headerlink" title="队列的链式存储结构"></a>队列的链式存储结构</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> QElemType;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">QNode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    QElemType data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">QNode</span>* <span class="title">next</span>;</span></span><br><span class="line">&#125;QNode, * QueuePtr;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    QueuePtr front, rear;</span><br><span class="line">&#125;LinkQueue;</span><br></pre></td></tr></table></figure>
+
+<h3 id="入队操作-1"><a href="#入队操作-1" class="headerlink" title="入队操作"></a>入队操作</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">EnQueue</span><span class="params">(LinkQueue&amp; Q, QElemType e)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    QueuePtr s = <span class="keyword">new</span> QNode;</span><br><span class="line">    <span class="keyword">if</span> (!s)                             <span class="comment">/*存储分配失败*/</span></span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"存储分配失败"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        s-&gt;data = e;</span><br><span class="line">        s-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">        Q.rear-&gt;next = s;   <span class="comment">/*新结点s赋值给队尾后继*/</span></span><br><span class="line">        Q.rear = s;         <span class="comment">/*s设为队尾结点*/</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="出队操作-1"><a href="#出队操作-1" class="headerlink" title="出队操作"></a>出队操作</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DeQueue</span><span class="params">(LinkQueue&amp; Q, QElemType&amp; e)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    QueuePtr p;</span><br><span class="line">    <span class="keyword">if</span> (Q.front == Q.rear)          <span class="comment">/*队列空*/</span></span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"队列空"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        p = Q.front-&gt;next;          <span class="comment">/*欲删除结点暂存给p*/</span></span><br><span class="line">        e = p-&gt;data;                <span class="comment">/*欲删除对头结点赋值给e*/</span></span><br><span class="line">        Q.front-&gt;next = p-&gt;next;    <span class="comment">/*原对头结点后继p-&gt;next赋值给头结点后继*/</span></span><br><span class="line">        <span class="keyword">if</span> (Q.rear == p)            <span class="comment">/*若队头是队尾，则删除后将rear指向头结点*/</span></span><br><span class="line">            Q.rear = Q.front;</span><br><span class="line">        <span class="keyword">delete</span> p;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="栈与队列对比"><a href="#栈与队列对比" class="headerlink" title="栈与队列对比"></a>栈与队列对比</h2><table>
+<thead>
+<tr>
+<th>比较项目</th>
+<th>栈</th>
+<th>队列</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>逻辑结构</td>
+<td>和线性表一样, 数据元素之间存在一对一的关系</td>
+<td>和线性表一样, 数据元素之间存在一对一的关系</td>
+</tr>
+<tr>
+<td>顺序存储</td>
+<td>存储空间预先分配，可能会导致空间闲置或栈满溢出现象；数据元素个数不能自由扩充</td>
+<td>（常设计成循环队列形式）；存储空间预先分配，可能会导致空间闲置或队满溢出现象；数据元素个数不能自由扩充</td>
+</tr>
+<tr>
+<td>链式存储</td>
+<td>动态分配，不会出现闲置或栈满溢出现象;数据元素个数可以自由扩充</td>
+<td>动态分配，不会出现闲置或栈满溢出现象;数据元素个数可以自由扩充</td>
+</tr>
+<tr>
+<td>运算规则</td>
+<td>插人和删除在表的一端(栈顶)完成，后进先出</td>
+<td>插入运算在表的一端(队尾)进行，删除运算在表的另一端(队头),先进先出</td>
+</tr>
+</tbody></table>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/18/%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97/">展开全文 >></a>
         </p>
       
 
@@ -979,13 +1030,13 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/21/%E7%AE%97%E6%B3%95/">算法</a>
+      <a class="article-title" href="/2020/07/14/%E7%AE%97%E6%B3%95/">算法</a>
     </h1>
   
 
         
-        <a href="/2020/07/21/%E7%AE%97%E6%B3%95/" class="archive-article-date">
-  	<time datetime="2020-07-21T07:15:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-21</time>
+        <a href="/2020/07/14/%E7%AE%97%E6%B3%95/" class="archive-article-date">
+  	<time datetime="2020-07-14T07:15:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-14</time>
 </a>
         
       </header>
@@ -1078,7 +1129,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/21/%E7%AE%97%E6%B3%95/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/07/14/%E7%AE%97%E6%B3%95/">展开全文 >></a>
         </p>
       
 
@@ -1115,13 +1166,13 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/21/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%BB%AA%E8%AE%BA/">数据结构绪论</a>
+      <a class="article-title" href="/2020/07/14/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%BB%AA%E8%AE%BA/">数据结构绪论</a>
     </h1>
   
 
         
-        <a href="/2020/07/21/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%BB%AA%E8%AE%BA/" class="archive-article-date">
-  	<time datetime="2020-07-21T07:14:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-21</time>
+        <a href="/2020/07/14/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%BB%AA%E8%AE%BA/" class="archive-article-date">
+  	<time datetime="2020-07-14T07:14:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-14</time>
 </a>
         
       </header>
@@ -1160,7 +1211,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/21/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%BB%AA%E8%AE%BA/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/07/14/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%BB%AA%E8%AE%BA/">展开全文 >></a>
         </p>
       
 
