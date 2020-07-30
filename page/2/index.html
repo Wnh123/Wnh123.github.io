@@ -59,7 +59,7 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/photos">相册</a></li>
+				<li><a href="/photos/">相册</a></li>
 	        
 			</ul>
 		</nav>
@@ -145,7 +145,7 @@
 				
 					<li style="width: 50%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/photos">相册</a></li>
+					<li style="width: 50%"><a href="/photos/">相册</a></li>
 		        
 				</ul>
 			</nav>
@@ -161,6 +161,142 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-数据结构绪论" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/14/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%BB%AA%E8%AE%BA/">数据结构绪论</a>
+    </h1>
+  
+
+        
+        <a href="/2020/07/14/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%BB%AA%E8%AE%BA/" class="archive-article-date">
+  	<time datetime="2020-07-14T07:14:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="数据结构绪论"><a href="#数据结构绪论" class="headerlink" title="数据结构绪论"></a>数据结构绪论</h1><p>数据结构是一门研究非数值计算的程序设计问题中的操作对象，以及它们之间的关系和操作等相关问题的学科。</p>
+<h2 id="程序设计-数据结构-算法"><a href="#程序设计-数据结构-算法" class="headerlink" title="程序设计 = 数据结构 + 算法"></a>程序设计 = 数据结构 + 算法</h2><p>数据结构在程序设计中占据了相当重要的地位。</p>
+        
+          <a class="article-more-a" href="/2020/07/14/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%BB%AA%E8%AE%BA/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/14/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%BB%AA%E8%AE%BA/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-重读KMP算法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/12/%E9%87%8D%E8%AF%BBKMP%E7%AE%97%E6%B3%95/">重读KMP算法</a>
+    </h1>
+  
+
+        
+        <a href="/2020/07/12/%E9%87%8D%E8%AF%BBKMP%E7%AE%97%E6%B3%95/" class="archive-article-date">
+  	<time datetime="2020-07-12T13:15:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="重读KMP算法"><a href="#重读KMP算法" class="headerlink" title="重读KMP算法"></a>重读KMP算法</h1><p>这几天看了《大话数据结构》第五章-串，重新了解了串这个数据结构，当然其中最重要的模式匹配算法KMP有了新的认识，或者说是终于理解了。<br>接下来结合我的理解和<a href="https://blog.csdn.net/v_JULY_v/article/details/7041827" target="_blank" rel="noopener">CSDN中大佬</a>的详解，讲一讲KMP吧！</p>
+<h2 id="朴素的模式匹配（BF算法、暴力算法）"><a href="#朴素的模式匹配（BF算法、暴力算法）" class="headerlink" title="朴素的模式匹配（BF算法、暴力算法）"></a>朴素的模式匹配（BF算法、暴力算法）</h2><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>这是最早、最简单的模式匹配算法，就是简单的暴力算法，思路：  </p>
+<ul>
+<li>主串S，模式串T</li>
+<li>从主串S第一位开始和模式串T第一位开始匹配，成功匹配返回匹配成功的第一位，匹配失败，主串S后移一位，模式串重新从头开始匹配  </li>
+</ul>
+        
+          <a class="article-more-a" href="/2020/07/12/%E9%87%8D%E8%AF%BBKMP%E7%AE%97%E6%B3%95/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/12/%E9%87%8D%E8%AF%BBKMP%E7%AE%97%E6%B3%95/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-读《大话数据结构》（更新中）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -315,7 +451,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="读《Java编程思想（第4版）》（更新中）"><a href="#读《Java编程思想（第4版）》（更新中）" class="headerlink" title="读《Java编程思想（第4版）》（更新中）"></a>读《Java编程思想（第4版）》（更新中）</h1><h2 id=""><a href="#" class="headerlink" title=""></a><img src="https://img9.doubanio.com/view/subject/l/public/s27243455.jpg" width = "" height = "200" alt="《Java编程思想（第4版）》"/></h2><h2 id="内容简介-·-·-·-·-·-·"><a href="#内容简介-·-·-·-·-·-·" class="headerlink" title="内容简介  · · · · · ·"></a>内容简介  · · · · · ·</h2><p>本书赢得了全球程序员的广泛赞誉，即使是最晦涩的概念，在Bruce Eckel的文字亲和力和小而直接的编程示例面前也会化解于无形。从Java的基础语法到最高级特性（深入的面向对象概念、多线程、自动项目构建、单元测试和调试等），本书都能逐步指导你轻松掌握。</p>
+        <h1 id="读《Java编程思想（第4版）》（更新中）"><a href="#读《Java编程思想（第4版）》（更新中）" class="headerlink" title="读《Java编程思想（第4版）》（更新中）"></a>读《Java编程思想（第4版）》（更新中）</h1><h2 id=""><a href="#" class="headerlink" title=""></a><img src="http://blog-photos.test.upcdn.net/blog-photo/java%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86.jpg" width = "" height = "200" alt="《Java编程思想（第4版）》"/></h2><h2 id="内容简介-·-·-·-·-·-·"><a href="#内容简介-·-·-·-·-·-·" class="headerlink" title="内容简介  · · · · · ·"></a>内容简介  · · · · · ·</h2><p>本书赢得了全球程序员的广泛赞誉，即使是最晦涩的概念，在Bruce Eckel的文字亲和力和小而直接的编程示例面前也会化解于无形。从Java的基础语法到最高级特性（深入的面向对象概念、多线程、自动项目构建、单元测试和调试等），本书都能逐步指导你轻松掌握。</p>
 <p>从本书获得的各项大奖以及来自世界各地的读者评论中，不难看出这是一本经典之作。本书的作者拥有多年教学经验，对C、C++以及Java语言都有独到、深入的见解，以通俗易懂及小而直接的示例解释了一个个晦涩抽象的概念。本书共22章，包括操作符、控制执行流程、访问权限控制、复用类、多态、接口、通过异常处理错误、字符串、泛型、数组、容器深入研究、Java I/O系统、枚举类型、并发以及图形化用户界面等内容。这些丰富的内容，包含了Java语言基础语法以及高级特性，适合各个层次的Java程序员阅读，同时也是高等院校讲授面向对象程序设计语言以及Java语言的绝佳教材和参考书。</p>
         
           <a class="article-more-a" href="/2020/07/04/%E8%AF%BB%E3%80%8AJava%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3%EF%BC%88%E7%AC%AC4%E7%89%88%EF%BC%89%E3%80%8B%EF%BC%88%E6%9B%B4%E6%96%B0%E4%B8%AD%EF%BC%89/#more">more >></a>
