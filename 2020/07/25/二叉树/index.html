@@ -15,14 +15,14 @@
 <meta property="og:site_name" content="计科老杨（Wnh123）">
 <meta property="og:description" content="二叉树树的基本概念和存储结构已经介绍过了，现在介绍数据结构中极其重要的二叉树。 部分显示问题，请参考 定义二叉树（Binary Tree）是n（n&gt;&#x3D;0）个结点的有限集合，该集合或者为空集（称为空二叉树），或者由一个根结点和两棵互不相交的，分别称为根结点的左子树和右子树的二叉树组成。">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Wnh123/clouding@master/%E6%BB%A1%E4%BA%8C%E5%8F%89%E6%A0%91.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Wnh123/clouding@master/%E5%AE%8C%E5%85%A8%E4%BA%8C%E5%8F%89%E6%A0%91.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Wnh123/clouding@master/%E9%81%8D%E5%8E%86.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/25/%E4%BA%8C%E5%8F%89%E6%A0%91/%E6%BB%A1%E4%BA%8C%E5%8F%89%E6%A0%91.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/25/%E4%BA%8C%E5%8F%89%E6%A0%91/%E5%AE%8C%E5%85%A8%E4%BA%8C%E5%8F%89%E6%A0%91.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/25/%E4%BA%8C%E5%8F%89%E6%A0%91/%E9%81%8D%E5%8E%86.png">
 <meta property="article:published_time" content="2020-07-25T08:11:20.000Z">
-<meta property="article:modified_time" content="2020-07-31T07:08:41.617Z">
+<meta property="article:modified_time" content="2020-07-31T07:21:24.495Z">
 <meta property="article:author" content="计科老杨（Wnh123）">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Wnh123/clouding@master/%E6%BB%A1%E4%BA%8C%E5%8F%89%E6%A0%91.png">
+<meta name="twitter:image" content="http://yoursite.com/2020/07/25/%E4%BA%8C%E5%8F%89%E6%A0%91/%E6%BB%A1%E4%BA%8C%E5%8F%89%E6%A0%91.png">
   
     <link rel="alternative" href="/atom.xml" title="计科老杨（Wnh123）" type="application/atom+xml">
   
@@ -205,7 +205,7 @@
 <p>(1)叶子只能出现在最下一层。出现在其他层就不可能达成平衡。</p>
 <p>(2)非叶子结点的度一-定是 2。否则就是“缺胳膊少腿”了。</p>
 <p>(3)在同样深度的二叉树中，满二叉树的结点个数最多，叶子数最多。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Wnh123/clouding@master/%E6%BB%A1%E4%BA%8C%E5%8F%89%E6%A0%91.png" alt="满二叉树"></p>
+<p><img src="/2020/07/25/%E4%BA%8C%E5%8F%89%E6%A0%91/%E6%BB%A1%E4%BA%8C%E5%8F%89%E6%A0%91.png" alt="满二叉树"></p>
 <h4 id="完全二叉树"><a href="#完全二叉树" class="headerlink" title="完全二叉树"></a>完全二叉树</h4><p>对一棵具有n个结点的二叉树按层序编号，如果编号为i（1≤i≤n）的结点与同祥深度的满二叉树中编号为i的结点在二叉树中位置完全相同，则这棵二叉树称为完全二叉树。</p>
 <p>特点：</p>
 <p>(1)叶子结点只能出现在最下两层。</p>
@@ -213,7 +213,7 @@
 <p>(3)倒数二层，若有叶子结点，一定都在右部连续位置。</p>
 <p>(4)如果结点度为1，则该结点只有左孩子，即不存在只有右子树的情况。</p>
 <p>(5)同样结点数的二叉树，完全二叉树的深度最小。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Wnh123/clouding@master/%E5%AE%8C%E5%85%A8%E4%BA%8C%E5%8F%89%E6%A0%91.png" alt="完全二叉树"></p>
+<p><img src="/2020/07/25/%E4%BA%8C%E5%8F%89%E6%A0%91/%E5%AE%8C%E5%85%A8%E4%BA%8C%E5%8F%89%E6%A0%91.png" alt="完全二叉树"></p>
 <h2 id="二叉树的性质"><a href="#二叉树的性质" class="headerlink" title="二叉树的性质"></a>二叉树的性质</h2><h3 id="性质一"><a href="#性质一" class="headerlink" title="性质一"></a>性质一</h3><p>在二叉树的第i层上至多有$2^{i-1}$个结点（i&gt;=1）。</p>
 <h3 id="性质二"><a href="#性质二" class="headerlink" title="性质二"></a>性质二</h3><p>深度为k的二叉树至多有$2^k-1$个结点（k&gt;=1）。</p>
 <h3 id="性质三"><a href="#性质三" class="headerlink" title="性质三"></a>性质三</h3><p>对任何一棵二叉树T，如果其终端结点数为$n_0$，度为2的结点数为$n_2$，则$n_0=n_2+1$。</p>
@@ -225,7 +225,7 @@
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">BiTNode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    TElemType data;     <span class="comment">/*数据*/</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">BiTNode</span>* <span class="title">lchild</span>, * <span class="title">rchild</span>;</span>   <span class="comment">/*左右孩子指针*/</span></span><br><span class="line">&#125;BiTNode, * BiTree;</span><br></pre></td></tr></table></figure>
 
 <h2 id="遍历二叉树"><a href="#遍历二叉树" class="headerlink" title="遍历二叉树"></a>遍历二叉树</h2><h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><p>二叉树的遍历( traversing binary tree )是指从根结点出发，按照某种次序依次访问二叉树中所有结点，使得每个结点被访问一次且仅被访问一次。</p>
-<h3 id="遍历方法"><a href="#遍历方法" class="headerlink" title="遍历方法"></a>遍历方法</h3><p><img src="https://cdn.jsdelivr.net/gh/Wnh123/clouding@master/%E9%81%8D%E5%8E%86.png" alt="遍历"></p>
+<h3 id="遍历方法"><a href="#遍历方法" class="headerlink" title="遍历方法"></a>遍历方法</h3><p><img src="/2020/07/25/%E4%BA%8C%E5%8F%89%E6%A0%91/%E9%81%8D%E5%8E%86.png" alt="遍历"></p>
 <h4 id="前序遍历即先（根）序的遍历算法"><a href="#前序遍历即先（根）序的遍历算法" class="headerlink" title="前序遍历即先（根）序的遍历算法"></a>前序遍历即先（根）序的遍历算法</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">PreOrderTraverse</span><span class="params">(BiTree T)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (T == <span class="literal">NULL</span>)</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; T-&gt;data;</span><br><span class="line">    PreOrderTraverse(T-&gt;lchild);</span><br><span class="line">    PreOrderTraverse(T-&gt;rchild);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>上图前序遍历：A  BDG  CEF</p>
