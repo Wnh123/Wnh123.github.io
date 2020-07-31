@@ -222,14 +222,14 @@
 <ul>
 <li>树中所有叶子结点的带权路径长度之和</li>
 </ul>
-<p><img src="WPL.png" alt="WPL"></p>
+<p><img src="/2020/07/25/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E5%8F%8A%E5%BA%94%E7%94%A8/WPL.png" alt="WPL"></p>
 <h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>设有n个权值{w1,w2,…,wn}，构造一棵有n个叶子结点的二叉树，每个叶子的权值为wi，则wpl最小的二叉树叫哈夫曼树。</p>
 <h2 id="哈夫曼树的构造过程"><a href="#哈夫曼树的构造过程" class="headerlink" title="哈夫曼树的构造过程"></a>哈夫曼树的构造过程</h2><p>(1). 初始化：根据给定的n个权值{w1,w2,…,wn}，构成n棵二叉树的集合F={T1,T2,…,Tn}，其中每棵二叉树Ti只有一个带权为wi的根结点，其左右子树均空。</p>
 <p>(2). 选取与合并：在 F 中选取两棵根结点的权值最小的树作为左右子树，构造一棵新的二叉树，且置新的二叉树的根结点的权值为其左、右子树上根结点的权值之和。</p>
 <p>(3). 删除与加入：在 F 中删除这两棵树，同时将新得到的二叉树加入 F 中。</p>
 <p>(4). 重复(2)和(3)，直到 F 只含一棵树为止。这棵树便是所求的哈夫曼树。</p>
 <h3 id="例："><a href="#例：" class="headerlink" title="例："></a>例：</h3><p>w={5, 29, 7, 8, 14, 23, 3, 11}的构造过程</p>
-<p><img src="w1.png" alt="w1"><br><img src="w2.png" alt="w2"><br><img src="w3.png" alt="w3"><br><img src="w4.png" alt="w4"><br><img src="w5.png" alt="w5"><br><img src="w6.png" alt="w6"><br><img src="w7.png" alt="w7"><br><img src="w8.png" alt="w8"></p>
+<p><img src="/2020/07/25/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E5%8F%8A%E5%BA%94%E7%94%A8/w1.png" alt="w1"><br><img src="/2020/07/25/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E5%8F%8A%E5%BA%94%E7%94%A8/w2.png" alt="w2"><br><img src="/2020/07/25/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E5%8F%8A%E5%BA%94%E7%94%A8/w3.png" alt="w3"><br><img src="/2020/07/25/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E5%8F%8A%E5%BA%94%E7%94%A8/w4.png" alt="w4"><br><img src="/2020/07/25/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E5%8F%8A%E5%BA%94%E7%94%A8/w5.png" alt="w5"><br><img src="/2020/07/25/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E5%8F%8A%E5%BA%94%E7%94%A8/w6.png" alt="w6"><br><img src="/2020/07/25/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E5%8F%8A%E5%BA%94%E7%94%A8/w7.png" alt="w7"><br><img src="/2020/07/25/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E5%8F%8A%E5%BA%94%E7%94%A8/w8.png" alt="w8"></p>
 <h2 id="哈夫曼编码"><a href="#哈夫曼编码" class="headerlink" title="哈夫曼编码"></a>哈夫曼编码</h2><p>一般地， 设需要编码的字符集为{ d1,d2,···,dn }，各个字符在电文中出现的次数或频率集合为{ W1,W2,···,Wn},以d1,d2,···,dn作为叶子结点，以W1,W,···,Wn作为相应叶子结点的权值来构造一棵哈夫曼树。规定哈夫曼树的左分支代表0，右分支代表1,则从根结点到叶子结点所经过的路径分支组成的0和1的序列便为该结点对应字符的编码，这就是哈夫曼编码。</p>
 <h2 id="哈夫曼树及编码存储结构"><a href="#哈夫曼树及编码存储结构" class="headerlink" title="哈夫曼树及编码存储结构"></a>哈夫曼树及编码存储结构</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">char</span> data;</span><br><span class="line">    <span class="keyword">int</span> weight;</span><br><span class="line">    <span class="keyword">int</span> parent, lchild, rchild;</span><br><span class="line">&#125;HTNode, * HuffmanTree;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">char</span>** HuffmanCode;<span class="comment">//动态分配数组存储哈夫曼编码</span></span><br></pre></td></tr></table></figure>
 
