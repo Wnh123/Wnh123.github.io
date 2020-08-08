@@ -27,7 +27,7 @@
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/Wnh123/clouding@master/heapsort.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/Wnh123/clouding@master/heapsort-trace.png">
 <meta property="article:published_time" content="2020-08-03T08:15:12.000Z">
-<meta property="article:modified_time" content="2020-08-04T11:32:11.019Z">
+<meta property="article:modified_time" content="2020-08-08T09:06:57.109Z">
 <meta property="article:author" content="计科老杨（Wnh123）">
 <meta property="article:tag" content="算法">
 <meta property="article:tag" content="排序">
@@ -197,10 +197,10 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="优先队列"><a href="#优先队列" class="headerlink" title="优先队列"></a>优先队列</h1><p>许多应用程序都需要处理有序的元素，但不一定要求它们全部有序，或是不一定要一次就将它们排序。很多情况下我们会收集些元素，处理当前键值最大的元素，然后再收集更多的元素，再处理当前键值最大的元素，如此这般。例如，你可能有一台能够同时运行多个应用程序的电脑(或者手机)。这是通过为每个应用程序的事件分配一个优先级，并总是处理下一个优先级最高的事件来实现的。例如，绝大多数手机分配给来电的优先级都会比游戏程序的高。</p>
-<p>在这种情况下，一个合适的数据结构应该支持两种操作: 删除最大元素和插入元素。这种数据类型叫做优先队列。优先队列的使用和队列（删除最老的元素）以及栈（删除最新的元素）类似，但高效地实现它则更有挑战性。</p>
-<p><a href="https://wnh123.github.io/2020/07/27/%E6%8E%92%E5%BA%8F/" target="_blank" rel="noopener">目录</a></p>
 <a id="more"></a>
 
+<p>在这种情况下，一个合适的数据结构应该支持两种操作: 删除最大元素和插入元素。这种数据类型叫做优先队列。优先队列的使用和队列（删除最老的元素）以及栈（删除最新的元素）类似，但高效地实现它则更有挑战性。</p>
+<p><a href="https://wnh123.github.io/2020/07/27/%E6%8E%92%E5%BA%8F/" target="_blank" rel="noopener">目录</a></p>
 <h2 id="API"><a href="#API" class="headerlink" title="API"></a>API</h2><p><img src="https://cdn.jsdelivr.net/gh/Wnh123/clouding@master/pq-api.png" alt="泛型优先队列的API"></p>
 <h2 id="初级实现"><a href="#初级实现" class="headerlink" title="初级实现"></a>初级实现</h2><h3 id="数组实现（无序）"><a href="#数组实现（无序）" class="headerlink" title="数组实现（无序）"></a>数组实现（无序）</h3><h3 id="数组实现（有序）"><a href="#数组实现（有序）" class="headerlink" title="数组实现（有序）"></a>数组实现（有序）</h3><h3 id="链表表示法"><a href="#链表表示法" class="headerlink" title="链表表示法"></a>链表表示法</h3><p><img src="https://cdn.jsdelivr.net/gh/Wnh123/clouding@master/pq-array.png" alt="在一个优先队列上执行的一系列操作"></p>
 <h2 id="堆的定义"><a href="#堆的定义" class="headerlink" title="堆的定义"></a>堆的定义</h2><p>数据结构二叉堆能够很好地实现优先队列的基本操作。在二叉堆的数组中，每个元素都要保证大于等于另两个特定位置的元素。相应地，这些位置的元素又至少要大于等于数组中的另两个元素，以此类推。如果我们将所有元素画成一棵二叉树，将每个较大元素和两个较小的元素用边连接就可以很容易看出这种结构。</p>
@@ -510,10 +510,6 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
@@ -526,7 +522,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">查找</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">博客</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -535,10 +539,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">博客</a>
               </li>
             
             <div class="clearfix"></div>

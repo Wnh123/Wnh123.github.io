@@ -25,7 +25,7 @@
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/Wnh123/clouding@master/w7.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/Wnh123/clouding@master/w8.png">
 <meta property="article:published_time" content="2020-07-25T07:15:42.000Z">
-<meta property="article:modified_time" content="2020-08-04T11:39:06.882Z">
+<meta property="article:modified_time" content="2020-08-08T09:05:36.544Z">
 <meta property="article:author" content="计科老杨（Wnh123）">
 <meta property="article:tag" content="数据结构">
 <meta name="twitter:card" content="summary">
@@ -195,10 +195,10 @@
       
         <h1 id="哈夫曼树及应用"><a href="#哈夫曼树及应用" class="headerlink" title="哈夫曼树及应用"></a>哈夫曼树及应用</h1><p>在计算机和互联网技术中，文本压缩就是一个非常重要的技术。玩电脑的人几乎都会应用压缩和解压缩软件来处理文档。因为它除了可以减少文档在磁盘上的空间外，还有重要的一点， 就是我们可以在网络上以压缩的形式传输大量数据，使得保存和传递都更加高效。</p>
 <p>那么压缩而不出错是如何做到的呢?简单说，就是把我们要压缩的文本进行重新编码，以减少不必要的空间。尽管现在最新技术在编码上已经很好很强大，但这一切都来自于曾经的技术积累，我们今天就来介绍一下最基本的压缩编码方法-赫夫曼编码。</p>
-<p>在介绍赫夫曼编码前，我们必须得介绍赫夫曼树，而介绍赫夫曼树，我们不得不提这样一个人，美国数学家赫夫曼(David Huffman)， 也有的翻译为哈夫曼。他在1952年发明了赫夫曼编码，为了纪念他的成就，于是就把他在编码中用到的特殊的C叉树称之为赫夫曼树，他的编码方法称为赫夫曼编码。也就是说，我们现在介绍的知识全都来自于近60年前这位伟大科学家的研究成果，而我们平时所用的压缩和解压缩技术也都是基于赫夫曼的研究之上发展而来，我们应该要记住他。</p>
-<p><a href="https://www.jianshu.com/p/acd06b8ed06b" target="_blank" rel="noopener">部分显示问题，请参考</a></p>
 <a id="more"></a>
 
+<p>在介绍赫夫曼编码前，我们必须得介绍赫夫曼树，而介绍赫夫曼树，我们不得不提这样一个人，美国数学家赫夫曼(David Huffman)， 也有的翻译为哈夫曼。他在1952年发明了赫夫曼编码，为了纪念他的成就，于是就把他在编码中用到的特殊的C叉树称之为赫夫曼树，他的编码方法称为赫夫曼编码。也就是说，我们现在介绍的知识全都来自于近60年前这位伟大科学家的研究成果，而我们平时所用的压缩和解压缩技术也都是基于赫夫曼的研究之上发展而来，我们应该要记住他。</p>
+<p><a href="https://www.jianshu.com/p/acd06b8ed06b" target="_blank" rel="noopener">部分显示问题，请参考</a></p>
 <h2 id="哈夫曼树的相关术语"><a href="#哈夫曼树的相关术语" class="headerlink" title="哈夫曼树的相关术语"></a>哈夫曼树的相关术语</h2><blockquote>
 <p>路径</p>
 </blockquote>
@@ -518,10 +518,6 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
@@ -534,7 +530,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">查找</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">博客</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -543,10 +547,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">博客</a>
               </li>
             
             <div class="clearfix"></div>

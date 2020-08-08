@@ -259,9 +259,6 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="排序应用"><a href="#排序应用" class="headerlink" title="排序应用"></a>排序应用</h1><p>排序如此有用的一个主要原因是，在一个有序的数组中查找一个元素要比在一个无序的数组中查找简单得多。人们用了一个多世纪发现在一本按姓氏排序的电话黄页中查找某个人的电话号码最容易。现在，数字音乐作家们将歌曲文件按照作家名或是歌曲名排序，搜索引擎按照搜素结果的重要性的高低显示结果，电子表格按照某一列的排序结果显示所有栏，矩阵处理工具将一个对称矩阵的真实特征值按照降序排列，等等。只要队列是有序的，很多其他任务也更容易完成，比如在本书最后的有序索引中查找某项，或是从一列长长的邮件列表或者投票人列表或者网站列表中删去重复项，或是在统计学计算中剔除异常值、查找中位数或者计算比例。</p>
-<p>在许多看似无关的领域中，排序其实仍然是个重要的子问题。 数据压缩、计算机图形学、计算生物学、供应链管理、组合优化、社会选择和投票等，不一而足。我们在本章中学习的算法也在开发本书其他章节的强大算法的过程中起到了关键作用。</p>
-<p>通用排序算法是最重要的，因此我们首先会考虑些在构建适用于 多种情况的排序算法时需要注意的实际问题。虽然部分话题只适用于Java,但每个问题都仍然是所有系统需要解决的。</p>
-<p>我们的主要目的是为了说明，尽管我们所学习的各种算法的思想相对简单，但它们的适用领域仍然广泛经过验证的各种排序算法的应用列表很长，我们在这里只会涉及其中的一小部分，一些是科学领域的。一 些是算法领域的。 还有一些是商业领域的。 在练习中你们还能找到更多例子。本书的网站上还有更多。</p>
         
           <a class="article-more-a" href="/2020/08/03/%E6%8E%92%E5%BA%8F%E5%BA%94%E7%94%A8/#more">more >></a>
         
@@ -342,8 +339,6 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="优先队列"><a href="#优先队列" class="headerlink" title="优先队列"></a>优先队列</h1><p>许多应用程序都需要处理有序的元素，但不一定要求它们全部有序，或是不一定要一次就将它们排序。很多情况下我们会收集些元素，处理当前键值最大的元素，然后再收集更多的元素，再处理当前键值最大的元素，如此这般。例如，你可能有一台能够同时运行多个应用程序的电脑(或者手机)。这是通过为每个应用程序的事件分配一个优先级，并总是处理下一个优先级最高的事件来实现的。例如，绝大多数手机分配给来电的优先级都会比游戏程序的高。</p>
-<p>在这种情况下，一个合适的数据结构应该支持两种操作: 删除最大元素和插入元素。这种数据类型叫做优先队列。优先队列的使用和队列（删除最老的元素）以及栈（删除最新的元素）类似，但高效地实现它则更有挑战性。</p>
-<p><a href="https://wnh123.github.io/2020/07/27/%E6%8E%92%E5%BA%8F/" target="_blank" rel="noopener">目录</a></p>
         
           <a class="article-more-a" href="/2020/08/03/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/#more">more >></a>
         
@@ -828,7 +823,6 @@
       
         <h1 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h1><p>树的基本概念和存储结构已经介绍过了，现在介绍数据结构中极其重要的二叉树。</p>
 <p><a href="https://www.jianshu.com/p/3a8aee2ce593" target="_blank" rel="noopener">部分显示问题，请参考</a></p>
-<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>二叉树（Binary Tree）是n（n&gt;=0）个结点的有限集合，该集合或者为空集（称为空二叉树），或者由一个根结点和两棵互不相交的，分别称为根结点的左子树和右子树的二叉树组成。</p>
         
           <a class="article-more-a" href="/2020/07/25/%E4%BA%8C%E5%8F%89%E6%A0%91/#more">more >></a>
         
@@ -906,8 +900,6 @@
       
         <h1 id="哈夫曼树及应用"><a href="#哈夫曼树及应用" class="headerlink" title="哈夫曼树及应用"></a>哈夫曼树及应用</h1><p>在计算机和互联网技术中，文本压缩就是一个非常重要的技术。玩电脑的人几乎都会应用压缩和解压缩软件来处理文档。因为它除了可以减少文档在磁盘上的空间外，还有重要的一点， 就是我们可以在网络上以压缩的形式传输大量数据，使得保存和传递都更加高效。</p>
 <p>那么压缩而不出错是如何做到的呢?简单说，就是把我们要压缩的文本进行重新编码，以减少不必要的空间。尽管现在最新技术在编码上已经很好很强大，但这一切都来自于曾经的技术积累，我们今天就来介绍一下最基本的压缩编码方法-赫夫曼编码。</p>
-<p>在介绍赫夫曼编码前，我们必须得介绍赫夫曼树，而介绍赫夫曼树，我们不得不提这样一个人，美国数学家赫夫曼(David Huffman)， 也有的翻译为哈夫曼。他在1952年发明了赫夫曼编码，为了纪念他的成就，于是就把他在编码中用到的特殊的C叉树称之为赫夫曼树，他的编码方法称为赫夫曼编码。也就是说，我们现在介绍的知识全都来自于近60年前这位伟大科学家的研究成果，而我们平时所用的压缩和解压缩技术也都是基于赫夫曼的研究之上发展而来，我们应该要记住他。</p>
-<p><a href="https://www.jianshu.com/p/acd06b8ed06b" target="_blank" rel="noopener">部分显示问题，请参考</a></p>
         
           <a class="article-more-a" href="/2020/07/25/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E5%8F%8A%E5%BA%94%E7%94%A8/#more">more >></a>
         
@@ -1081,10 +1073,6 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
@@ -1097,7 +1085,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">查找</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">博客</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1106,10 +1102,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">博客</a>
               </li>
             
             <div class="clearfix"></div>
