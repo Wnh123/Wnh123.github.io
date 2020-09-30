@@ -6,16 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: 自己 | 计科老杨（Wnh123）</title>
+  <title>LeetCode1 | 计科老杨（Wnh123）</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="学习记录所用">
-<meta property="og:type" content="website">
-<meta property="og:title" content="计科老杨（Wnh123）">
-<meta property="og:url" content="http://yoursite.com/tags/%E8%87%AA%E5%B7%B1/index.html">
+  <meta name="description" content="LeetCode1这两天在LeetCode这个平台上刷算法题，想着也快毕业了，不想读研，那就要为找工作多费心力了。之后我会经常在这看题的，也会发一些好的题目算法，做个记录。 这次相对都是简单一些的。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LeetCode1">
+<meta property="og:url" content="http://yoursite.com/2020/09/30/LeetCode1/index.html">
 <meta property="og:site_name" content="计科老杨（Wnh123）">
-<meta property="og:description" content="学习记录所用">
+<meta property="og:description" content="LeetCode1这两天在LeetCode这个平台上刷算法题，想着也快毕业了，不想读研，那就要为找工作多费心力了。之后我会经常在这看题的，也会发一些好的题目算法，做个记录。 这次相对都是简单一些的。">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-09-30T12:26:47.000Z">
+<meta property="article:modified_time" content="2020-09-30T13:24:01.685Z">
 <meta property="article:author" content="计科老杨（Wnh123）">
+<meta property="article:tag" content="算法">
+<meta property="article:tag" content="LeetCode">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="计科老杨（Wnh123）" type="application/atom+xml">
@@ -160,64 +164,246 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-LeetCode1" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/08/2020%E7%9A%84%E6%80%9D%E8%80%83/" class="archive-article-date">
-  	<time datetime="2020-09-08T07:21:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-08</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/08/2020%E7%9A%84%E6%80%9D%E8%80%83/">2020的思考</a>
+    <h1 class="article-title" itemprop="name">
+      LeetCode1
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2020/09/30/LeetCode1/" class="archive-article-date">
+  	<time datetime="2020-09-30T12:26:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="LeetCode1"><a href="#LeetCode1" class="headerlink" title="LeetCode1"></a>LeetCode1</h1><p>这两天在LeetCode这个平台上刷算法题，想着也快毕业了，不想读研，那就要为找工作多费心力了。之后我会经常在这看题的，也会发一些好的题目算法，做个记录。</p>
+<p>这次相对都是简单一些的。</p>
+<a id="more"></a>
+
+<h2 id="7-整数反转"><a href="#7-整数反转" class="headerlink" title="7.整数反转"></a>7.整数反转</h2><p><a href="https://leetcode-cn.com/problems/reverse-integer/" target="_blank" rel="noopener">题目地址</a></p>
+<p>题目描述：给出一个 32 位的有符号整数，你需要将这个整数中每位上的数字进行反转。</p>
+<p>示例1：</p>
+<blockquote>
+<p>输入: 123<br>输出: 321</p>
+</blockquote>
+<p>示例2：</p>
+<blockquote>
+<p>输入: -123<br>输出: -321</p>
+</blockquote>
+<p>示例3：</p>
+<blockquote>
+<p>输入: 120<br>输出: 21</p>
+</blockquote>
+<p>注意:</p>
+<p>假设我们的环境只能存储得下 32 位的有符号整数，则其数值范围为 [−231,  231 − 1]。请根据这个假设，如果反转后整数溢出那么就返回 0。</p>
+<h2 id="begin"><a href="#begin" class="headerlink" title="begin"></a>begin</h2><p>是不是感觉很简单，没错是相对简单的题，解这个题应该都可以的，但解题前是否分析了该怎么做才能做到最优，时间空间达到平衡。</p>
+<p>这个题关键是就是用好“%”、“/”和循环，然后判断溢出即可，最简单的开始练手嘛！</p>
+<p>一种java题解</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">reverse</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> rev=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(x!=<span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">int</span> pop=x%<span class="number">10</span>;</span><br><span class="line">            x/=<span class="number">10</span>;</span><br><span class="line">            <span class="keyword">if</span> (rev &gt; Integer.MAX_VALUE/<span class="number">10</span> || (rev == Integer.MAX_VALUE / <span class="number">10</span> &amp;&amp; pop &gt; <span class="number">7</span>)) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">if</span> (rev &lt; Integer.MIN_VALUE/<span class="number">10</span> || (rev == Integer.MIN_VALUE / <span class="number">10</span> &amp;&amp; pop &lt; -<span class="number">8</span>))<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            rev=rev*<span class="number">10</span>+pop;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> rev;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://leetcode-cn.com/problems/reverse-integer/solution/" target="_blank" rel="noopener">详细题解</a></p>
+<p>热身好就下一个</p>
+<h2 id="9-回文数"><a href="#9-回文数" class="headerlink" title="9.回文数"></a>9.回文数</h2><p><a href="https://leetcode-cn.com/problems/palindrome-number/" target="_blank" rel="noopener">题目地址</a></p>
+<p>判断一个整数是否是回文数。回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。</p>
+<p>示例1：</p>
+<blockquote>
+<p>输入: 121<br>输出: true</p>
+</blockquote>
+<p>示例2：</p>
+<blockquote>
+<p>输入: -121<br>输出: false<br>解释: 从左向右读, 为 -121 。 从右向左读, 为 121- 。因此它不是一个回文数。</p>
+</blockquote>
+<p>示例3：</p>
+<blockquote>
+<p>输入: 10<br>输出: false<br>解释: 从右向左读, 为 01 。因此它不是一个回文数。</p>
+</blockquote>
+<p>进阶:</p>
+<p>你能不将整数转为字符串来解决这个问题吗？</p>
+<h2 id="begin-1"><a href="#begin-1" class="headerlink" title="begin"></a>begin</h2><p>很多人可能对进阶的字符串回文的会更了解，low、high首尾判断。这个题是整数的回文，最好自己先是尝试一下，不知道有没有人这样想，分三种情况考虑，负数false，0true，正数在做类似于字符串那样处理，不怕你们嘲笑，我当时就这么想的，实现之后，虽然通过但时间消耗太大了，需要改进，看了题解，不禁感慨：我怎么想不到！！！</p>
+<p>题解思路：负数和以0结尾的数false，重点来了，下一步将这个数反转一半，如：12321和123321分别反转为123和123，接着与剩下的比较，匹配则true。</p>
+<p>一种java题解</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">bool <span class="title">isPalindrome</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 特殊情况：</span></span><br><span class="line">        <span class="comment">// 如上所述，当 x &lt; 0 时，x 不是回文数。</span></span><br><span class="line">        <span class="comment">// 同样地，如果数字的最后一位是 0，为了使该数字为回文，</span></span><br><span class="line">        <span class="comment">// 则其第一位数字也应该是 0</span></span><br><span class="line">        <span class="comment">// 只有 0 满足这一属性</span></span><br><span class="line">        <span class="keyword">if</span> (x &lt; <span class="number">0</span> || (x % <span class="number">10</span> == <span class="number">0</span> &amp;&amp; x != <span class="number">0</span>)) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> revertedNumber = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (x &gt; revertedNumber) &#123;</span><br><span class="line">            revertedNumber = revertedNumber * <span class="number">10</span> + x % <span class="number">10</span>;</span><br><span class="line">            x /= <span class="number">10</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 当数字长度为奇数时，我们可以通过 revertedNumber/10 去除处于中位的数字。</span></span><br><span class="line">        <span class="comment">// 例如，当输入为 12321 时，在 while 循环的末尾我们可以得到 x = 12，revertedNumber = 123，</span></span><br><span class="line">        <span class="comment">// 由于处于中位的数字不影响回文（它总是与自己相等），所以我们可以简单地将其去除。</span></span><br><span class="line">        <span class="keyword">return</span> x == revertedNumber || x == revertedNumber / <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://leetcode-cn.com/problems/palindrome-number/solution/hui-wen-shu-by-leetcode-solution/" target="_blank" rel="noopener">详细题解</a></p>
+<p>是不是觉得，就这，那就来一道复杂一点的吧！</p>
+<h2 id="2-两数相加"><a href="#2-两数相加" class="headerlink" title="2. 两数相加"></a>2. 两数相加</h2><p><a href="https://leetcode-cn.com/problems/add-two-numbers/" target="_blank" rel="noopener">题目地址</a></p>
+<p>给出两个 非空 的链表用来表示两个非负的整数。其中，它们各自的位数是按照 逆序 的方式存储的，并且它们的每个节点只能存储 一位 数字。</p>
+<p>如果，我们将这两个数相加起来，则会返回一个新的链表来表示它们的和。</p>
+<p>您可以假设除了数字 0 之外，这两个数都不会以 0 开头。</p>
+<p>示例：</p>
+<blockquote>
+<p>输入：(2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)<br>输出：7 -&gt; 0 -&gt; 8<br>原因：342 + 465 = 807</p>
+</blockquote>
+<h2 id="begin-2"><a href="#begin-2" class="headerlink" title="begin"></a>begin</h2><p>这个，还行吧，包含链表知识，可以费点心思了吧！</p>
+<p>选这个题是有目的的，因为这个题和解太有趣了，也可能就我笨想不到吧！</p>
+<p>提示一下下面直接放题解了——从低位依次向上加，存入链表即可。</p>
+<p>一种java题解</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * public class ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode next;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) &#123; val = x; &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">addTwoNumbers</span><span class="params">(ListNode l1, ListNode l2)</span> </span>&#123;</span><br><span class="line">        ListNode l=<span class="keyword">new</span> ListNode(<span class="number">0</span>);</span><br><span class="line">        ListNode p1=l1,p2=l2,p=l;</span><br><span class="line">        <span class="keyword">int</span> carry=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(p1!=<span class="keyword">null</span>||p2!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">int</span> x=(p1!=<span class="keyword">null</span>)? p1.val:<span class="number">0</span>;</span><br><span class="line">            <span class="keyword">int</span> y=(p2!=<span class="keyword">null</span>)? p2.val:<span class="number">0</span>;</span><br><span class="line">            <span class="keyword">int</span> sum=carry+x+y;</span><br><span class="line">            carry=sum/<span class="number">10</span>;</span><br><span class="line">            p.next=<span class="keyword">new</span> ListNode(sum%<span class="number">10</span>);</span><br><span class="line">            p=p.next;</span><br><span class="line">            <span class="keyword">if</span>(p1!=<span class="keyword">null</span>)</span><br><span class="line">                p1=p1.next;</span><br><span class="line">            <span class="keyword">if</span>(p2!=<span class="keyword">null</span>)</span><br><span class="line">                p2=p2.next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(carry&gt;<span class="number">0</span>)</span><br><span class="line">            p.next=<span class="keyword">new</span> ListNode(carry);</span><br><span class="line">        <span class="keyword">return</span> l.next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://leetcode-cn.com/problems/add-two-numbers/solution/" target="_blank" rel="noopener">详细题解</a></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>引用一位解题者在题解下的评论“简单的题效率完全比不上题解，复杂的题完全不会 -.-”，我也是这样，天生没有那么聪明的脑子，那就必须要格外努力！Fighting！</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/alipay.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">思考</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">自己</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">LeetCode</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/09/30/LeetCode1/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2020/09/27/%E5%88%9D%E8%AF%86Python/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">初识Python</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -240,9 +426,9 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
