@@ -6,16 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: 博客 | 计科老杨（Wnh123）</title>
+  <title>动态规划B最值问题 | 计科老杨（Wnh123）</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="学习记录所用">
-<meta property="og:type" content="website">
-<meta property="og:title" content="计科老杨（Wnh123）">
-<meta property="og:url" content="http://yoursite.com/tags/%E5%8D%9A%E5%AE%A2/index.html">
+  <meta name="description" content="动态规划B最值问题接下来用一道例题来认识动态规划的最值问题，首先声明一下，这些题可能有其他解法，但在这里我只是说一说关于动态规划的解法。 开始吧！">
+<meta property="og:type" content="article">
+<meta property="og:title" content="动态规划B最值问题">
+<meta property="og:url" content="http://yoursite.com/2020/10/19/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92B%E6%9C%80%E5%80%BC%E9%97%AE%E9%A2%98/index.html">
 <meta property="og:site_name" content="计科老杨（Wnh123）">
-<meta property="og:description" content="学习记录所用">
+<meta property="og:description" content="动态规划B最值问题接下来用一道例题来认识动态规划的最值问题，首先声明一下，这些题可能有其他解法，但在这里我只是说一说关于动态规划的解法。 开始吧！">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-10-19T09:06:42.000Z">
+<meta property="article:modified_time" content="2020-10-19T09:53:07.695Z">
 <meta property="article:author" content="计科老杨（Wnh123）">
+<meta property="article:tag" content="算法">
+<meta property="article:tag" content="LeetCode">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="计科老杨（Wnh123）" type="application/atom+xml">
@@ -160,60 +164,262 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-动态规划B最值问题" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/08/04/%E8%A7%A3%E5%86%B3PicGo-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%9B%BE%E5%BA%8A%E4%B8%8A%E4%BC%A0%E5%A4%B1%E8%B4%A5%E9%97%AE%E9%A2%98/" class="archive-article-date">
-  	<time datetime="2020-08-04T11:49:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-04</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/04/%E8%A7%A3%E5%86%B3PicGo-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%9B%BE%E5%BA%8A%E4%B8%8A%E4%BC%A0%E5%A4%B1%E8%B4%A5%E9%97%AE%E9%A2%98/">解决PicGo+GitHub搭建个人图床上传失败问题</a>
+    <h1 class="article-title" itemprop="name">
+      动态规划B最值问题
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2020/10/19/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92B%E6%9C%80%E5%80%BC%E9%97%AE%E9%A2%98/" class="archive-article-date">
+  	<time datetime="2020-10-19T09:06:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-19</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="动态规划B最值问题"><a href="#动态规划B最值问题" class="headerlink" title="动态规划B最值问题"></a>动态规划B最值问题</h1><p>接下来用一道例题来认识动态规划的最值问题，首先声明一下，这些题可能有其他解法，但在这里我只是说一说关于动态规划的解法。</p>
+<p>开始吧！</p>
+<a id="more"></a>
+
+<h2 id="322-零钱兑换"><a href="#322-零钱兑换" class="headerlink" title="322. 零钱兑换"></a>322. 零钱兑换</h2><p><a href="https://leetcode-cn.com/problems/coin-change/" target="_blank" rel="noopener">题目地址</a></p>
+<p>给定不同面额的硬币 coins 和一个总金额 amount。编写一个函数来计算可以凑成总金额所需的最少的硬币个数。如果没有任何一种硬币组合能组成总金额，返回 -1。</p>
+<p>你可以认为每种硬币的数量是无限的。</p>
+<p>示例1：</p>
+<blockquote>
+<p>输入：coins = [1, 2, 5], amount = 11<br>输出：3<br>解释：11 = 5 + 5 + 1</p>
+</blockquote>
+<p>示例2：</p>
+<blockquote>
+<p>输入：coins = [2], amount = 3<br>输出：-1  </p>
+</blockquote>
+<p>示例3：</p>
+<blockquote>
+<p>输入：coins = [1], amount = 0<br>输出：0</p>
+</blockquote>
+<p>示例4：</p>
+<blockquote>
+<p>输入：coins = [1], amount = 1<br>输出：1</p>
+</blockquote>
+<p>示例5：</p>
+<blockquote>
+<p>输入：coins = [1], amount = 2<br>输出：2</p>
+</blockquote>
+<p>提示：</p>
+<ul>
+<li>1 &lt;= coins.length &lt;= 12</li>
+<li>1 &lt;= coins[i] &lt;= $2^{31}$ - 1</li>
+<li>0 &lt;= amount &lt;= $10^4$</li>
+</ul>
+<h2 id="begin"><a href="#begin" class="headerlink" title="begin"></a>begin</h2><p>题目描述得很清楚了，你是否有了想法，建议先尝试一下，考虑用动态规划怎么解。</p>
+<h3 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h3><p>A 计数问题 B 最值问题 C 可行性问题</p>
+<h4 id="一、确定状态"><a href="#一、确定状态" class="headerlink" title="一、确定状态"></a>一、确定状态</h4><blockquote>
+<ol>
+<li>最后一步</li>
+<li>子问题</li>
+</ol>
+</blockquote>
+<h4 id="二、转移方程"><a href="#二、转移方程" class="headerlink" title="二、转移方程"></a>二、转移方程</h4><h4 id="三、初始条件和边界问题"><a href="#三、初始条件和边界问题" class="headerlink" title="三、初始条件和边界问题"></a>三、初始条件和边界问题</h4><blockquote>
+<p>初始条件：用转移方程算不出来，需要手工定义<br>边界情况：数组不能越界</p>
+</blockquote>
+<h4 id="四、计算顺序"><a href="#四、计算顺序" class="headerlink" title="四、计算顺序"></a>四、计算顺序</h4><h2 id="B最值问题"><a href="#B最值问题" class="headerlink" title="B最值问题"></a>B最值问题</h2><p>很明显这是一个关于最值的问题，题目要求解的是用最少的硬币组成目标数字，如果没有这样的解就返回-1。题目让求的仅仅是最少需要几个硬币，而不是要求这最少的那些组合是什么，这就是动态规划的一个标志吧，不要过程要结果。</p>
+<p>按照上面的顺序来：</p>
+<h3 id="一、确定状态-1"><a href="#一、确定状态-1" class="headerlink" title="一、确定状态"></a>一、确定状态</h3><ol>
+<li>最后一步</li>
+</ol>
+<blockquote>
+<p>我们假设有这么最后一块硬币使我们组成了目标数字，并且这就是最少组合，如我们要凑出n，那么我们设最少方案是a1,a2,…ak,组成了n。那么我们的最后一块就是ak，前面则是a1-ak-1组成了n-ak，并且他们都是最少方案。</p>
+</blockquote>
+<ol start="2">
+<li>子问题</li>
+</ol>
+<blockquote>
+<p>根据最后一步，我们把由k块硬币组成n的问题变成了由k-1块组成n-ak的问题，很明显是将一个大问题变成一个规模更小的问题了，所以这个就是子问题。</p>
+</blockquote>
+<h3 id="二、转移方程-1"><a href="#二、转移方程-1" class="headerlink" title="二、转移方程"></a>二、转移方程</h3><blockquote>
+<p>我们设f(n)表示组成n的最少个数，那么f(n)=min(f(n-ak1)+1,f(n-ak2)+1)，这里的ak1、ak2代表的是所有可能的硬币，例如我们要组成27，并且我们只有2、5、7三种硬币，f(27)=min(f(27-2)+1,f(27-5)+1,f(27-7)+1)，这就是我们的转移方程。</p>
+</blockquote>
+<h3 id="三、初始条件和边界问题-1"><a href="#三、初始条件和边界问题-1" class="headerlink" title="三、初始条件和边界问题"></a>三、初始条件和边界问题</h3><blockquote>
+<p>我们可以用数组来保存小于等于n的最少个数，这时候我们要确认用转移方程算不出来，需要手工定义的初始条件，关于这个题是f(0)=0,之后当然还要考虑数组边界问题。</p>
+</blockquote>
+<h3 id="四、计算顺序-1"><a href="#四、计算顺序-1" class="headerlink" title="四、计算顺序"></a>四、计算顺序</h3><blockquote>
+<p>关于这个题的计算顺序还是比较清晰的，我们并需要从小到大逐个计算，最后得到f(n)。</p>
+</blockquote>
+<p>一种java题解</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">coinChange</span><span class="params">(<span class="keyword">int</span>[] coins, <span class="keyword">int</span> amount)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> A=coins.length;</span><br><span class="line">        <span class="keyword">int</span> max=amount+<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span>[] f=<span class="keyword">new</span> <span class="keyword">int</span>[amount+<span class="number">1</span>];</span><br><span class="line">        Arrays.fill(f,max);</span><br><span class="line">        f[<span class="number">0</span>]=<span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=amount;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;A;j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(i&gt;=coins[j])&#123;</span><br><span class="line">                    f[i]=Math.min(f[i],f[i-coins[j]]+<span class="number">1</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> f[amount]&gt;amount? -<span class="number">1</span>:f[amount];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这个题解还是做了很好处理的，就在那个“int[] f=new int[amount+1];”这样在最后就可以比较amount直接确定结果了。</p>
+<p><a href="https://leetcode-cn.com/problems/coin-change/solution/" target="_blank" rel="noopener">详细题解</a></p>
+<h2 id="推荐视频"><a href="#推荐视频" class="headerlink" title="推荐视频"></a>推荐视频</h2><p><a href="https://www.bilibili.com/video/BV1xb411e7ww" target="_blank" rel="noopener">动态规划入门</a></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/alipay.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">博客</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">LeetCode</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/10/19/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92B%E6%9C%80%E5%80%BC%E9%97%AE%E9%A2%98/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2020/10/19/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92C%E5%8F%AF%E8%A1%8C%E6%80%A7%E9%97%AE%E9%A2%98/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          动态规划C可行性问题
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2020/10/19/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92A%E8%AE%A1%E6%95%B0%E9%97%AE%E9%A2%98/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">动态规划A计数问题</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -236,9 +442,9 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
