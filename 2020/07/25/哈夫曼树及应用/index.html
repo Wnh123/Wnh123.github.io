@@ -8,12 +8,12 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>哈夫曼树及应用 | 计科老杨（Wnh123）</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="哈夫曼树及应用在计算机和互联网技术中，文本压缩就是一个非常重要的技术。玩电脑的人几乎都会应用压缩和解压缩软件来处理文档。因为它除了可以减少文档在磁盘上的空间外，还有重要的一点， 就是我们可以在网络上以压缩的形式传输大量数据，使得保存和传递都更加高效。 那么压缩而不出错是如何做到的呢?简单说，就是把我们要压缩的文本进行重新编码，以减少不必要的空间。尽管现在最新技术在编码上已经很好很强大，但这一切都来">
+  <meta name="description" content="在计算机和互联网技术中，文本压缩就是一个非常重要的技术。玩电脑的人几乎都会应用压缩和解压缩软件来处理文档。因为它除了可以减少文档在磁盘上的空间外，还有重要的一点， 就是我们可以在网络上以压缩的形式传输大量数据，使得保存和传递都更加高效。 那么压缩而不出错是如何做到的呢?简单说，就是把我们要压缩的文本进行重新编码，以减少不必要的空间。尽管现在最新技术在编码上已经很好很强大，但这一切都来自于曾经的技术">
 <meta property="og:type" content="article">
 <meta property="og:title" content="哈夫曼树及应用">
 <meta property="og:url" content="http://yoursite.com/2020/07/25/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E5%8F%8A%E5%BA%94%E7%94%A8/index.html">
 <meta property="og:site_name" content="计科老杨（Wnh123）">
-<meta property="og:description" content="哈夫曼树及应用在计算机和互联网技术中，文本压缩就是一个非常重要的技术。玩电脑的人几乎都会应用压缩和解压缩软件来处理文档。因为它除了可以减少文档在磁盘上的空间外，还有重要的一点， 就是我们可以在网络上以压缩的形式传输大量数据，使得保存和传递都更加高效。 那么压缩而不出错是如何做到的呢?简单说，就是把我们要压缩的文本进行重新编码，以减少不必要的空间。尽管现在最新技术在编码上已经很好很强大，但这一切都来">
+<meta property="og:description" content="在计算机和互联网技术中，文本压缩就是一个非常重要的技术。玩电脑的人几乎都会应用压缩和解压缩软件来处理文档。因为它除了可以减少文档在磁盘上的空间外，还有重要的一点， 就是我们可以在网络上以压缩的形式传输大量数据，使得保存和传递都更加高效。 那么压缩而不出错是如何做到的呢?简单说，就是把我们要压缩的文本进行重新编码，以减少不必要的空间。尽管现在最新技术在编码上已经很好很强大，但这一切都来自于曾经的技术">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/Wnh123/clouding@master/WPL.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/Wnh123/clouding@master/w1.png">
@@ -25,9 +25,9 @@
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/Wnh123/clouding@master/w7.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/Wnh123/clouding@master/w8.png">
 <meta property="article:published_time" content="2020-07-25T07:15:42.000Z">
-<meta property="article:modified_time" content="2020-08-08T09:05:36.544Z">
+<meta property="article:modified_time" content="2020-12-10T08:29:45.362Z">
 <meta property="article:author" content="计科老杨（Wnh123）">
-<meta property="article:tag" content="数据结构">
+<meta property="article:tag" content="数据结构算法">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Wnh123/clouding@master/WPL.png">
   
@@ -193,7 +193,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="哈夫曼树及应用"><a href="#哈夫曼树及应用" class="headerlink" title="哈夫曼树及应用"></a>哈夫曼树及应用</h1><p>在计算机和互联网技术中，文本压缩就是一个非常重要的技术。玩电脑的人几乎都会应用压缩和解压缩软件来处理文档。因为它除了可以减少文档在磁盘上的空间外，还有重要的一点， 就是我们可以在网络上以压缩的形式传输大量数据，使得保存和传递都更加高效。</p>
+        <p>在计算机和互联网技术中，文本压缩就是一个非常重要的技术。玩电脑的人几乎都会应用压缩和解压缩软件来处理文档。因为它除了可以减少文档在磁盘上的空间外，还有重要的一点， 就是我们可以在网络上以压缩的形式传输大量数据，使得保存和传递都更加高效。</p>
 <p>那么压缩而不出错是如何做到的呢?简单说，就是把我们要压缩的文本进行重新编码，以减少不必要的空间。尽管现在最新技术在编码上已经很好很强大，但这一切都来自于曾经的技术积累，我们今天就来介绍一下最基本的压缩编码方法-赫夫曼编码。</p>
 <a id="more"></a>
 
@@ -290,7 +290,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">数据结构算法</a>
         		</li>
       		
 		</ul>
@@ -518,7 +518,7 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+                <a href="javascript:void(0)" class="js-tag color2">数据结构算法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -538,7 +538,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+                <a href="javascript:void(0)" class="js-tag color3">博客</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -550,27 +550,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">排序</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">杂谈</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">科技</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">查找</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">博客</a>
               </li>
              
               <li class="article-tag-list-item">

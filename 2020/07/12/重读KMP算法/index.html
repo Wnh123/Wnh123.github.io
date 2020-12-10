@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>重读KMP算法 | 计科老杨（Wnh123）</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="重读KMP算法这几天看了《大话数据结构》第五章-串，重新了解了串这个数据结构，当然其中最重要的模式匹配算法KMP有了新的认识，或者说是终于理解了。接下来结合我的理解和CSDN中大佬的详解，讲一讲KMP吧！ 朴素的模式匹配（BF算法、暴力算法）简介这是最早、最简单的模式匹配算法，就是简单的暴力算法，思路：    主串S，模式串T 从主串S第一位开始和模式串T第一位开始匹配，成功匹配返回匹配成功的第一">
+  <meta name="description" content="这几天看了《大话数据结构》第五章-串，重新了解了串这个数据结构，当然其中最重要的模式匹配算法KMP有了新的认识，或者说是终于理解了。接下来结合我的理解和CSDN中大佬的详解，讲一讲KMP吧！ 朴素的模式匹配（BF算法、暴力算法）简介这是最早、最简单的模式匹配算法，就是简单的暴力算法，思路：    主串S，模式串T 从主串S第一位开始和模式串T第一位开始匹配，成功匹配返回匹配成功的第一位，匹配失败，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="重读KMP算法">
 <meta property="og:url" content="http://yoursite.com/2020/07/12/%E9%87%8D%E8%AF%BBKMP%E7%AE%97%E6%B3%95/index.html">
 <meta property="og:site_name" content="计科老杨（Wnh123）">
-<meta property="og:description" content="重读KMP算法这几天看了《大话数据结构》第五章-串，重新了解了串这个数据结构，当然其中最重要的模式匹配算法KMP有了新的认识，或者说是终于理解了。接下来结合我的理解和CSDN中大佬的详解，讲一讲KMP吧！ 朴素的模式匹配（BF算法、暴力算法）简介这是最早、最简单的模式匹配算法，就是简单的暴力算法，思路：    主串S，模式串T 从主串S第一位开始和模式串T第一位开始匹配，成功匹配返回匹配成功的第一">
+<meta property="og:description" content="这几天看了《大话数据结构》第五章-串，重新了解了串这个数据结构，当然其中最重要的模式匹配算法KMP有了新的认识，或者说是终于理解了。接下来结合我的理解和CSDN中大佬的详解，讲一讲KMP吧！ 朴素的模式匹配（BF算法、暴力算法）简介这是最早、最简单的模式匹配算法，就是简单的暴力算法，思路：    主串S，模式串T 从主串S第一位开始和模式串T第一位开始匹配，成功匹配返回匹配成功的第一位，匹配失败，">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-07-12T13:15:11.000Z">
-<meta property="article:modified_time" content="2020-08-04T11:37:31.026Z">
+<meta property="article:modified_time" content="2020-12-10T08:28:19.243Z">
 <meta property="article:author" content="计科老杨（Wnh123）">
-<meta property="article:tag" content="数据结构">
+<meta property="article:tag" content="数据结构算法">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="计科老杨（Wnh123）" type="application/atom+xml">
@@ -183,7 +183,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="重读KMP算法"><a href="#重读KMP算法" class="headerlink" title="重读KMP算法"></a>重读KMP算法</h1><p>这几天看了《大话数据结构》第五章-串，重新了解了串这个数据结构，当然其中最重要的模式匹配算法KMP有了新的认识，或者说是终于理解了。<br>接下来结合我的理解和<a href="https://blog.csdn.net/v_JULY_v/article/details/7041827" target="_blank" rel="noopener">CSDN中大佬</a>的详解，讲一讲KMP吧！</p>
+        <p>这几天看了《大话数据结构》第五章-串，重新了解了串这个数据结构，当然其中最重要的模式匹配算法KMP有了新的认识，或者说是终于理解了。<br>接下来结合我的理解和<a href="https://blog.csdn.net/v_JULY_v/article/details/7041827" target="_blank" rel="noopener">CSDN中大佬</a>的详解，讲一讲KMP吧！</p>
 <h2 id="朴素的模式匹配（BF算法、暴力算法）"><a href="#朴素的模式匹配（BF算法、暴力算法）" class="headerlink" title="朴素的模式匹配（BF算法、暴力算法）"></a>朴素的模式匹配（BF算法、暴力算法）</h2><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>这是最早、最简单的模式匹配算法，就是简单的暴力算法，思路：  </p>
 <ul>
 <li>主串S，模式串T</li>
@@ -356,7 +356,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">数据结构算法</a>
         		</li>
       		
 		</ul>
@@ -584,7 +584,7 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+                <a href="javascript:void(0)" class="js-tag color2">数据结构算法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -604,7 +604,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+                <a href="javascript:void(0)" class="js-tag color3">博客</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -616,27 +616,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">排序</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">杂谈</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">科技</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">查找</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">博客</a>
               </li>
              
               <li class="article-tag-list-item">
