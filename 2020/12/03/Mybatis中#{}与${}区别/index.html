@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Mybatis中#{}与${}区别 | 计科老杨（Wnh123）</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="学习记录所用">
+  <meta name="description" content="在使用Mybatis写sql语句时常会用到#{}和${}动态实现参数传递，这里就是来记录一下这两者的区别。 参考MyBatis视频教程 #{}与${}的区别 区别输入参数: parameterType 类型为简单类型(8个基本类型+String)  a  #{任意值} ${value}，其中的标识符只能是value  b  #{}自动给String类型加上’ ‘(自动类型转换) ${}原样输出，但">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mybatis中#{}与${}区别">
-<meta property="og:url" content="http://yoursite.com/2020/12/10/Mybatis%E4%B8%AD#{}%E4%B8%8E${}%E5%8C%BA%E5%88%AB/index.html">
+<meta property="og:url" content="http://yoursite.com/2020/12/03/Mybatis%E4%B8%AD#{}%E4%B8%8E${}%E5%8C%BA%E5%88%AB/index.html">
 <meta property="og:site_name" content="计科老杨（Wnh123）">
-<meta property="og:description" content="学习记录所用">
+<meta property="og:description" content="在使用Mybatis写sql语句时常会用到#{}和${}动态实现参数传递，这里就是来记录一下这两者的区别。 参考MyBatis视频教程 #{}与${}的区别 区别输入参数: parameterType 类型为简单类型(8个基本类型+String)  a  #{任意值} ${value}，其中的标识符只能是value  b  #{}自动给String类型加上’ ‘(自动类型转换) ${}原样输出，但">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-12-10T08:23:59.000Z">
-<meta property="article:modified_time" content="2020-12-10T08:32:04.725Z">
+<meta property="article:published_time" content="2020-12-03T08:23:59.000Z">
+<meta property="article:modified_time" content="2020-12-10T09:15:57.392Z">
 <meta property="article:author" content="计科老杨（Wnh123）">
 <meta property="article:tag" content="java">
 <meta name="twitter:card" content="summary">
@@ -175,15 +175,45 @@
   
 
         
-        <a href="/2020/12/10/Mybatis%E4%B8%AD#%7B%7D%E4%B8%8E$%7B%7D%E5%8C%BA%E5%88%AB/" class="archive-article-date">
-  	<time datetime="2020-12-10T08:23:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-10</time>
+        <a href="/2020/12/03/Mybatis%E4%B8%AD#%7B%7D%E4%B8%8E$%7B%7D%E5%8C%BA%E5%88%AB/" class="archive-article-date">
+  	<time datetime="2020-12-03T08:23:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-03</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>在使用Mybatis写sql语句时常会用到#{}和${}动态实现参数传递，这里就是来记录一下这两者的区别。</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.bilibili.com/video/BV1gs411j7kA" target="_blank" rel="noopener">MyBatis视频教程</a></p>
+<p><a href="https://blog.csdn.net/qian_qian_123/article/details/92844194?ops_request_misc=%25257B%252522request%25255Fid%252522%25253A%252522160759025519726885835134%252522%25252C%252522scm%252522%25253A%25252220140713.130102334..%252522%25257D&request_id=160759025519726885835134&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~baidu_landing_v2~default-3-92844194.pc_search_result_no_baidu_js&utm_term=#{}%E4%B8%8E${}%E5%8C%BA%E5%88%AB" target="_blank" rel="noopener">#{}与${}的区别</a></p>
+<h2 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h2><p>输入参数: parameterType</p>
+<p>类型为简单类型(8个基本类型+String)</p>
+<blockquote>
+<p>a</p>
+</blockquote>
+<p>#{任意值}</p>
+<p>${value}，其中的标识符只能是value</p>
+<blockquote>
+<p>b</p>
+</blockquote>
+<p>#{}自动给String类型加上’ ‘(自动类型转换)</p>
+<p>${}原样输出，但是适合于动态排序(动态字段)</p>
+<p>例：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> sno,sname,sage <span class="keyword">from</span> student <span class="keyword">where</span> sname = <span class="comment">#&#123;value&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>等价</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> sno,sname,sage <span class="keyword">from</span> student <span class="keyword">where</span> sname =<span class="string">'$&#123;value&#125;'</span></span><br></pre></td></tr></table></figure>
+
+<p>动态排序</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> sno,sname,sage <span class="keyword">from</span> student <span class="keyword">order</span> <span class="keyword">by</span> $&#123;<span class="keyword">value</span>&#125; <span class="keyword">asc</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>c</p>
+</blockquote>
+<p>#{}可以防止SQL注入</p>
+<p>${}不防止</p>
+<p><a href="https://blog.csdn.net/q_all_is_well/article/details/81559612" target="_blank" rel="noopener">原因</a></p>
+
       
 
       
@@ -283,7 +313,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/12/10/Mybatis%E4%B8%AD#{}%E4%B8%8E${}%E5%8C%BA%E5%88%AB/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/12/03/Mybatis%E4%B8%AD#{}%E4%B8%8E${}%E5%8C%BA%E5%88%AB/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -297,9 +327,18 @@
   
 <nav id="article-nav">
   
+    <a href="/2020/12/03/0-1%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%EF%BC%88%E8%BD%AC%E8%BD%BD%EF%BC%89/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          0-1背包问题（转载）
+        
+      </div>
+    </a>
   
-    <a href="/2020/12/08/%E3%80%82%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">。常用配置参考</div>
+  
+    <a href="/2020/11/22/maven%E4%B8%8Enpm%E4%BD%BF%E7%94%A8%E9%95%9C%E5%83%8F/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">maven与npm使用镜像</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -446,6 +485,10 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">数据结构算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">思考</a>
               </li>
              
@@ -454,15 +497,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">数据结构算法</a>
+                <a href="javascript:void(0)" class="js-tag color4">LeetCode</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">LeetCode</a>
               </li>
              
               <li class="article-tag-list-item">
