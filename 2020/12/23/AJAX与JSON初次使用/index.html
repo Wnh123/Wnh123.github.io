@@ -19,7 +19,7 @@
 <meta property="og:image" content="https://img.imgdb.cn/item/600120d83ffa7d37b32962ff.jpg">
 <meta property="og:image" content="https://img.imgdb.cn/item/600128333ffa7d37b32c6454.jpg">
 <meta property="article:published_time" content="2020-12-23T06:41:30.000Z">
-<meta property="article:modified_time" content="2021-01-15T05:31:22.092Z">
+<meta property="article:modified_time" content="2021-01-15T11:30:37.848Z">
 <meta property="article:author" content="计科老杨（Wnh123）">
 <meta property="article:tag" content="java">
 <meta name="twitter:card" content="summary">
@@ -239,7 +239,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RequestMapping</span>(<span class="string">"queryCommentByNIdMore"</span>)</span><br><span class="line">    <span class="meta">@ResponseBody</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">queryCommentByNIdMore</span><span class="params">(@RequestParam(<span class="string">"nid"</span>)</span> <span class="keyword">long</span> nid, @<span class="title">RequestParam</span><span class="params">(value = <span class="string">"cPage"</span>, required = <span class="keyword">false</span>, defaultValue = <span class="string">"0"</span>)</span> <span class="keyword">int</span> cPage) </span>&#123;</span><br><span class="line">        Map&lt;String, Object&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        List&lt;Comment&gt; comments = frontService.QueryCommentsByNewsId(nid, (cPage + <span class="number">1</span>) * <span class="number">3</span>);</span><br><span class="line">        map.put(<span class="string">"moreComments"</span>, comments);</span><br><span class="line">        map.put(<span class="string">"cPage"</span>, cPage + <span class="number">1</span>);</span><br><span class="line">        JSON.DEFFAULT_DATE_FORMAT = <span class="string">"yyyy-MM-dd HH:mm:ss"</span>;</span><br><span class="line">        <span class="keyword">return</span> JSON.toJSONString(map, SerializerFeature.WriteDateUseDateFormat);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="meta">@RequestMapping</span>(value = <span class="string">"addComment"</span>, produces = <span class="string">"text/json;charset=UTF-8"</span>)</span><br><span class="line">    <span class="meta">@ResponseBody</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">addComment</span><span class="params">(Comment comment)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> result = frontService.AddComment(comment);</span><br><span class="line">        Map&lt;String, Object&gt; map = <span class="keyword">new</span> HashMap&lt;String, Object&gt;();</span><br><span class="line">        <span class="keyword">if</span> (result &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">long</span> LastId = comment.getComment_id();</span><br><span class="line">            map.put(<span class="string">"result"</span>, <span class="string">"success"</span>);</span><br><span class="line">            map.put(<span class="string">"cid"</span>, LastId);</span><br><span class="line">            System.out.println(<span class="string">"评论成功"</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            map.put(<span class="string">"result"</span>, <span class="string">"fail"</span>);</span><br><span class="line">            System.out.println(<span class="string">"评论失败"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> JSON.toJSONString(map);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@RequestMapping</span>(value = <span class="string">"deleteComment"</span>, produces = <span class="string">"text/json;charset=UTF-8"</span>)</span><br><span class="line">    <span class="meta">@ResponseBody</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">deleteComment</span><span class="params">(@RequestParam(<span class="string">"cid"</span>)</span> <span class="keyword">long</span> cid) </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> result = frontService.DeleteComment(cid);</span><br><span class="line">        Map&lt;String, Object&gt; map = <span class="keyword">new</span> HashMap&lt;String, Object&gt;();</span><br><span class="line">        <span class="keyword">if</span> (result &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            map.put(<span class="string">"result"</span>, <span class="string">"success"</span>);</span><br><span class="line">            System.out.println(<span class="string">"评论删除成功"</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            map.put(<span class="string">"result"</span>, <span class="string">"fail"</span>);</span><br><span class="line">            System.out.println(<span class="string">"评论删除失败"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> JSON.toJSONString(map);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
 <p>上面主要是三部分的AJAX的使用，其实还有一些，比如：用户信息修改、密码修改、反馈、用户头像上传，如果包括整个项目的话更多了。上面三个已经比较有代表性了。</p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>AJAX的使用能让用户得到不错的体验，不用动不动就刷新整个界面，搞得人很烦了。JSON只是一种数据格式，简单说就是键值对（key-value）的集合，可嵌套。在使用AJAX时，后端数据通常都是以JSON返回到前端的。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>AJAX的使用能让用户得到不错的体验，不用动不动就刷新整个界面，搞得人很烦了。JSON只是一种数据格式，简单说就是键值对（key-value）的集合，可嵌套。在使用AJAX时，后端数据通常都是以JSON返回到前端的。这时只需要处理JSON数据即可，即完成了AJAX的使用。</p>
 
       
 
@@ -512,19 +512,19 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">思考</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">自己</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">数据结构算法</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">思考</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">自己</a>
               </li>
              
               <li class="article-tag-list-item">
