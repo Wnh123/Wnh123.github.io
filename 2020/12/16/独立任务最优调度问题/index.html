@@ -8,13 +8,15 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>独立任务最优调度问题 | 计科老杨（Wnh123）</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
+  <meta name="description" content="这是一道动态规划问题，提到它的原因是，我个人觉得解法挺有趣的，可能是因为见识少，没遇到过这样解决问题的。">
+<meta property="og:type" content="article">
 <meta property="og:title" content="独立任务最优调度问题">
 <meta property="og:url" content="http://yoursite.com/2020/12/16/%E7%8B%AC%E7%AB%8B%E4%BB%BB%E5%8A%A1%E6%9C%80%E4%BC%98%E8%B0%83%E5%BA%A6%E9%97%AE%E9%A2%98/index.html">
 <meta property="og:site_name" content="计科老杨（Wnh123）">
+<meta property="og:description" content="这是一道动态规划问题，提到它的原因是，我个人觉得解法挺有趣的，可能是因为见识少，没遇到过这样解决问题的。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-12-16T06:46:21.000Z">
-<meta property="article:modified_time" content="2021-01-05T01:10:32.000Z">
+<meta property="article:modified_time" content="2021-01-16T10:45:58.735Z">
 <meta property="article:author" content="计科老杨（Wnh123）">
 <meta property="article:tag" content="数据结构算法">
 <meta name="twitter:card" content="summary">
@@ -181,7 +183,33 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
+        <p>这是一道动态规划问题，提到它的原因是，我个人觉得解法挺有趣的，可能是因为见识少，没遇到过这样解决问题的。</p>
+<a id="more"></a>
+
+<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>【问题描述】用两台处理机A和B处理n个作业。设第i个作业交给机器A处理时需要时间ai, 若由机器B处理，则需要时间bi 。由于各作业的特点和机器的性能关系，可能对于某些i，有ai&gt;=bi，而对于某些j(j!=i，j不等于i)，有aj&lt;bj。即不能将一个作业分开由两台机器处理，也没有一台机器能同时处理2个作业。设计一个动态规划算法，使得这两台机器处理完成这n个作业的时间最短（从任何一台机器开工到最后一台机器停工的总时间）。</p>
+<p>研究一个实例：(a1, a2, a3, a4, a5, a6)=(2, 5, 7, 10, 5, 2), (b1, b2, b3, b4, b5, b6, )=(3, 8, 4, 11, 3, 4)<br>【算法设计】对于给定的两台处理机A和B处理n个作业，找出一个最优调度方案，使2台机器处理完成这n个作业的时间最短。（每个数之间用空格隔开）</p>
+<p>【输入形式】第一行是1个正整数n，表示要处理n个作业。在接下来的2行中，每行有n个正整数，分别表示处理机A和B处理第i个作业需要的处理时间。</p>
+<p>【输出形式】将最短处理时间输出。</p>
+<p>【样例输入】</p>
+<blockquote>
+<p>6<br>2 5 7 10 5 2<br>3 8 4 11 3 4</p>
+</blockquote>
+<p>【样例输出】</p>
+<blockquote>
+<p>15</p>
+</blockquote>
+<h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><p>利用dp存储每个状态的结果，最后选出最优的一个解。转换方程：dp[i][j]=min(dp[i-1][j]+b[i],dp[i-1][j-a[i]]);dp[i][j]代表做完前i个任务，A机器花几分钟情况下，B机器所花的时间，也就是说dp[i][j]就是表示B机器所花时间。</p>
+<p>dp[i][j] = dp[i-1][j]+b[i]代表第i个任务交给B来做，所以做完前i个任务的时候,A机器和前i - 1的任务一样，还是花了j分钟，而B机器则花dp[i-1][j]+b[i]分钟；</p>
+<p>dp[i][j] = dp[i-1][j-a[i]]代表第i个任务交给A来做，现在的A机器花费时间是j，所以在前i - 1个任务完成的时候，A机器是花了j-a[i]分钟的，所以现在B机器还是花了dp[i-1][j-a[i]]分钟；</p>
+<p>一直到dp[n][i]:代表所有的任务都做完了，B机器所花费的时间，那么最迟的时间就是B的时间和A的时间求最大值；</p>
+<p>for(int i=0; i&lt;=sum; i++)ans=min(ans,max(dp[n][i],i));//max(dp[n][i],i) 表示完成前n个作业A机器花i分钟 B机器花dp[n][i]分钟情况下，最迟完工时间。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> a[<span class="number">201</span>], b[<span class="number">201</span>];</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="keyword">int</span> dp[<span class="number">202</span>][<span class="number">10000</span>];<span class="comment">//dp[i][j] 表示前i个作业中A机器花j分钟的时候 B机器所花时间 </span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span>* argv[])</span> </span>&#123;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">    <span class="built_in">memset</span>(dp,<span class="number">0</span>,<span class="keyword">sizeof</span>(dp));</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=n; i++) <span class="built_in">cin</span>&gt;&gt;a[i];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=n; i++) <span class="built_in">cin</span>&gt;&gt;b[i];</span><br><span class="line">    <span class="keyword">int</span> sum=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=n; i++) &#123;</span><br><span class="line">        sum+=a[i];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;=sum; j++) &#123;</span><br><span class="line">            dp[i][j]=dp[i<span class="number">-1</span>][j]+b[i];</span><br><span class="line">            <span class="keyword">if</span>(j&gt;=a[i]) dp[i][j]=<span class="built_in">min</span>(dp[i<span class="number">-1</span>][j]+b[i],dp[i<span class="number">-1</span>][j-a[i]]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> ans=<span class="number">999999</span>;</span><br><span class="line">    <span class="comment">//max(dp[n][i],i) 表示完成前n个作业A机器花i分钟 B机器花dp[n][i]分钟情况下，最迟完工时间 </span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;=sum; i++)ans=<span class="built_in">min</span>(ans,<span class="built_in">max</span>(dp[n][i],i));</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>可能有些人并没有觉得这个解有什么特殊的，但认真看这个dp数组会发现它是挺有意思的，重复上面的dp[i][j]代表做完前i个任务，A机器花几分钟情况下，B机器所花的时间，也就是说dp[i][j]就是表示B机器所花时间，而同时又显示了A机器花的时间。这样一来就可用二维数组表示B机器和A机器所花的时间了，查看我的教材答案用的却是三维数组，明显更麻烦一些，对这个的话只需最后再找到最长时间便可，也不至于三维数组。</p>
+<p>也就我这种见识少的会感叹这种解法，大牛们应该也瞧不上这，仍需要做题啊。</p>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://blog.csdn.net/qq_38089964/article/details/80803595" target="_blank" rel="noopener">独立任务最优调度问题</a></p>
+<p>其实几乎就是搬运，再加上自己看法</p>
+
       
 
       
@@ -453,15 +481,15 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">数据结构算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">思考</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">自己</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">数据结构算法</a>
               </li>
              
               <li class="article-tag-list-item">
