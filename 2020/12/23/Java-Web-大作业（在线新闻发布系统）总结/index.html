@@ -67,6 +67,8 @@
 	        
 				<li><a href="/photos/">相册</a></li>
 	        
+				<li><a href="/archives/index.html">归档</a></li>
+	        
 			</ul>
 		</nav>
 		<nav class="header-smart-menu">
@@ -127,6 +129,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -146,12 +150,14 @@
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/photos/">相册</a></li>
+					<li style="width: 33.333333333333336%"><a href="/photos/">相册</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/archives/index.html">归档</a></li>
 		        
 				</ul>
 			</nav>
@@ -176,6 +182,18 @@
       Java Web 大作业（在线新闻发布系统）总结
     </h1>
   
+
+        <!--显示阅读次数-->
+        
+          <br/>
+          <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+          <span class="icon-sort"></span>
+          <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
+                    阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+          </span>
+          </a>
+        
+        <!--显示阅读次数完毕-->
 
         
         <a href="/2020/12/23/Java-Web-%E5%A4%A7%E4%BD%9C%E4%B8%9A%EF%BC%88%E5%9C%A8%E7%BA%BF%E6%96%B0%E9%97%BB%E5%8F%91%E5%B8%83%E7%B3%BB%E7%BB%9F%EF%BC%89%E6%80%BB%E7%BB%93/" class="archive-article-date">
@@ -350,7 +368,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/12/23/Java-Web-%E5%A4%A7%E4%BD%9C%E4%B8%9A%EF%BC%88%E5%9C%A8%E7%BA%BF%E6%96%B0%E9%97%BB%E5%8F%91%E5%B8%83%E7%B3%BB%E7%BB%9F%EF%BC%89%E6%80%BB%E7%BB%93/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wnh123.github.iohttp://yoursite.com/2020/12/23/Java-Web-%E5%A4%A7%E4%BD%9C%E4%B8%9A%EF%BC%88%E5%9C%A8%E7%BA%BF%E6%96%B0%E9%97%BB%E5%8F%91%E5%B8%83%E7%B3%BB%E7%BB%9F%EF%BC%89%E6%80%BB%E7%BB%93/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -395,6 +413,19 @@
         </div>
         
         
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#项目介绍"><span class="toc-number">1.</span> <span class="toc-text">项目介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#展示"><span class="toc-number">2.</span> <span class="toc-text">展示</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#环境-工具"><span class="toc-number">3.</span> <span class="toc-text">环境&#x2F;工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#项目结构"><span class="toc-number">4.</span> <span class="toc-text">项目结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#关键部分"><span class="toc-number">5.</span> <span class="toc-text">关键部分</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#DAO层"><span class="toc-number">5.1.</span> <span class="toc-text">DAO层</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Service层"><span class="toc-number">5.2.</span> <span class="toc-text">Service层</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Controller层"><span class="toc-number">5.3.</span> <span class="toc-text">Controller层</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#总结"><span class="toc-number">6.</span> <span class="toc-text">总结</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#问题与展望"><span class="toc-number">6.1.</span> <span class="toc-text">问题与展望</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#合作开发重要性"><span class="toc-number">6.2.</span> <span class="toc-text">合作开发重要性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#结束"><span class="toc-number">6.3.</span> <span class="toc-text">结束</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#相关链接"><span class="toc-number">7.</span> <span class="toc-text">相关链接</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
     </div>
 </aside>
 
@@ -417,6 +448,12 @@
       <footer id="footer">
   <div class="outer">
     <div id="footer-info">
+		<!-- PV方式，单个用户连续点击 n 篇，记录 n 次记录值 -->
+		<span id="busuanzi_container_site_pv">    本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+
+		<!-- UV方式，单个用户连续点击 n 篇，记录 1 次记录值 -->
+		<span id="busuanzi_container_site_uv">  本站访客数<span id="busuanzi_value_site_uv"></span>人次</span>
+
     	<div class="footer-left">
     		&copy; 2021 计科老杨（Wnh123）
     	</div>
@@ -470,6 +507,7 @@ MathJax.Hub.Queue(function() {
 </script>
 
 
+<script  async  src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     
 <div class="tools-col" q-class="show:isShow,hide:isShow|isFalse" q-on="click:stop(e)">
   <div class="tools-nav header-menu">
@@ -522,15 +560,15 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">数据结构算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">思考</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">自己</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">数据结构算法</a>
               </li>
              
               <li class="article-tag-list-item">

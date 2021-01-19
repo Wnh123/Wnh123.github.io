@@ -64,6 +64,8 @@
 	        
 				<li><a href="/photos/">相册</a></li>
 	        
+				<li><a href="/archives/index.html">归档</a></li>
+	        
 			</ul>
 		</nav>
 		<nav class="header-smart-menu">
@@ -124,6 +126,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -143,12 +147,14 @@
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/photos/">相册</a></li>
+					<li style="width: 33.333333333333336%"><a href="/photos/">相册</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/archives/index.html">归档</a></li>
 		        
 				</ul>
 			</nav>
@@ -173,6 +179,18 @@
       栈与队列
     </h1>
   
+
+        <!--显示阅读次数-->
+        
+          <br/>
+          <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+          <span class="icon-sort"></span>
+          <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
+                    阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+          </span>
+          </a>
+        
+        <!--显示阅读次数完毕-->
 
         
         <a href="/2020/07/18/%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97/" class="archive-article-date">
@@ -357,7 +375,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/18/%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wnh123.github.iohttp://yoursite.com/2020/07/18/%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -402,6 +420,19 @@
         </div>
         
         
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#栈"><span class="toc-number">1.</span> <span class="toc-text">栈</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#栈的抽象数据类型"><span class="toc-number">2.</span> <span class="toc-text">栈的抽象数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#栈的顺序存储结构"><span class="toc-number">3.</span> <span class="toc-text">栈的顺序存储结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#进栈操作"><span class="toc-number">3.1.</span> <span class="toc-text">进栈操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#出栈操作"><span class="toc-number">3.2.</span> <span class="toc-text">出栈操作</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#两栈共享空间"><span class="toc-number">4.</span> <span class="toc-text">两栈共享空间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#栈的链式存储结构"><span class="toc-number">5.</span> <span class="toc-text">栈的链式存储结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#进栈操作-1"><span class="toc-number">5.1.</span> <span class="toc-text">进栈操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#出栈出栈"><span class="toc-number">5.2.</span> <span class="toc-text">出栈出栈</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#栈的作用"><span class="toc-number">6.</span> <span class="toc-text">栈的作用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#栈的应用-递归"><span class="toc-number">7.</span> <span class="toc-text">栈的应用-递归</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#斐波那契数列"><span class="toc-number">7.1.</span> <span class="toc-text">斐波那契数列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#等…"><span class="toc-number">7.2.</span> <span class="toc-text">等…</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#栈的应用-四则运算表达式求值"><span class="toc-number">8.</span> <span class="toc-text">栈的应用-四则运算表达式求值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#队列"><span class="toc-number">9.</span> <span class="toc-text">队列</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#队列的抽象数据类型"><span class="toc-number">10.</span> <span class="toc-text">队列的抽象数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#循环队列"><span class="toc-number">11.</span> <span class="toc-text">循环队列</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#定义"><span class="toc-number">11.1.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#初始化"><span class="toc-number">11.2.</span> <span class="toc-text">初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#队列长度"><span class="toc-number">11.3.</span> <span class="toc-text">队列长度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#入队操作"><span class="toc-number">11.4.</span> <span class="toc-text">入队操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#出队操作"><span class="toc-number">11.5.</span> <span class="toc-text">出队操作</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#队列的链式存储结构"><span class="toc-number">12.</span> <span class="toc-text">队列的链式存储结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#入队操作-1"><span class="toc-number">12.1.</span> <span class="toc-text">入队操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#出队操作-1"><span class="toc-number">12.2.</span> <span class="toc-text">出队操作</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#栈与队列对比"><span class="toc-number">13.</span> <span class="toc-text">栈与队列对比</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
     </div>
 </aside>
 
@@ -424,6 +455,12 @@
       <footer id="footer">
   <div class="outer">
     <div id="footer-info">
+		<!-- PV方式，单个用户连续点击 n 篇，记录 n 次记录值 -->
+		<span id="busuanzi_container_site_pv">    本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+
+		<!-- UV方式，单个用户连续点击 n 篇，记录 1 次记录值 -->
+		<span id="busuanzi_container_site_uv">  本站访客数<span id="busuanzi_value_site_uv"></span>人次</span>
+
     	<div class="footer-left">
     		&copy; 2021 计科老杨（Wnh123）
     	</div>
@@ -477,6 +514,7 @@ MathJax.Hub.Queue(function() {
 </script>
 
 
+<script  async  src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     
 <div class="tools-col" q-class="show:isShow,hide:isShow|isFalse" q-on="click:stop(e)">
   <div class="tools-nav header-menu">
@@ -529,15 +567,15 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">数据结构算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">思考</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">自己</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">数据结构算法</a>
               </li>
              
               <li class="article-tag-list-item">
