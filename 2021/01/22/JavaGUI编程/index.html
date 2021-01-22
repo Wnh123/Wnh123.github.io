@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>JavaGUI编程 | 计科老杨（Wnh123）</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="虽说java在做pc应用并不是很有市场，我那时学的也是VS下用WPF做的，有了WPF那些基础，之后的Android也更容易入手，还是有些帮助的。 GUI编程组件和容器Frame1234567891011121314151617public class TestFrame2 &amp;#123;    public static void main(String[] args) &amp;#123;">
+  <meta name="description" content="虽说java在做pc应用并不是很有市场，我那时学的也是VS下用WPF做的，有了WPF那些基础，之后的Android也更容易入手，还是有些帮助的。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaGUI编程">
 <meta property="og:url" content="http://yoursite.com/2021/01/22/JavaGUI%E7%BC%96%E7%A8%8B/index.html">
 <meta property="og:site_name" content="计科老杨（Wnh123）">
-<meta property="og:description" content="虽说java在做pc应用并不是很有市场，我那时学的也是VS下用WPF做的，有了WPF那些基础，之后的Android也更容易入手，还是有些帮助的。 GUI编程组件和容器Frame1234567891011121314151617public class TestFrame2 &amp;#123;    public static void main(String[] args) &amp;#123;">
+<meta property="og:description" content="虽说java在做pc应用并不是很有市场，我那时学的也是VS下用WPF做的，有了WPF那些基础，之后的Android也更容易入手，还是有些帮助的。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-01-22T06:45:29.000Z">
-<meta property="article:modified_time" content="2021-01-22T07:17:46.235Z">
+<meta property="article:modified_time" content="2021-01-22T07:24:17.229Z">
 <meta property="article:author" content="计科老杨（Wnh123）">
 <meta property="article:tag" content="java">
 <meta name="twitter:card" content="summary">
@@ -202,6 +202,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>虽说java在做pc应用并不是很有市场，我那时学的也是VS下用WPF做的，有了WPF那些基础，之后的Android也更容易入手，还是有些帮助的。</p>
+<a id="more"></a>
+
 <h3 id="GUI编程"><a href="#GUI编程" class="headerlink" title="GUI编程"></a>GUI编程</h3><h4 id="组件和容器"><a href="#组件和容器" class="headerlink" title="组件和容器"></a>组件和容器</h4><h5 id="Frame"><a href="#Frame" class="headerlink" title="Frame"></a>Frame</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestFrame2</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        MyFrame myFrame1 =<span class="keyword">new</span> MyFrame(<span class="number">100</span>,<span class="number">100</span>,<span class="number">200</span>,<span class="number">200</span>,Color.blue);</span><br><span class="line">        MyFrame myFrame2 =<span class="keyword">new</span> MyFrame(<span class="number">200</span>,<span class="number">100</span>,<span class="number">200</span>,<span class="number">200</span>,Color.yellow);</span><br><span class="line">        MyFrame myFrame3 =<span class="keyword">new</span> MyFrame(<span class="number">300</span>,<span class="number">100</span>,<span class="number">200</span>,<span class="number">200</span>,Color.red);</span><br><span class="line">        MyFrame myFrame4 =<span class="keyword">new</span> MyFrame(<span class="number">400</span>,<span class="number">100</span>,<span class="number">200</span>,<span class="number">200</span>,Color.gray);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyFrame</span> <span class="keyword">extends</span> <span class="title">Frame</span></span>&#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> id=<span class="number">0</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MyFrame</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y, <span class="keyword">int</span> w, <span class="keyword">int</span> h, Color color)</span></span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(<span class="string">"MyFrame"</span>+(++id));</span><br><span class="line">        setBackground(color);</span><br><span class="line">        setBounds(x,y,w,h);</span><br><span class="line">        setVisible(<span class="keyword">true</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h5 id="Panel"><a href="#Panel" class="headerlink" title="Panel"></a>Panel</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestPanel</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Frame frame=<span class="keyword">new</span> Frame();</span><br><span class="line">        Panel panel=<span class="keyword">new</span> Panel();</span><br><span class="line"></span><br><span class="line">        frame.setLayout(<span class="keyword">null</span>);</span><br><span class="line"></span><br><span class="line">        frame.setBounds(<span class="number">300</span>,<span class="number">300</span>,<span class="number">500</span>,<span class="number">500</span>);</span><br><span class="line">        frame.setBackground(<span class="keyword">new</span> Color(<span class="number">40</span>,<span class="number">160</span>,<span class="number">50</span>));</span><br><span class="line"></span><br><span class="line">        panel.setBounds(<span class="number">50</span>,<span class="number">50</span>,<span class="number">400</span>,<span class="number">400</span>);</span><br><span class="line">        panel.setBackground(<span class="keyword">new</span> Color(<span class="number">90</span>,<span class="number">20</span>,<span class="number">150</span>));</span><br><span class="line"></span><br><span class="line">        frame.add(panel);</span><br><span class="line"></span><br><span class="line">        frame.setVisible(<span class="keyword">true</span>);</span><br><span class="line"></span><br><span class="line">        frame.addWindowListener(<span class="keyword">new</span> WindowAdapter() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">windowClosing</span><span class="params">(WindowEvent e)</span> </span>&#123;</span><br><span class="line">                System.exit(<span class="number">0</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -537,15 +539,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">博客</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">简单记录</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">博客</a>
               </li>
              
               <li class="article-tag-list-item">
