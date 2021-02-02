@@ -6,17 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>计科老杨（Wnh123）</title>
+  <title>MySQL（二） | 计科老杨（Wnh123）</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="学习记录所用">
-<meta property="og:type" content="website">
-<meta property="og:title" content="计科老杨（Wnh123）">
-<meta property="og:url" content="http://yoursite.com/page/6/index.html">
+  <meta name="description" content="因为内容太多了，所以将其拆分为以下内容  MySQL(一) MySQL(二)（当前） MySQL(三) MySQL(四)  参考https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;BV1NJ411J79W https:&#x2F;&#x2F;www.runoob.com&#x2F;mysql&#x2F;mysql-tutorial.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MySQL（二）">
+<meta property="og:url" content="http://yoursite.com/2021/02/02/MySQL%EF%BC%88%E4%BA%8C%EF%BC%89/index.html">
 <meta property="og:site_name" content="计科老杨（Wnh123）">
-<meta property="og:description" content="学习记录所用">
+<meta property="og:description" content="因为内容太多了，所以将其拆分为以下内容  MySQL(一) MySQL(二)（当前） MySQL(三) MySQL(四)  参考https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;BV1NJ411J79W https:&#x2F;&#x2F;www.runoob.com&#x2F;mysql&#x2F;mysql-tutorial.html">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://pic4.zhimg.com/80/v2-7dd2e77f2d94fb2752900b05ba7ae67b_720w.jpg">
+<meta property="article:published_time" content="2021-02-02T11:14:26.000Z">
+<meta property="article:modified_time" content="2021-02-02T11:21:44.953Z">
 <meta property="article:author" content="计科老杨（Wnh123）">
+<meta property="article:tag" content="java">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic4.zhimg.com/80/v2-7dd2e77f2d94fb2752900b05ba7ae67b_720w.jpg">
   
     <link rel="alternative" href="/atom.xml" title="计科老杨（Wnh123）" type="application/atom+xml">
   
@@ -166,527 +171,329 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-归并排序" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-MySQL（二）" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/30/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/">归并排序</a>
+    <h1 class="article-title" itemprop="name">
+      MySQL（二）
     </h1>
   
 
         <!--显示阅读次数-->
         
+          <br/>
+          <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+          <span class="icon-sort"></span>
+          <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
+                    阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+          </span>
+          </a>
+        
         <!--显示阅读次数完毕-->
 
         
-        <a href="/2020/07/30/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/" class="archive-article-date">
-  	<time datetime="2020-07-30T13:59:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-30</time>
+        <a href="/2021/02/02/MySQL%EF%BC%88%E4%BA%8C%EF%BC%89/" class="archive-article-date">
+  	<time datetime="2021-02-02T11:14:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-02</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>在本节中我们所讨论的算法都基于归并这个简单的操作，即将两个有序的数组归并成个更大的有序数组。很快人们就根据这个操作发明了一种简单的递归排序算法:归并排序。要将一个数组排序，可以先(递归地)将它分成两半分别排序，然后将结果归并起来。你将会看到，归并排序最吸引人的性质是它能够保证将任意长度为$N$的数组排序所需时间和$NlogN$成正比;它的主要缺点则是它所需的额外空间和$N$成正比。</p>
-<p><a href="https://wnh123.github.io/2020/07/27/%E6%8E%92%E5%BA%8F/" target="_blank" rel="noopener">目录</a></p>
-        
-          <a class="article-more-a" href="/2020/07/30/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">数据结构算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/30/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-初级排序算法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/30/%E5%88%9D%E7%BA%A7%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">初级排序算法</a>
-    </h1>
-  
-
-        <!--显示阅读次数-->
-        
-        <!--显示阅读次数完毕-->
-
-        
-        <a href="/2020/07/30/%E5%88%9D%E7%BA%A7%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" class="archive-article-date">
-  	<time datetime="2020-07-30T07:34:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>作为对排序算法领域的第一次探索，我们将学习两种初级的排序算法以及其中一种的一个变体。深人学习这些相对简单的算法的原因在于:第一，我们将通过它们熟悉一些术语和简单的技巧；第二，这些简单的算法在某些情况下比我们之后将会讨论的复杂算法更有效；第三，以后你会发现，它们有助于我们改进复杂算法的效率。那么开始吧！</p>
-<p><a href="https://wnh123.github.io/2020/07/27/%E6%8E%92%E5%BA%8F/" target="_blank" rel="noopener">目录</a></p>
-        
-          <a class="article-more-a" href="/2020/07/30/%E5%88%9D%E7%BA%A7%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">数据结构算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/30/%E5%88%9D%E7%BA%A7%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-排序" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/27/%E6%8E%92%E5%BA%8F/">排序</a>
-    </h1>
-  
-
-        <!--显示阅读次数-->
-        
-        <!--显示阅读次数完毕-->
-
-        
-        <a href="/2020/07/27/%E6%8E%92%E5%BA%8F/" class="archive-article-date">
-  	<time datetime="2020-07-27T07:15:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>我们的排序算法模板适用于任何实现了Comparable接口的数据类型。遵守Java惯例的好处是很多你希望排序的数据都实现了Comparable接口。例如，Java中封装数字的类型Integer和Double,以及String和其他许多高级数据类型(如File和URL)都实现了Comparable接口。因此你可以直接用这些类型的数组作为参数调用我们的排序方法。</p>
-        
-          <a class="article-more-a" href="/2020/07/27/%E6%8E%92%E5%BA%8F/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">数据结构算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/27/%E6%8E%92%E5%BA%8F/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-查找" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/27/%E6%9F%A5%E6%89%BE/">查找</a>
-    </h1>
-  
-
-        <!--显示阅读次数-->
-        
-        <!--显示阅读次数完毕-->
-
-        
-        <a href="/2020/07/27/%E6%9F%A5%E6%89%BE/" class="archive-article-date">
-  	<time datetime="2020-07-27T07:15:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <a id="more"></a>
-
-<h2 id="更新ing"><a href="#更新ing" class="headerlink" title="更新ing"></a>更新ing</h2>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">数据结构算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/27/%E6%9F%A5%E6%89%BE/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-二叉树" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/25/%E4%BA%8C%E5%8F%89%E6%A0%91/">二叉树</a>
-    </h1>
-  
-
-        <!--显示阅读次数-->
-        
-        <!--显示阅读次数完毕-->
-
-        
-        <a href="/2020/07/25/%E4%BA%8C%E5%8F%89%E6%A0%91/" class="archive-article-date">
-  	<time datetime="2020-07-25T08:11:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>树的基本概念和存储结构已经介绍过了，现在介绍数据结构中极其重要的二叉树。</p>
-<p><a href="https://www.jianshu.com/p/3a8aee2ce593" target="_blank" rel="noopener">部分显示问题，请参考</a></p>
-        
-          <a class="article-more-a" href="/2020/07/25/%E4%BA%8C%E5%8F%89%E6%A0%91/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">数据结构算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/25/%E4%BA%8C%E5%8F%89%E6%A0%91/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-哈夫曼树及应用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/25/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E5%8F%8A%E5%BA%94%E7%94%A8/">哈夫曼树及应用</a>
-    </h1>
-  
-
-        <!--显示阅读次数-->
-        
-        <!--显示阅读次数完毕-->
-
-        
-        <a href="/2020/07/25/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E5%8F%8A%E5%BA%94%E7%94%A8/" class="archive-article-date">
-  	<time datetime="2020-07-25T07:15:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在计算机和互联网技术中，文本压缩就是一个非常重要的技术。玩电脑的人几乎都会应用压缩和解压缩软件来处理文档。因为它除了可以减少文档在磁盘上的空间外，还有重要的一点， 就是我们可以在网络上以压缩的形式传输大量数据，使得保存和传递都更加高效。</p>
-<p>那么压缩而不出错是如何做到的呢?简单说，就是把我们要压缩的文本进行重新编码，以减少不必要的空间。尽管现在最新技术在编码上已经很好很强大，但这一切都来自于曾经的技术积累，我们今天就来介绍一下最基本的压缩编码方法-赫夫曼编码。</p>
-        
-          <a class="article-more-a" href="/2020/07/25/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E5%8F%8A%E5%BA%94%E7%94%A8/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">数据结构算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/25/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E5%8F%8A%E5%BA%94%E7%94%A8/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-树" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/21/%E6%A0%91/">树</a>
-    </h1>
-  
-
-        <!--显示阅读次数-->
-        
-        <!--显示阅读次数完毕-->
-
-        
-        <a href="/2020/07/21/%E6%A0%91/" class="archive-article-date">
-  	<time datetime="2020-07-21T06:07:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>树是由n个结点组成的有限集。n=0时称为空树。且对于非空树：</p>
+        <p>因为内容太多了，所以将其拆分为以下内容</p>
 <ul>
-<li><p>有且仅有一个特定的称为根的结点；</p>
-</li>
-<li><p>当n&gt;1时，其余结点可分为m(m&gt;0)个互不相交的有限集T1,T2,…,Tm，其中每一个集合本身又是一棵树，称为根的子树(subtree)。</p>
+<li><a href="https://wnh123.github.io/2021/01/25/JUC%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E4%B8%80/" target="_blank" rel="noopener">MySQL(一)</a></li>
+<li><a href="https://wnh123.github.io/2021/01/26/JUC%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E4%BA%8C/" target="_blank" rel="noopener">MySQL(二)（当前）</a></li>
+<li><a href="https://wnh123.github.io/2021/01/26/JUC%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E4%B8%89/" target="_blank" rel="noopener">MySQL(三)</a></li>
+<li><a href="https://wnh123.github.io/2021/01/26/JUC%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%9B%9B/" target="_blank" rel="noopener">MySQL(四)</a></li>
+</ul>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://www.bilibili.com/video/BV1NJ411J79W" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1NJ411J79W</a></p>
+<p><a href="https://www.runoob.com/mysql/mysql-tutorial.html" target="_blank" rel="noopener">https://www.runoob.com/mysql/mysql-tutorial.html</a></p>
+<a id="more"></a>
+
+<h3 id="MySQL-数据管理"><a href="#MySQL-数据管理" class="headerlink" title="MySQL 数据管理"></a>MySQL 数据管理</h3><h4 id="外键（了解）"><a href="#外键（了解）" class="headerlink" title="外键（了解）"></a>外键（了解）</h4><p>【强制】不得使用外键与级联，一切外键概念必须在应用层解决。 说明：以学生和成绩的关系为例，学生表中的 student_id是主键，那么成绩表中的 student_id 则为外键。如果更新学生表中的 student_id，同时触发成绩表中的 student_id 更新，即为 级联更新。外键与级联更新适用于单机低并发，不适合分布式、高并发集群；级联更新是强阻 塞，存在数据库更新风暴的风险；外键影响数据库的插入速度。    ——阿里巴巴Java开发手册</p>
+<h4 id="DML（掌握）"><a href="#DML（掌握）" class="headerlink" title="DML（掌握）"></a>DML（掌握）</h4><blockquote>
+<p>where</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">操作符</th>
+<th align="left">描述</th>
+<th align="left">实例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">=</td>
+<td align="left">等号，检测两个值是否相等，如果相等返回true</td>
+<td align="left">(A = B) 返回false。</td>
+</tr>
+<tr>
+<td align="left">&lt;&gt;, !=</td>
+<td align="left">不等于，检测两个值是否相等，如果不相等返回true</td>
+<td align="left">(A != B) 返回 true。</td>
+</tr>
+<tr>
+<td align="left">&gt;</td>
+<td align="left">大于号，检测左边的值是否大于右边的值, 如果左边的值大于右边的值返回true</td>
+<td align="left">(A &gt; B) 返回false。</td>
+</tr>
+<tr>
+<td align="left">&lt;</td>
+<td align="left">小于号，检测左边的值是否小于右边的值, 如果左边的值小于右边的值返回true</td>
+<td align="left">(A &lt; B) 返回 true。</td>
+</tr>
+<tr>
+<td align="left">&gt;=</td>
+<td align="left">大于等于号，检测左边的值是否大于或等于右边的值, 如果左边的值大于或等于右边的值返回true</td>
+<td align="left">(A &gt;= B) 返回false。</td>
+</tr>
+<tr>
+<td align="left">&lt;=</td>
+<td align="left">小于等于号，检测左边的值是否小于或等于右边的值, 如果左边的值小于或等于右边的值返回true</td>
+<td align="left">(A &lt;= B) 返回 true。</td>
+</tr>
+</tbody></table>
+<p>如果我们想在 MySQL 数据表中读取指定的数据，WHERE 子句是非常有用的。</p>
+<p>使用主键来作为 WHERE 子句的条件查询是非常快速的。</p>
+<p>如果给定的条件在表中没有任何匹配的记录，那么查询不会返回任何数据。</p>
+<h5 id="增加"><a href="#增加" class="headerlink" title="增加"></a>增加</h5><blockquote>
+<p>insert</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> table_name ( field1, field2,...fieldN )</span><br><span class="line"><span class="keyword">VALUES</span> ( value1, value2,...valueN );</span><br></pre></td></tr></table></figure>
+
+<h5 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h5><blockquote>
+<p>update</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">UPDATE</span> table_name <span class="keyword">SET</span> field1=<span class="keyword">new</span>-value1, field2=<span class="keyword">new</span>-value2</span><br><span class="line">[<span class="keyword">WHERE</span> Clause]</span><br></pre></td></tr></table></figure>
+
+<h5 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h5><blockquote>
+<p>delete</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> table_name [<span class="keyword">WHERE</span> Clause]</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>truncate</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">TRUNCATE</span> <span class="keyword">TABLE</span> table_name</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>delete 与 truncate 的区别</p>
+</blockquote>
+<ul>
+<li>相同点：都能删除表数据，不影响表结构</li>
+<li>不同：<ul>
+<li>TRUNCATE 重新设置自增（归零）</li>
+<li>TRUNCATE 不影响事务</li>
+</ul>
 </li>
 </ul>
-        
-          <a class="article-more-a" href="/2020/07/21/%E6%A0%91/#more">more >></a>
-        
+<h3 id="DQL-查询数据"><a href="#DQL-查询数据" class="headerlink" title="DQL 查询数据"></a>DQL 查询数据</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> [<span class="keyword">all</span> | <span class="keyword">distinct</span>] &lt;select_expr&gt;, &lt;select_expr&gt;, ...</span><br><span class="line"><span class="keyword">from</span> &lt;table_reference&gt;</span><br><span class="line">[<span class="keyword">where</span> &lt;where_condition&gt;]</span><br><span class="line">[<span class="keyword">group</span> <span class="keyword">by</span> &lt;col_list&gt;]</span><br><span class="line">[<span class="keyword">having</span> &lt;having_condition&gt;]</span><br><span class="line">[<span class="keyword">order</span> <span class="keyword">by</span> &lt;order_condition&gt;]</span><br><span class="line">[<span class="keyword">distribute</span> <span class="keyword">by</span> &lt;distribute_condition&gt; [<span class="keyword">sort</span> <span class="keyword">by</span> &lt;sort_condition&gt;] ]</span><br><span class="line">[<span class="keyword">limit</span> &lt;<span class="built_in">number</span>&gt;]</span><br></pre></td></tr></table></figure>
+
+<h4 id="简单示例"><a href="#简单示例" class="headerlink" title="简单示例"></a>简单示例</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> <span class="keyword">users</span>	<span class="comment">-- 查询全部表数据</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">select</span> user_name <span class="keyword">as</span> 姓名,user_password <span class="keyword">as</span> 密码 <span class="keyword">from</span> <span class="keyword">users</span>	<span class="comment">-- 查询指定字段 as 可以取别名</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">select</span> <span class="keyword">CONCAT</span>(<span class="string">'姓名：'</span>,user_name) <span class="keyword">as</span> 姓名 <span class="keyword">from</span> <span class="keyword">users</span>	<span class="comment">-- 函数 CONCAT('姓名：',user_name)</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">select</span> <span class="keyword">count</span>(*) <span class="keyword">from</span> <span class="keyword">table</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">select</span> coutn(<span class="number">1</span>) <span class="keyword">from</span> <span class="keyword">table</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>去重</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">distinct</span> user_id <span class="keyword">from</span> news	<span class="comment">-- 依据 user_id 去重</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>数据库的列</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">version</span>()	<span class="comment">--查看数据库版本</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">select</span> <span class="number">100</span>*<span class="number">3</span><span class="number">-1</span> <span class="keyword">as</span> 计算结果	<span class="comment">-- 计算</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">select</span> @@auto_increment_increment	<span class="comment">-- 查询自增步长</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">select</span> state+<span class="number">1</span> <span class="keyword">from</span> news	<span class="comment">-- 状态 +1</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="逻辑运算"><a href="#逻辑运算" class="headerlink" title="逻辑运算"></a>逻辑运算</h4><table>
+<thead>
+<tr>
+<th>逻辑运算符</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>and &amp;&amp;</td>
+<td>与</td>
+</tr>
+<tr>
+<td>or ||</td>
+<td>或</td>
+</tr>
+<tr>
+<td>not !</td>
+<td>非</td>
+</tr>
+</tbody></table>
+<h4 id="模糊查询"><a href="#模糊查询" class="headerlink" title="模糊查询"></a>模糊查询</h4><table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>语法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>is null</td>
+<td>a is null</td>
+</tr>
+<tr>
+<td>is not null</td>
+<td>a is not null</td>
+</tr>
+<tr>
+<td>between and</td>
+<td>a between b and c</td>
+</tr>
+<tr>
+<td><strong>like</strong></td>
+<td>a like b</td>
+</tr>
+<tr>
+<td><strong>in</strong></td>
+<td>a in (b,c,d…)</td>
+</tr>
+</tbody></table>
+<p>like：</p>
+<ul>
+<li><p>%：0个或多个字符</p>
+</li>
+<li><p>_：1个字符</p>
+</li>
+</ul>
+<h4 id="连接查询（join-on）"><a href="#连接查询（join-on）" class="headerlink" title="连接查询（join on）"></a>连接查询（join on）</h4><img src="https://pic4.zhimg.com/80/v2-7dd2e77f2d94fb2752900b05ba7ae67b_720w.jpg" alt="img" style="zoom: 67%;" />
+
+<table>
+<thead>
+<tr>
+<th>操作</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>INNER JOIN</strong></td>
+<td>内连接,或等值连接，获取两个表中字段匹配关系的记录。</td>
+</tr>
+<tr>
+<td><strong>LEFT JOIN</strong></td>
+<td>获取左表所有记录，即使右表没有对应匹配的记录。</td>
+</tr>
+<tr>
+<td><strong>RIGHT JOIN</strong></td>
+<td>获取右表所有记录，即使左表没有对应匹配的记录。</td>
+</tr>
+</tbody></table>
+<p>例：</p>
+<p><strong>等值连接：</strong>查找两个表中连接字段相等的记录。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--查询每个学生的学号、姓名、籍贯、年龄、专业、班级</span></span><br><span class="line"><span class="comment">--涉及到student和major两张表，用共有字段“学号”为连接字段</span></span><br><span class="line"></span><br><span class="line"><span class="comment">--写法1：使用INNER JOIN</span></span><br><span class="line"><span class="keyword">SELECT</span> A.学号, A.姓名, A.籍贯, A.年龄, B.专业, B.班级</span><br><span class="line"><span class="keyword">FROM</span> student A</span><br><span class="line"><span class="keyword">INNER</span> <span class="keyword">JOIN</span> major B   </span><br><span class="line"><span class="keyword">ON</span>  A.学号=B.学号</span><br><span class="line"></span><br><span class="line"><span class="comment">--写法2：--省去了INNER，直接写JOIN，与INNER JOIN没有区别</span></span><br><span class="line"><span class="keyword">SELECT</span> A.学号, A.姓名, A.籍贯, A.年龄, B.专业, B.班级</span><br><span class="line"><span class="keyword">FROM</span> student A</span><br><span class="line"><span class="keyword">JOIN</span> major B  </span><br><span class="line"><span class="keyword">ON</span>  A.学号=B.学号</span><br><span class="line"></span><br><span class="line"><span class="comment">--写法3： --使用WHERE，已经逐渐被淘汰</span></span><br><span class="line"><span class="keyword">SELECT</span> A.学号, A.姓名, A.籍贯, A.年龄, B.专业, B.班级</span><br><span class="line"><span class="keyword">FROM</span> student A, major B</span><br><span class="line"><span class="keyword">WHERE</span> A.学号=B.学号 </span><br><span class="line"></span><br><span class="line"><span class="comment">--上面三种写法的结果都是一样的，推荐使用写法2</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>自身连接：</strong>就是和自己进行连接查询，给一张表取两个不同的别名，然后附上连接条件。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--要在学生表里查询与 HH 同龄且籍贯也相同的学生信息</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> B.学号, B.姓名, B.性别, B.籍贯, B.年龄</span><br><span class="line"><span class="keyword">FROM</span> student A </span><br><span class="line"><span class="keyword">JOIN</span> student B</span><br><span class="line"><span class="keyword">ON</span> A.年龄=B.年龄 <span class="keyword">AND</span> A.籍贯=B.籍贯 <span class="keyword">AND</span> A.姓名=<span class="string">'HH'</span></span><br></pre></td></tr></table></figure>
+
+<p>参考：<a href="https://zhuanlan.zhihu.com/p/68136613" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/68136613</a></p>
+<h4 id="子查询、嵌套查询"><a href="#子查询、嵌套查询" class="headerlink" title="子查询、嵌套查询"></a>子查询、嵌套查询</h4><ul>
+<li>格式1</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> &lt;select_expr&gt; <span class="keyword">from</span> (&lt;select_statement&gt;) &lt;sq_alias_name&gt;;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>格式2</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> (&lt;select_statement&gt;) <span class="keyword">from</span> &lt;table_name&gt;;</span><br></pre></td></tr></table></figure>
+
+<p>参数说明</p>
+<ul>
+<li><strong>select_expr</strong>：必填。格式为<code>col1_name, col2_name, 正则表达式,...</code>，表示待查询的普通列、分区列或正则表达式。</li>
+<li><strong>select_statement</strong>必填。子查询语句。如果子查询语句为格式2，子查询结果必须只有一行。格式请参见<a href="https://help.aliyun.com/document_detail/73777.html" target="_blank" rel="noopener">SELECT语法</a>。</li>
+<li><strong>sq_alias_name</strong>：必填。子查询的别名。</li>
+<li><strong>table_name</strong>：必填。目标表名称。</li>
+</ul>
+<h4 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h4><blockquote>
+<p>[group by 子句 ]：分组子句，group by子句主要的作用是分组，从而进行统计操作，而不是为了展示（展示的时候，只会展示分组记录的第一条记录），分组时，一般会结合使用count（）、max（）、min（）、avg（）、sum（）函数。</p>
+</blockquote>
+<p><strong>例：</strong></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> c_id,sex,<span class="keyword">count</span>(*),<span class="keyword">max</span>(height),<span class="keyword">min</span>(height),<span class="keyword">avg</span>(height),<span class="keyword">sum</span>(age),<span class="keyword">GROUP_CONCAT</span>(<span class="keyword">name</span>) <span class="keyword">from</span> my_student <span class="keyword">group</span> <span class="keyword">by</span> c_id ,sex;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>[having 子句]：having的作用类同where，而且having能做几乎所有where能做的事情，而where却不能做having能做的很多事情，主要是因为</p>
+<p>where只能在磁盘提取数据的时候对数据进行操作；而在内存中对数据进行group by分组之后的结果进行处理，只能通过having。</p>
+</blockquote>
+<p><strong>例：</strong></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> c_id,<span class="keyword">count</span>(*),<span class="keyword">max</span>(height),<span class="keyword">min</span>(height),<span class="keyword">avg</span>(height),<span class="keyword">sum</span>(age) <span class="keyword">from</span> my_student <span class="keyword">group</span> <span class="keyword">by</span> c_id <span class="keyword">having</span> <span class="keyword">COUNT</span>(*) &gt;= <span class="number">3</span>;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h4><ul>
+<li><p>升序 ASC </p>
+</li>
+<li><p>降序：DESC</p>
+</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ORDER BY order_experssion[ASC | DESC]</span><br></pre></td></tr></table></figure>
+
+<p>其中，order_experssion表示用于排序的列或列名及表达式。当有多个排序列时，每个排序了列用逗号隔开，而且列后都可以跟一个排序要求。</p>
+<h4 id="分页"><a href="#分页" class="headerlink" title="分页"></a>分页</h4><blockquote>
+<p>一般的分页查询</p>
+</blockquote>
+<p>一般的分页查询使用简单的 limit 子句就可以实现。limit 子句声明如下：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> <span class="keyword">table</span> <span class="keyword">LIMIT</span> [<span class="keyword">offset</span>,] <span class="keyword">rows</span> | <span class="keyword">rows</span> <span class="keyword">OFFSET</span> <span class="keyword">offset</span></span><br></pre></td></tr></table></figure>
+
+<p>LIMIT 子句可以被用于指定 SELECT 语句返回的记录数。需注意以下几点：</p>
+<ul>
+<li>第一个参数指定第一个返回记录行的偏移量，注意从<code>0</code>开始</li>
+<li>第二个参数指定返回记录行的最大数目</li>
+<li>如果只给定一个参数：它表示返回最大的记录行数目</li>
+<li>第二个参数为 -1 表示检索从某一个偏移量到记录集的结束所有的记录行</li>
+<li>初始记录行的偏移量是 0(而不是 1)</li>
+</ul>
+<p><strong>例：</strong></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> news <span class="keyword">limit</span> <span class="number">0</span>,<span class="number">5</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>子查询优化</p>
+</blockquote>
+<h4 id="参考-1"><a href="#参考-1" class="headerlink" title="参考"></a>参考</h4><p><a href="http://uusama.com/458.html" target="_blank" rel="noopener">分页优化参考</a></p>
+<p><a href="https://blog.csdn.net/u011991249/article/details/64519945?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-4.baidujs&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-4.baidujs" target="_blank" rel="noopener">select参考</a></p>
+<p>因为内容太多了，所以将其拆分为以下内容</p>
+<ul>
+<li><a href="https://wnh123.github.io/2021/01/25/JUC%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E4%B8%80/" target="_blank" rel="noopener">MySQL(一)</a></li>
+<li><a href="https://wnh123.github.io/2021/01/26/JUC%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E4%BA%8C/" target="_blank" rel="noopener">MySQL(二)（当前）</a></li>
+<li><a href="https://wnh123.github.io/2021/01/26/JUC%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E4%B8%89/" target="_blank" rel="noopener">MySQL(三)</a></li>
+<li><a href="https://wnh123.github.io/2021/01/26/JUC%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-%E5%9B%9B/" target="_blank" rel="noopener">MySQL(四)</a></li>
+</ul>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/alipay.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -697,7 +504,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">数据结构算法</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
         		</li>
       		
 		</ul>
@@ -706,16 +513,84 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/21/%E6%A0%91/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wnh123.github.io/2021/02/02/MySQL%EF%BC%88%E4%BA%8C%EF%BC%89/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2021/02/02/MySQL%EF%BC%88%E4%B8%89%EF%BC%89/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          MySQL（三）
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/02/02/MySQL%EF%BC%88%E4%B8%80%EF%BC%89/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">MySQL（一）</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -730,258 +605,32 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-线性表" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/18/%E7%BA%BF%E6%80%A7%E8%A1%A8/">线性表</a>
-    </h1>
-  
-
-        <!--显示阅读次数-->
-        
-        <!--显示阅读次数完毕-->
-
-        
-        <a href="/2020/07/18/%E7%BA%BF%E6%80%A7%E8%A1%A8/" class="archive-article-date">
-  	<time datetime="2020-07-18T12:46:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>顾名思义，线性表中的数据是线性排列的，是包括零个或多个数据元素的有限序列。 </p>
-        
-          <a class="article-more-a" href="/2020/07/18/%E7%BA%BF%E6%80%A7%E8%A1%A8/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">数据结构算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/18/%E7%BA%BF%E6%80%A7%E8%A1%A8/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#参考"><span class="toc-number">1.</span> <span class="toc-text">参考</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MySQL-数据管理"><span class="toc-number">2.</span> <span class="toc-text">MySQL 数据管理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#外键（了解）"><span class="toc-number">2.1.</span> <span class="toc-text">外键（了解）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#DML（掌握）"><span class="toc-number">2.2.</span> <span class="toc-text">DML（掌握）</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#增加"><span class="toc-number">2.2.1.</span> <span class="toc-text">增加</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#修改"><span class="toc-number">2.2.2.</span> <span class="toc-text">修改</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#删除"><span class="toc-number">2.2.3.</span> <span class="toc-text">删除</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DQL-查询数据"><span class="toc-number">3.</span> <span class="toc-text">DQL 查询数据</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#简单示例"><span class="toc-number">3.1.</span> <span class="toc-text">简单示例</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#逻辑运算"><span class="toc-number">3.2.</span> <span class="toc-text">逻辑运算</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#模糊查询"><span class="toc-number">3.3.</span> <span class="toc-text">模糊查询</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#连接查询（join-on）"><span class="toc-number">3.4.</span> <span class="toc-text">连接查询（join on）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#子查询、嵌套查询"><span class="toc-number">3.5.</span> <span class="toc-text">子查询、嵌套查询</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#分组"><span class="toc-number">3.6.</span> <span class="toc-text">分组</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#排序"><span class="toc-number">3.7.</span> <span class="toc-text">排序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#分页"><span class="toc-number">3.8.</span> <span class="toc-text">分页</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#参考-1"><span class="toc-number">3.9.</span> <span class="toc-text">参考</span></a></li></ol></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
-  
-    <article id="post-栈与队列" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/18/%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97/">栈与队列</a>
-    </h1>
-  
-
-        <!--显示阅读次数-->
-        
-        <!--显示阅读次数完毕-->
-
-        
-        <a href="/2020/07/18/%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97/" class="archive-article-date">
-  	<time datetime="2020-07-18T06:06:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h2><p>栈是限定仅在表尾进行插入和删除操作的线性表。</p>
-        
-          <a class="article-more-a" href="/2020/07/18/%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">数据结构算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/18/%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-算法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/14/%E7%AE%97%E6%B3%95/">算法</a>
-    </h1>
-  
-
-        <!--显示阅读次数-->
-        
-        <!--显示阅读次数完毕-->
-
-        
-        <a href="/2020/07/14/%E7%AE%97%E6%B3%95/" class="archive-article-date">
-  	<time datetime="2020-07-14T07:15:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>算法是解决特定问题求解步骤的描述，在计算机中表现为指令的有限序列，并且每条指令表示一个或多个操作。</p>
-<h2 id="算法特性"><a href="#算法特性" class="headerlink" title="算法特性"></a>算法特性</h2><p>算法具有五个基本特性：输入、输出、有穷性、确定性、可行性。</p>
-        
-          <a class="article-more-a" href="/2020/07/14/%E7%AE%97%E6%B3%95/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">数据结构算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/14/%E7%AE%97%E6%B3%95/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/5/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/7/">Next &amp;raquo;</a>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -1010,8 +659,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
