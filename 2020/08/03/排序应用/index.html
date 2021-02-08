@@ -5,13 +5,13 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="https://wnh123.gitee.io/wnh123.gitee.io">
+  <link rel="dns-prefetch" href="https://wnh123.github.io">
   <title>排序应用 | 计科老杨（Wnh123）</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="排序如此有用的一个主要原因是，在一个有序的数组中查找一个元素要比在一个无序的数组中查找简单得多。人们用了一个多世纪发现在一本按姓氏排序的电话黄页中查找某个人的电话号码最容易。现在，数字音乐作家们将歌曲文件按照作家名或是歌曲名排序，搜索引擎按照搜素结果的重要性的高低显示结果，电子表格按照某一列的排序结果显示所有栏，矩阵处理工具将一个对称矩阵的真实特征值按照降序排列，等等。只要队列是有序的，很多其他任">
 <meta property="og:type" content="article">
 <meta property="og:title" content="排序应用">
-<meta property="og:url" content="https://wnh123.gitee.io/wnh123.gitee.io/2020/08/03/%E6%8E%92%E5%BA%8F%E5%BA%94%E7%94%A8/index.html">
+<meta property="og:url" content="https://wnh123.github.io/2020/08/03/%E6%8E%92%E5%BA%8F%E5%BA%94%E7%94%A8/index.html">
 <meta property="og:site_name" content="计科老杨（Wnh123）">
 <meta property="og:description" content="排序如此有用的一个主要原因是，在一个有序的数组中查找一个元素要比在一个无序的数组中查找简单得多。人们用了一个多世纪发现在一本按姓氏排序的电话黄页中查找某个人的电话号码最容易。现在，数字音乐作家们将歌曲文件按照作家名或是歌曲名排序，搜索引擎按照搜素结果的重要性的高低显示结果，电子表格按照某一列的排序结果显示所有栏，矩阵处理工具将一个对称矩阵的真实特征值按照降序排列，等等。只要队列是有序的，很多其他任">
 <meta property="og:locale" content="en_US">
@@ -211,7 +211,7 @@
 <p>在许多看似无关的领域中，排序其实仍然是个重要的子问题。 数据压缩、计算机图形学、计算生物学、供应链管理、组合优化、社会选择和投票等，不一而足。我们在本章中学习的算法也在开发本书其他章节的强大算法的过程中起到了关键作用。</p>
 <p>通用排序算法是最重要的，因此我们首先会考虑些在构建适用于 多种情况的排序算法时需要注意的实际问题。虽然部分话题只适用于Java,但每个问题都仍然是所有系统需要解决的。</p>
 <p>我们的主要目的是为了说明，尽管我们所学习的各种算法的思想相对简单，但它们的适用领域仍然广泛经过验证的各种排序算法的应用列表很长，我们在这里只会涉及其中的一小部分，一些是科学领域的。一 些是算法领域的。 还有一些是商业领域的。 在练习中你们还能找到更多例子。本书的网站上还有更多。</p>
-<p><a href="https://wnh123.github.io/2020/07/27/%E6%8E%92%E5%BA%8F/" target="_blank" rel="noopener">目录</a></p>
+<p><a href="https://wnh123.github.io/2020/07/27/%E6%8E%92%E5%BA%8F/">目录</a></p>
 <h2 id="将各种数据排序"><a href="#将各种数据排序" class="headerlink" title="将各种数据排序"></a>将各种数据排序</h2><h3 id="交易事务"><a href="#交易事务" class="headerlink" title="交易事务"></a>交易事务</h3><h3 id="指针排序"><a href="#指针排序" class="headerlink" title="指针排序"></a>指针排序</h3><h3 id="不可变的键"><a href="#不可变的键" class="headerlink" title="不可变的键"></a>不可变的键</h3><h3 id="廉价的交换"><a href="#廉价的交换" class="headerlink" title="廉价的交换"></a>廉价的交换</h3><h3 id="多种排序方法"><a href="#多种排序方法" class="headerlink" title="多种排序方法"></a>多种排序方法</h3><h3 id="多健数组"><a href="#多健数组" class="headerlink" title="多健数组"></a>多健数组</h3><h3 id="使用比较器实现优先多列"><a href="#使用比较器实现优先多列" class="headerlink" title="使用比较器实现优先多列"></a>使用比较器实现优先多列</h3><h3 id="稳定性"><a href="#稳定性" class="headerlink" title="稳定性"></a>稳定性</h3><p><img src="https://cdn.jsdelivr.net/gh/Wnh123/clouding@master/stability.png" alt="从另一个键上排序的稳定性"></p>
 <h2 id="我应该使用哪种排序算法"><a href="#我应该使用哪种排序算法" class="headerlink" title="我应该使用哪种排序算法"></a>我应该使用哪种排序算法</h2><p><img src="https://cdn.jsdelivr.net/gh/Wnh123/clouding@master/sort-characteristics.png" alt="从另一个键上排序的稳定性"></p>
 <h3 id="将原始类型数据排序"><a href="#将原始类型数据排序" class="headerlink" title="将原始类型数据排序"></a>将原始类型数据排序</h3><h3 id="java系统库的排序算法"><a href="#java系统库的排序算法" class="headerlink" title="java系统库的排序算法"></a>java系统库的排序算法</h3><h2 id="问题的规约"><a href="#问题的规约" class="headerlink" title="问题的规约"></a>问题的规约</h2><h3 id="找出重复元素"><a href="#找出重复元素" class="headerlink" title="找出重复元素"></a>找出重复元素</h3><h3 id="排名"><a href="#排名" class="headerlink" title="排名"></a>排名</h3><h3 id="优先队列"><a href="#优先队列" class="headerlink" title="优先队列"></a>优先队列</h3><h3 id="中位数与顺序统计"><a href="#中位数与顺序统计" class="headerlink" title="中位数与顺序统计"></a>中位数与顺序统计</h3><p><img src="https://cdn.jsdelivr.net/gh/Wnh123/clouding@master/median.png" alt="用切分找出中位数"></p>
@@ -317,7 +317,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wnh123.github.io/.io/wnh123.gitee.io/2020/08/03/%E6%8E%92%E5%BA%8F%E5%BA%94%E7%94%A8/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wnh123.github.io/b.io/2020/08/03/%E6%8E%92%E5%BA%8F%E5%BA%94%E7%94%A8/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -509,15 +509,15 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">数据结构算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">思考</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">自己</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">数据结构算法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -636,7 +636,7 @@ MathJax.Hub.Queue(function() {
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">&lt;br/&gt;说不上技术分享，只能算是学习记录吧&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;每个人都有自己的故事&lt;br/&gt;你的经历别人无法复制&lt;br/&gt;越是困难越要向前push&lt;br/&gt;向你的目标，迈出你的步子&lt;br&gt;</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">&lt;br/&gt;说不上技术分享，只能算是学习记录吧&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;人生就是要开开心心&lt;br/&gt;喜欢的话就要认认真真&lt;br/&gt;</div>
   	  	
     	</section>
     

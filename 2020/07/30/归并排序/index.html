@@ -5,13 +5,13 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="https://wnh123.gitee.io/wnh123.gitee.io">
+  <link rel="dns-prefetch" href="https://wnh123.github.io">
   <title>归并排序 | 计科老杨（Wnh123）</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="在本节中我们所讨论的算法都基于归并这个简单的操作，即将两个有序的数组归并成个更大的有序数组。很快人们就根据这个操作发明了一种简单的递归排序算法:归并排序。要将一个数组排序，可以先(递归地)将它分成两半分别排序，然后将结果归并起来。你将会看到，归并排序最吸引人的性质是它能够保证将任意长度为$N$的数组排序所需时间和$NlogN$成正比;它的主要缺点则是它所需的额外空间和$N$成正比。 目录">
 <meta property="og:type" content="article">
 <meta property="og:title" content="归并排序">
-<meta property="og:url" content="https://wnh123.gitee.io/wnh123.gitee.io/2020/07/30/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/index.html">
+<meta property="og:url" content="https://wnh123.github.io/2020/07/30/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/index.html">
 <meta property="og:site_name" content="计科老杨（Wnh123）">
 <meta property="og:description" content="在本节中我们所讨论的算法都基于归并这个简单的操作，即将两个有序的数组归并成个更大的有序数组。很快人们就根据这个操作发明了一种简单的递归排序算法:归并排序。要将一个数组排序，可以先(递归地)将它分成两半分别排序，然后将结果归并起来。你将会看到，归并排序最吸引人的性质是它能够保证将任意长度为$N$的数组排序所需时间和$NlogN$成正比;它的主要缺点则是它所需的额外空间和$N$成正比。 目录">
 <meta property="og:locale" content="en_US">
@@ -207,7 +207,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>在本节中我们所讨论的算法都基于归并这个简单的操作，即将两个有序的数组归并成个更大的有序数组。很快人们就根据这个操作发明了一种简单的递归排序算法:归并排序。要将一个数组排序，可以先(递归地)将它分成两半分别排序，然后将结果归并起来。你将会看到，归并排序最吸引人的性质是它能够保证将任意长度为$N$的数组排序所需时间和$NlogN$成正比;它的主要缺点则是它所需的额外空间和$N$成正比。</p>
-<p><a href="https://wnh123.github.io/2020/07/27/%E6%8E%92%E5%BA%8F/" target="_blank" rel="noopener">目录</a></p>
+<p><a href="https://wnh123.github.io/2020/07/27/%E6%8E%92%E5%BA%8F/">目录</a></p>
 <a id="more"></a>
 <h2 id="原地归并的抽象方法"><a href="#原地归并的抽象方法" class="headerlink" title="原地归并的抽象方法"></a>原地归并的抽象方法</h2><p>实现归并的一种直截了当的办法是将两个不同的有序数组归并到第三个数组中，两个数组中的元素应该都实现了Comparable接口。实现的方法很简单，创建一个适当大小的数组然后将两个输人数组中的元素一个个从小到大放 人这个数组中。</p>
 <p>但是，当用归并将-个大数组排序时，我们需要进行很多次归并，因此在每次归并时 都创建一个新数组来存储排序结果会带来问题。我们更希望有一种能够在原地归并的方法，这样就可以先将前半部分排序，再将后半部分排序，然后在数组中移动元素而不需要使用额外的空间。你可以先停下来想想应该如何实现这一点，乍一看很容易做到，但实际上已有的实现都非常复杂，尤其是和使用额外空间的方法相比。</p>
@@ -330,7 +330,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wnh123.github.io/.io/wnh123.gitee.io/2020/07/30/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wnh123.github.io/b.io/2020/07/30/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -522,15 +522,15 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">数据结构算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">思考</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">自己</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">数据结构算法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -649,7 +649,7 @@ MathJax.Hub.Queue(function() {
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">&lt;br/&gt;说不上技术分享，只能算是学习记录吧&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;每个人都有自己的故事&lt;br/&gt;你的经历别人无法复制&lt;br/&gt;越是困难越要向前push&lt;br/&gt;向你的目标，迈出你的步子&lt;br&gt;</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">&lt;br/&gt;说不上技术分享，只能算是学习记录吧&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;人生就是要开开心心&lt;br/&gt;喜欢的话就要认认真真&lt;br/&gt;</div>
   	  	
     	</section>
     
