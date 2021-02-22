@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="https://wnh123.github.io">
   <title>SpringMVC | 计科老杨（Wnh123）</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="SpringMVC参考官方文档：https:&#x2F;&#x2F;docs.spring.io&#x2F;spring-framework&#x2F;docs&#x2F;5.3.5-SNAPSHOT&#x2F;reference&#x2F;html&#x2F;web.html#spring-web 其他：https:&#x2F;&#x2F;blog.csdn.net&#x2F;litianxiang_kaola&#x2F;article&#x2F;details&#x2F;79169148 【狂神说Java】SpringMVC最新教">
+  <meta name="description" content="参考官方文档：https:&#x2F;&#x2F;docs.spring.io&#x2F;spring-framework&#x2F;docs&#x2F;5.3.5-SNAPSHOT&#x2F;reference&#x2F;html&#x2F;web.html#spring-web 其他：https:&#x2F;&#x2F;blog.csdn.net&#x2F;litianxiang_kaola&#x2F;article&#x2F;details&#x2F;79169148 【狂神说Java】SpringMVC最新教程IDEA版通俗易">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SpringMVC">
 <meta property="og:url" content="https://wnh123.github.io/2021/02/22/SpringMVC/index.html">
 <meta property="og:site_name" content="计科老杨（Wnh123）">
-<meta property="og:description" content="SpringMVC参考官方文档：https:&#x2F;&#x2F;docs.spring.io&#x2F;spring-framework&#x2F;docs&#x2F;5.3.5-SNAPSHOT&#x2F;reference&#x2F;html&#x2F;web.html#spring-web 其他：https:&#x2F;&#x2F;blog.csdn.net&#x2F;litianxiang_kaola&#x2F;article&#x2F;details&#x2F;79169148 【狂神说Java】SpringMVC最新教">
+<meta property="og:description" content="参考官方文档：https:&#x2F;&#x2F;docs.spring.io&#x2F;spring-framework&#x2F;docs&#x2F;5.3.5-SNAPSHOT&#x2F;reference&#x2F;html&#x2F;web.html#spring-web 其他：https:&#x2F;&#x2F;blog.csdn.net&#x2F;litianxiang_kaola&#x2F;article&#x2F;details&#x2F;79169148 【狂神说Java】SpringMVC最新教程IDEA版通俗易">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-02-22T06:00:04.000Z">
-<meta property="article:modified_time" content="2021-02-22T06:16:03.676Z">
+<meta property="article:modified_time" content="2021-02-22T06:19:20.160Z">
 <meta property="article:author" content="计科老杨（Wnh123）">
 <meta property="article:tag" content="SSM">
 <meta property="article:tag" content="Spring家族">
@@ -202,7 +202,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="SpringMVC"><a href="#SpringMVC" class="headerlink" title="SpringMVC"></a>SpringMVC</h2><h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p>官方文档：<a href="https://docs.spring.io/spring-framework/docs/5.3.5-SNAPSHOT/reference/html/web.html#spring-web" target="_blank" rel="noopener">https://docs.spring.io/spring-framework/docs/5.3.5-SNAPSHOT/reference/html/web.html#spring-web</a></p>
+        <h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p>官方文档：<a href="https://docs.spring.io/spring-framework/docs/5.3.5-SNAPSHOT/reference/html/web.html#spring-web" target="_blank" rel="noopener">https://docs.spring.io/spring-framework/docs/5.3.5-SNAPSHOT/reference/html/web.html#spring-web</a></p>
 <p>其他：<a href="https://blog.csdn.net/litianxiang_kaola/article/details/79169148" target="_blank" rel="noopener">https://blog.csdn.net/litianxiang_kaola/article/details/79169148</a></p>
 <p><a href="https://www.bilibili.com/video/BV1aE41167Tu" target="_blank" rel="noopener">【狂神说Java】SpringMVC最新教程IDEA版通俗易懂</a></p>
 <a id="more"></a>
@@ -480,7 +480,7 @@ return new ObjectMapper().configure(SerializationFeature.WRITE_DATES_AS_TIMESTAM
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#SpringMVC"><span class="toc-number">1.</span> <span class="toc-text">SpringMVC</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#参考"><span class="toc-number">1.1.</span> <span class="toc-text">参考</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置"><span class="toc-number">1.2.</span> <span class="toc-text">配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#web-xml"><span class="toc-number">1.2.1.</span> <span class="toc-text">web.xml</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#spring-servlet-xml"><span class="toc-number">1.2.2.</span> <span class="toc-text">spring-servlet.xml</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#乱码问题"><span class="toc-number">1.2.3.</span> <span class="toc-text">乱码问题</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#RequestMapping"><span class="toc-number">1.3.</span> <span class="toc-text">@RequestMapping</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#RestFul风格"><span class="toc-number">1.3.1.</span> <span class="toc-text">RestFul风格</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#RequestParam"><span class="toc-number">1.3.2.</span> <span class="toc-text">@RequestParam</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#转发与重定向"><span class="toc-number">1.4.</span> <span class="toc-text">转发与重定向</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#AJAX-与-JSON"><span class="toc-number">1.5.</span> <span class="toc-text">AJAX 与 JSON</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#jackson"><span class="toc-number">1.5.1.</span> <span class="toc-text">jackson</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#实体类对象"><span class="toc-number">1.5.1.1.</span> <span class="toc-text">实体类对象</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#fastjson"><span class="toc-number">1.5.2.</span> <span class="toc-text">fastjson</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#测试"><span class="toc-number">1.5.2.1.</span> <span class="toc-text">测试</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#实例"><span class="toc-number">1.5.2.2.</span> <span class="toc-text">实例</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#拦截器"><span class="toc-number">1.6.</span> <span class="toc-text">拦截器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件上传下载"><span class="toc-number">1.7.</span> <span class="toc-text">文件上传下载</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#上传"><span class="toc-number">1.7.1.</span> <span class="toc-text">上传</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#下载"><span class="toc-number">1.7.2.</span> <span class="toc-text">下载</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#注意"><span class="toc-number">1.7.3.</span> <span class="toc-text">注意</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#参考"><span class="toc-number">1.</span> <span class="toc-text">参考</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置"><span class="toc-number">2.</span> <span class="toc-text">配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#web-xml"><span class="toc-number">2.1.</span> <span class="toc-text">web.xml</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#spring-servlet-xml"><span class="toc-number">2.2.</span> <span class="toc-text">spring-servlet.xml</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#乱码问题"><span class="toc-number">2.3.</span> <span class="toc-text">乱码问题</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#RequestMapping"><span class="toc-number">3.</span> <span class="toc-text">@RequestMapping</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#RestFul风格"><span class="toc-number">3.1.</span> <span class="toc-text">RestFul风格</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#RequestParam"><span class="toc-number">3.2.</span> <span class="toc-text">@RequestParam</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#转发与重定向"><span class="toc-number">4.</span> <span class="toc-text">转发与重定向</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#AJAX-与-JSON"><span class="toc-number">5.</span> <span class="toc-text">AJAX 与 JSON</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#jackson"><span class="toc-number">5.1.</span> <span class="toc-text">jackson</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#实体类对象"><span class="toc-number">5.1.1.</span> <span class="toc-text">实体类对象</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#fastjson"><span class="toc-number">5.2.</span> <span class="toc-text">fastjson</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#测试"><span class="toc-number">5.2.1.</span> <span class="toc-text">测试</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#实例"><span class="toc-number">5.2.2.</span> <span class="toc-text">实例</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#拦截器"><span class="toc-number">6.</span> <span class="toc-text">拦截器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件上传下载"><span class="toc-number">7.</span> <span class="toc-text">文件上传下载</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#上传"><span class="toc-number">7.1.</span> <span class="toc-text">上传</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#下载"><span class="toc-number">7.2.</span> <span class="toc-text">下载</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#注意"><span class="toc-number">7.3.</span> <span class="toc-text">注意</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -620,6 +620,10 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">数据结构算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">思考</a>
               </li>
              
@@ -628,19 +632,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">数据结构算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">JavaWeb</a>
+                <a href="javascript:void(0)" class="js-tag color2">JavaSE</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">简单记录</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">JavaWeb</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -660,15 +660,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">小结</a>
+                <a href="javascript:void(0)" class="js-tag color3">博客</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">python</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">博客</a>
               </li>
              
               <li class="article-tag-list-item">
